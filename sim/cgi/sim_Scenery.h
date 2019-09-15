@@ -72,7 +72,7 @@ private:
 
     void createGeneric();
     void createObjects();
-#   ifdef SIM_DESKTOP
+#   ifdef SIM_SHADOW
     void createShadow();
 #   endif
 

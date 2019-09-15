@@ -318,7 +318,7 @@ void UnitViewer::loadUnit()
                     }
                 }
             }
-#           ifdef SIM_DESKTOP
+#           ifdef SIM_WATER_REFLECTIONS
             else if ( data.type == ListUnits::Marine )
             {
                 UnitMarine::createReflection( model.get(), m_root.get() );

@@ -24,7 +24,7 @@ WreckageSurface::WreckageSurface( osg::Node *model , osg::Group *smoke ) :
 
     m_switch->addChild( smokeTmp.get() );
 
-#   ifdef SIM_DESKTOP
+#   ifdef SIM_WATER_REFLECTIONS
     UnitMarine::createReflection( model, m_switch.get() );
 #   endif
 }

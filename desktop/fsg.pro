@@ -27,7 +27,11 @@ win32: QMAKE_LFLAGS += /INCREMENTAL:NO
 ################################################################################
 
 DEFINES += \
-    SIM_DESKTOP
+    SIM_DESKTOP \
+    SIM_SHADOW
+
+#DEFINES += \
+#    SIM_WATER_REFLECTIONS
 
 greaterThan(QT_MAJOR_VERSION, 4):win32: DEFINES += USE_QT5
 

@@ -1,6 +1,6 @@
 #include <sim/entities/sim_UnitMarine.h>
 
-#ifdef SIM_DESKTOP
+#ifdef SIM_WATER_REFLECTIONS
 #   include <osg/ClipNode>
 #   include <osg/Geode>
 #   include <osg/Geometry>
@@ -22,7 +22,7 @@ using namespace sim;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef SIM_DESKTOP
+#ifdef SIM_WATER_REFLECTIONS
 const char UnitMarine::m_frag[] =
     "uniform sampler2D reflection;\n"
     "uniform sampler2D refraction;\n"
@@ -93,7 +93,7 @@ const char UnitMarine::m_vert[] =
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef SIM_DESKTOP
+#ifdef SIM_WATER_REFLECTIONS
 void UnitMarine::createReflection( osg::Node *model, osg::Group *parent )
 {
     const float z = 0.1f;
@@ -229,7 +229,7 @@ void UnitMarine::load()
     UnitSurface::load();
     ////////////////////
 
-#   ifdef SIM_DESKTOP
+#   ifdef SIM_WATER_REFLECTIONS
     if ( m_model.valid() )
     {
         createReflection( m_model.get(), m_switch.get() );

@@ -36,7 +36,7 @@ Scenery::Scenery( Module *parent ) :
 
     m_counter ( 100 )
 {
-#   ifdef SIM_DESKTOP
+#   ifdef SIM_SHADOW
     osgSim::OverlayNode::OverlayTechnique technique = osgSim::OverlayNode::OBJECT_DEPENDENT_WITH_ORTHOGRAPHIC_OVERLAY;
     m_root = m_overlayNode = new osgSim::OverlayNode( technique );
 
@@ -50,7 +50,7 @@ Scenery::Scenery( Module *parent ) :
     createObjects();
     createGeneric();
 
-#   ifdef SIM_DESKTOP
+#   ifdef SIM_SHADOW
     createShadow();
 #   endif
 }
@@ -196,7 +196,7 @@ void Scenery::createObjects()
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef SIM_DESKTOP
+#ifdef SIM_SHADOW
 void Scenery::createShadow()
 {
     const double w_2 = 8.0;
@@ -251,7 +251,7 @@ void Scenery::createShadow()
 
     stateSet->setAttribute( material.get() );
 
-    osg::ref_ptr<osg::Texture2D> texture = Textures::get( getPath( "shadow.png" ) );
+    osg::ref_ptr<osg::Texture2D> texture = Textures::get( getPath( "textures/shadow.png" ) );
     stateSet->setTextureAttributeAndModes( 0, texture.get(), osg::StateAttribute::ON );
 }
 #endif
