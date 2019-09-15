@@ -1,0 +1,29 @@
+#ifndef UNITAERIAL_H
+#define UNITAERIAL_H
+
+////////////////////////////////////////////////////////////////////////////////
+
+#include <sim/entities/sim_Unit.h>
+
+////////////////////////////////////////////////////////////////////////////////
+
+namespace sim
+{
+
+/** Aerial unit base class. */
+class UnitAerial : public Unit
+{
+public:
+
+    /** Constructor. */
+    UnitAerial( Affiliation affiliation = Unknown );
+
+    /** Destructor. */
+    virtual ~UnitAerial();
+};
+
+} // end of sim namespace
+
+////////////////////////////////////////////////////////////////////////////////
+
+#endif // UNITAERIAL_H

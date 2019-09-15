@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>756</width>
+    <height>584</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Flight Simulation Game</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../fsg.qrc">
+    <normaloff>:/gui/images/fsg.svg</normaloff>:/gui/images/fsg.svg</iconset>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowNestedDocks|QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="1" column="0">
+     <widget class="QStackedWidget" name="stackedMain">
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="pageCampaign">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelLanguage">
+          <property name="text">
+           <string>Language:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="buddy">
+           <cstring>comboBoxLanguage</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboBoxLanguage"/>
+        </item>
+        <item row="1" column="0" colspan="5">
+         <widget class="WidgetCampaign" name="widgetCampaign" native="true"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QComboBox" name="comboBoxUnits"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="pushButtonStartUnitView">
+          <property name="text">
+           <string>Show</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="pushButtonStartQuickAction">
+          <property name="text">
+           <string>Start Quick Action</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QPushButton" name="pushButtonStartCampaign">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Start Mission</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageSimulation">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="WidgetCGI" name="widgetCGI" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>756</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuView">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionViewChase"/>
+    <addaction name="actionViewFlyby"/>
+    <addaction name="actionViewFront"/>
+    <addaction name="actionViewOrbit"/>
+    <addaction name="actionViewPilot"/>
+    <addaction name="actionViewShift"/>
+    <addaction name="actionViewWorld"/>
+    <addaction name="separator"/>
+    <addaction name="actionViewToggle"/>
+    <addaction name="separator"/>
+    <addaction name="actionViewFull"/>
+   </widget>
+   <widget class="QMenu" name="menuSimulation">
+    <property name="title">
+     <string>Simulation</string>
+    </property>
+    <addaction name="actionStart"/>
+    <addaction name="actionPause"/>
+    <addaction name="actionAbort"/>
+    <addaction name="separator"/>
+    <addaction name="actionAuto"/>
+    <addaction name="separator"/>
+    <addaction name="actionCtrl"/>
+    <addaction name="actionData"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuTime">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Time</string>
+    </property>
+    <addaction name="actionTimeFaster"/>
+    <addaction name="actionTimeSlower"/>
+   </widget>
+   <addaction name="menuSimulation"/>
+   <addaction name="menuView"/>
+   <addaction name="menuTime"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionViewChase">
+   <property name="text">
+    <string>Chase</string>
+   </property>
+  </action>
+  <action name="actionViewOrbit">
+   <property name="text">
+    <string>Orbit</string>
+   </property>
+  </action>
+  <action name="actionViewPilot">
+   <property name="text">
+    <string>Pilot</string>
+   </property>
+  </action>
+  <action name="actionViewWorld">
+   <property name="text">
+    <string>World</string>
+   </property>
+  </action>
+  <action name="actionCtrl">
+   <property name="text">
+    <string>Controls (Ctrl+C)</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit (Ctrl+Q)</string>
+   </property>
+   <property name="toolTip">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionData">
+   <property name="text">
+    <string>Data (Ctrl+D)</string>
+   </property>
+  </action>
+  <action name="actionViewFull">
+   <property name="text">
+    <string>Full Screen (Ctrl+F)</string>
+   </property>
+  </action>
+  <action name="actionTimeFaster">
+   <property name="text">
+    <string>Faster</string>
+   </property>
+  </action>
+  <action name="actionTimeSlower">
+   <property name="text">
+    <string>Slower</string>
+   </property>
+  </action>
+  <action name="actionAuto">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Autopilot (Ctrl+A)</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Pause (Pause)</string>
+   </property>
+  </action>
+  <action name="actionAbort">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Abort (Esc)</string>
+   </property>
+  </action>
+  <action name="actionViewToggle">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Toggle</string>
+   </property>
+  </action>
+  <action name="actionViewShift">
+   <property name="text">
+    <string>Shift</string>
+   </property>
+  </action>
+  <action name="actionViewFlyby">
+   <property name="text">
+    <string>Flyby</string>
+   </property>
+  </action>
+  <action name="actionViewFront">
+   <property name="text">
+    <string>Front</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>WidgetCGI</class>
+   <extends>QWidget</extends>
+   <header>gui/WidgetCGI.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetCampaign</class>
+   <extends>QWidget</extends>
+   <header>gui/WidgetCampaign.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>comboBoxLanguage</tabstop>
+  <tabstop>comboBoxUnits</tabstop>
+  <tabstop>pushButtonStartUnitView</tabstop>
+  <tabstop>pushButtonStartQuickAction</tabstop>
+  <tabstop>pushButtonStartCampaign</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../fsg.qrc"/>
+ </resources>
+ <connections/>
+</ui>
