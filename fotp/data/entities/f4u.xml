@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/f4u.osgb</model>
+  <ap>8</ap>
+  <radius>5.8</radius>
+  <aircraft>
+    <time_p>0.1</time_p>
+    <time_q>0.5</time_q>
+    <time_r>0.5</time_r>
+    <time_v>10.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>200.0</speed_max>
+    <roll_max>72.0</roll_max>
+    <max_ailerons>20.0</max_ailerons>
+    <max_elevator>30.0</max_elevator>
+    <max_rudder>60.0</max_rudder>
+    
+    <flash>-0.66  2.45 -0.66</flash>
+    <flash light="1">-0.65  2.64 -0.63</flash>
+    <flash>-0.64  2.83 -0.60</flash>
+    <flash>-0.66 -2.45 -0.66</flash>
+    <flash light="1">-0.65 -2.64 -0.63</flash>
+    <flash>-0.64 -2.83 -0.60</flash>
+    
+    <muzzle trail="1">-55.0 -2.4 0.0</muzzle>
+    <muzzle trail="1">-55.0  2.4 0.0</muzzle>
+    <muzzle trail="1">-35.0 -2.6 0.0</muzzle>
+    <muzzle trail="1">-35.0  2.6 0.0</muzzle>
+    <muzzle trail="1">-15.0 -2.8 0.0</muzzle>
+    <muzzle trail="1">-15.0  2.8 0.0</muzzle>
+    
+  </aircraft>
+  <bomber_level>
+    <bomb model="entities/anm59.osgb">
+      <position>0.5 -0.55  -0.75</position>
+      <attitude>30.0 0.0 0.0</attitude>
+    </bomb>
+    <bomb model="entities/anm59.osgb">
+      <position>0.5  0.55  -0.75</position>
+      <attitude>-30.0 0.0 0.0</attitude>
+    </bomb>
+  </bomber_level>
+</unit>

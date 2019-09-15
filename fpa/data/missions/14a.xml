@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/14a_ico.png</icon>
+  <icon_locked>missions/14a_ico_locked.png</icon_locked>
+  <image>missions/14a_img.png</image>
+  <image_locked>missions/14a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Battle of Berlin. Part 1</text>
+   <text lang="pl">Operacja berlińska. Część I</text>
+  </name>
+  <introduction>
+   <text lang="en">In April 1945 1st Fighter Regiment "Warszawa" of Polish People's Army was dislocated to the Baranówko Airfield to fight in the Battle of Berlin. On the April 19th 1945 second lieutenant Wiesław Bobrowski took off his Yak-9 to cover 1st Polish Army crossing Oder river. Watch out for enemy aircrafts that could threaten land forces.</text>
+   <text lang="pl">W kwietniu 1945 roku 1 Pułk Lotnictwa Myśliwskiego "Warszawa" Ludowego Wojska Polskiego został przebazowany na lotnisko Baranówko aby wziąć udział w walkach o Berlin. 19. kwietnia 1945 podporucznik Wiesław Bobrowski wystartował swoim Jakiem-9 aby osłaniać przeprawę 1 Armii Wojska Polskiego przez Odrę. Wypatruj wrogich maszyn mogących zagrozić wojskom lądowym.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to destroy enemy aircrafts. Try again.</text>
+   <text lang="pl">Nie udało ci się zniszczyć wrogich maszyn. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Congratulations. You have succeeded to destroy all enemy aircrafts. On April 19th 1945 1st Fighter Regiment "Warszawa" scored its first aerial victory. Second lieutenant Wiesław Bobrowski shot down German Fw 190 fighter, regiment pilots shot down 4 more German aircrafts on this day.</text>
+   <text lang="pl">Gratulacje. Udało ci się zniszczyć wrogie samoloty. 19. kwietnia 1945 1 Pułk Lotnictwa Myśliwskiego "Warszawa" zaliczył swoje pierwsze zwycięstwo. Podporucznik Wiesław Bobrowski zestrzelił niemiecki myśliwiec Fw 190, piloci pułku zestrzelili tego dnia łącznie 5 niemieckich maszyn.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/yak9.xml</file>
+    <position>0 0 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/yak9_llwp_1945_68.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_r">
+    <offset>100 100 0</offset>
+    <file>entities/yak9.xml</file>
+    <position>-100 -100 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/yak9_llwp_1945.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_l">
+    <offset>100 -100 0</offset>
+    <file>entities/yak9.xml</file>
+    <position>-100 100 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/yak9_llwp_1945.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" name="ally_1c">
+    <file>entities/yak9.xml</file>
+    <position>-400 0 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/yak9_llwp_1945.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="ally_1c" name="ally_1r">
+    <offset>100 100 0</offset>
+    <file>entities/yak9.xml</file>
+    <position>-500 -100 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/yak9_llwp_1945.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="ally_1c" name="ally_1l">
+    <offset>100 -100 0</offset>
+    <file>entities/yak9.xml</file>
+    <position>-500 100 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/yak9_llwp_1945.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <fighter route="fighters" hp="100" name="fighter_1cf">
+    <file>entities/fw190a.xml</file>
+    <position>9000 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_1cf" name="fighter_1lf">
+    <offset>100 -100 0</offset>
+    <file>entities/fw190a.xml</file>
+    <position>9100 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" name="fighter_1cm">
+    <file>entities/fw190a.xml</file>
+    <position>9500 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_1cm" name="fighter_1lm">
+    <offset>100 -100 0</offset>
+    <file>entities/fw190a.xml</file>
+    <position>9600 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" name="fighter_2cf">
+    <file>entities/fw190a.xml</file>
+    <position>9000 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_2cf" name="fighter_2lf">
+    <offset>100 -100 0</offset>
+    <file>entities/fw190a.xml</file>
+    <position>9100 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" name="fighter_2cm">
+    <file>entities/fw190a.xml</file>
+    <position>9500 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_2cm" name="fighter_2lm">
+    <offset>100 -100 0</offset>
+    <file>entities/fw190a.xml</file>
+    <position>9600 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>2000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>4000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>6000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>8000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>10000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>12000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+  </route>
+  <route name="fighters">
+   <waypoint>
+    <position>6000 -3000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -3000 305</position>
+    <speed>129</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <init_units>
+    <unit name="wingman_l"/>
+    <unit name="wingman_r"/>
+    <unit name="ally_1c"/>
+    <unit name="ally_1l"/>
+    <unit name="ally_1r"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Patrol area near Oder River crossing.</text>
+      <text lang="pl">Patroluj okolice przeprawy przez Odrę.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Fighters 1">
+   <init_units>
+    <unit name="fighter_1cf"/>
+    <unit name="fighter_1lf"/>
+    <unit name="fighter_1cm"/>
+    <unit name="fighter_1lm"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy fighters at 2 o'clock.</text>
+      <text lang="pl">Wrogie myśliwce na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="fighter_1cf"/>
+     <unit name="fighter_1lf"/>
+     <unit name="fighter_1cm"/>
+     <unit name="fighter_1lm"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Timeout 1">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Fighters 2">
+   <init_units>
+    <unit name="fighter_2cf"/>
+    <unit name="fighter_2lf"/>
+    <unit name="fighter_2cm"/>
+    <unit name="fighter_2lm"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">More enemy fighters incoming.</text>
+      <text lang="pl">Nadlatuje więcej myśliwców wroga.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="fighter_2cf"/>
+     <unit name="fighter_2lf"/>
+     <unit name="fighter_2cm"/>
+     <unit name="fighter_2lm"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

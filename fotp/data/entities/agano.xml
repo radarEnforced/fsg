@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/agano.osgb</model>
+  <ap>1000</ap>
+  <radius>25</radius>
+  <gunners>
+    <gunner_flak>    0.0  0.0  10.0 </gunner_flak>
+    <gunner_front> -50.0  0.0  10.0 </gunner_front>
+    <gunner_back>   50.0  0.0  10.0 </gunner_back>
+  </gunners>
+</unit>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/13a_ico.png</icon>
+  <icon_locked>missions/13a_ico_locked.png</icon_locked>
+  <image>missions/13a_img.png</image>
+  <image_locked>missions/13a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Intercept Bombers from Guam</text>
+   <text lang="pl">Przechwyć bombowce z Guam</text>
+  </name>
+  <introduction>
+   <text lang="en">On June 19th 1944, during the battle of the Philippine Sea, F6F Hellcats were dispatched from the USS Belleau Wood to deal with Japanese aircrafts from Orote Airfield at the Guam island, threatening Task Force 58.</text>
+   <text lang="pl">19 czerwca 1944, podczas bitwy na Morzu Filipińskim, myśliwce F6F Hellcats wystartowały z lotniskowca USS Belleau Wood aby rozprawić się z japońskimi samolotami z lotniska Orote na wyspie Guam zagrażającymi Task Force 58.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy aircrafts and defend Task Force 58. Try again.</text>
+   <text lang="pl">Nie udało ci zestrzelić wrogich samolotów i obronić Task Force 58.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Great job. You have defended ships of Task Force 58. But the battle is not over yet.</text>
+   <text lang="pl">Dobra robota. Udało ci się obronić okręty Task Force 58. Bitwa jednak się jeszcze nie skończyła.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/ocean.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_0.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/f6f.xml</file>
+    <position>0 14000 914</position>
+    <heading>180</heading>
+    <velocity>155</velocity>
+    <livery>entities/f6f_usn_1943.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_1">
+    <offset>100 100 0</offset>
+    <file>entities/f6f.xml</file>
+    <position>-100 14100 914</position>
+    <heading>180</heading>
+    <velocity>155</velocity>
+    <livery>entities/f6f_usn_1943.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="wingman_1" name="wingman_2">
+    <offset>0 -200 -50</offset>
+    <file>entities/f6f.xml</file>
+    <position>100 14100 914</position>
+    <heading>180</heading>
+    <velocity>155</velocity>
+    <livery>entities/f6f_usn_1943.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="wingman_1" name="wingman_3">
+    <offset>100 100 50</offset>
+    <file>entities/f6f.xml</file>
+    <position>-200 14200 914</position>
+    <heading>180</heading>
+    <velocity>155</velocity>
+    <livery>entities/f6f_usn_1943.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <bomber_dive route="bombers" hp="100" name="bomber_1_1">
+    <file>entities/d3a.xml</file>
+    <position>0 0 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_1_1" name="bomber_1_2">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>100 -100 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_1_2" name="bomber_1_3">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-100 -100 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_1_2" name="bomber_1_4">
+    <offset>100 100 50</offset>
+    <file>entities/d3a.xml</file>
+    <position>200 -200 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_1_4" name="bomber_1_5">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>300 -300 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_1_5" name="bomber_1_6">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>100 -300 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" name="bomber_2_1">
+    <file>entities/d3a.xml</file>
+    <position>0 0 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_2_1" name="bomber_2_2">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>100 -100 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_2_2" name="bomber_2_3">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-100 -100 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_2_3" name="bomber_2_4">
+    <offset>100 -100 50</offset>
+    <file>entities/d3a.xml</file>
+    <position>-200 -200 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_2_4" name="bomber_2_5">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-100 -300 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_2_5" name="bomber_2_6">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-300 -300 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" name="bomber_3_1">
+    <file>entities/d3a.xml</file>
+    <position>0 0 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_3_1" name="bomber_3_2">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>100 -100 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_3_2" name="bomber_3_3">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-100 -100 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_3_2" name="bomber_3_4">
+    <offset>100 100 50</offset>
+    <file>entities/d3a.xml</file>
+    <position>200 -200 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_3_4" name="bomber_3_5">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>300 -300 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_3_5" name="bomber_3_6">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>100 -300 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>0 12000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 10000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 8000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 6000 914</position>
+    <speed>155</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>0 10000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 26000 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <init_units>
+    <unit name="wingman_1"/>
+    <unit name="wingman_2"/>
+    <unit name="wingman_3"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Intercept incoming enemy aircrafts.</text>
+      <text lang="pl">Przechwyć nadlatujące samoloty wroga.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="30"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept">
+   <init_units>
+    <unit name="bomber_1_1"/>
+    <unit name="bomber_1_2"/>
+    <unit name="bomber_1_3"/>
+    <unit name="bomber_1_4"/>
+    <unit name="bomber_1_5"/>
+    <unit name="bomber_1_6"/>
+   </init_units>
+   <objectives>
+    <objective_timeout limit="45"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept">
+   <init_units>
+    <unit name="bomber_2_1"/>
+    <unit name="bomber_2_2"/>
+    <unit name="bomber_2_3"/>
+    <unit name="bomber_2_4"/>
+    <unit name="bomber_2_5"/>
+    <unit name="bomber_2_6"/>
+   </init_units>
+   <objectives>
+    <objective_timeout limit="45"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept">
+   <init_units>
+    <unit name="bomber_3_1"/>
+    <unit name="bomber_3_2"/>
+    <unit name="bomber_3_3"/>
+    <unit name="bomber_3_4"/>
+    <unit name="bomber_3_5"/>
+    <unit name="bomber_3_6"/>
+   </init_units>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1_1"/>
+     <unit name="bomber_1_2"/>
+     <unit name="bomber_1_3"/>
+     <unit name="bomber_1_4"/>
+     <unit name="bomber_1_5"/>
+     <unit name="bomber_1_6"/>
+     <unit name="bomber_2_1"/>
+     <unit name="bomber_2_2"/>
+     <unit name="bomber_2_3"/>
+     <unit name="bomber_2_4"/>
+     <unit name="bomber_2_5"/>
+     <unit name="bomber_2_6"/>
+     <unit name="bomber_3_1"/>
+     <unit name="bomber_3_2"/>
+     <unit name="bomber_3_3"/>
+     <unit name="bomber_3_4"/>
+     <unit name="bomber_3_5"/>
+     <unit name="bomber_3_6"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

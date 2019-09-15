@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/do17.osgb</model>
+  <ap>8</ap>
+  <radius>9.0</radius>
+  <gunners>
+    <gunner_rear>  -0.5  0.0   0.9 </gunner_rear>
+    <gunner_front> -5.4  0.0  -0.2 </gunner_front>
+  </gunners>
+  <aircraft>
+    <time_p>0.2</time_p>
+    <time_q>0.6</time_q>
+    <time_r>0.6</time_r>
+    <time_v>20.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>115.0</speed_max>
+    <roll_max>45.0</roll_max>
+  </aircraft>
+  <bomber_level>
+    <bomb hidden="1" model="entities/sc250.osgb"><position>  0.2  0.0 -1.2 </position></bomb>
+    <bomb hidden="1" model="entities/sc250.osgb"><position>  0.2  0.0 -1.2 </position></bomb>
+    <bomb hidden="1" model="entities/sc250.osgb"><position>  1.8  0.0 -1.2 </position></bomb>
+    <bomb hidden="1" model="entities/sc250.osgb"><position>  1.8  0.0 -1.2 </position></bomb>
+  </bomber_level>
+</unit>

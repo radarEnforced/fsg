@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/11a_ico.png</icon>
+  <icon_locked>missions/11a_ico_locked.png</icon_locked>
+  <image>missions/11a_img.png</image>
+  <image_locked>missions/11a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Poles in USAAF. Part 4. Ace of aces</text>
+   <text lang="pl">Polacy w USAAF, Część IV. Największy as</text>
+  </name>
+  <introduction>
+   <text lang="en">Pilots of the USAAF had ranking called the Ace Race. On June 1944 Francis Gabreski was at the top of that list with only two other pilot above him: Robert Johnson and Walker Mahurin.</text>
+   <text lang="pl">Piloci USAAF prowadzili ranking największej ilości zestrzeleń. W czerwcu 1944 roku Franciszek Gabreski był w czołówce tej listy, a przed nim było tylko dwóch innych pilotów: Robert  Johnson i Walker Mahurin. </text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy aircrafts. Try again.</text>
+   <text lang="pl">Niestety nie udało Ci się zestrzelić samolotów wroga. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">On July 5th 1944 Francis Gabreski shot 28th aircraft during his tour of duty. This was a record. On that day Francis Gabreski became the America's Greatest Living Ace. No ally pilot in Europe beat this score.</text>
+   <text lang="pl">5 lipca 1944 roku Franciszek Gabreski zestrzelił swoją 28 maszynę co było rekordem. Tego dnia został największym amerykańskim asem myśliwskim. Tego wyniku nie udało się pobić żadnemu pilotowi alianckiemu w Europie.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p47d.xml</file>
+    <position>0 0 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/p47d_usaaf_1944_stripes_hva.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends/>
+  <hostiles>
+   <fighter route="fighters" hp="100" name="fighter_1">
+    <file>entities/bf109.xml</file>
+    <position>9000 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" name="fighter_2">
+    <file>entities/bf109.xml</file>
+    <position>8900 2800 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>2000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>4000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>6000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>8000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>10000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>12000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+  </route>
+  <route name="fighters">
+   <waypoint>
+    <position>6000 -3000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -3000 305</position>
+    <speed>129</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <init_units/>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Patrol sky over Normandy.</text>
+      <text lang="pl">Patroluj niebo nad Normandią.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Incoming Fighters">
+   <init_units>
+    <unit name="fighter_1"/>
+   </init_units>
+   <message overlay="0">
+    <duration>3</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy fighters at 2 o'clock.</text>
+      <text lang="pl">Wrogie myśliwce na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Fighters">
+   <init_units>
+    <unit name="fighter_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>9</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy fighters at 2 o'clock.</text>
+      <text lang="pl">Wrogie myśliwce na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="fighter_1"/>
+     <unit name="fighter_2"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

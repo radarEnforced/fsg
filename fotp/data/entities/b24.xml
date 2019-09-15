@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/b24.osgb</model>
+  <ap>15</ap>
+  <radius>16.8</radius>
+  <gunners>
+    <gunner_back>  12.7  0.0 -0.2 </gunner_back>
+    <gunner_front> -8.4  0.0 -0.3 </gunner_front>
+    <gunner_front> -2.1  0.0  1.0 </gunner_front>
+    <gunner_left>   6.7 -1.1 -0.5 </gunner_left>
+    <gunner_right>  6.7  1.1 -0.5 </gunner_right>
+  </gunners>
+  <aircraft>
+    <time_p>0.2</time_p>
+    <time_q>0.7</time_q>
+    <time_r>0.7</time_r>
+    <time_v>30.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>250.0</speed_max>
+    <roll_max>30.0</roll_max>
+  </aircraft>
+  <bomber_level>
+    <bomb hidden="1" model="entities/anm59.osgb"><position> -0.7 -0.3 -2.8 </position></bomb>
+    <bomb hidden="1" model="entities/anm59.osgb"><position> -0.7  0.3 -2.8 </position></bomb>
+    <bomb hidden="1" model="entities/anm59.osgb"><position>  2.0 -0.3 -2.8 </position></bomb>
+    <bomb hidden="1" model="entities/anm59.osgb"><position>  2.0  0.3 -2.8 </position></bomb>
+  </bomber_level>
+</unit>

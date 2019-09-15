@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/13a_ico.png</icon>
+  <icon_locked>missions/13a_ico_locked.png</icon_locked>
+  <image>missions/13a_img.png</image>
+  <image_locked>missions/13a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Poles in USAAF. Part 5</text>
+   <text lang="pl">Polacy w USAAF, Część V</text>
+  </name>
+  <introduction>
+   <text lang="en">On September 17th 1944 operation "Market Garden", the allied attempt to seize bridges in Netherlands, was launched. 61st Fighter Squadron USAAF participated in aerial part of the operation.</text>
+   <text lang="pl">17 września 1944 roku rozpoczęła się operacja "Market Garden", aliancka próba zajęcia mostów w Holandii. 61. Dywizjon Myśliwski USAAF uczestniczył w lotniczej części operacji.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy aircrafts. Try again.</text>
+   <text lang="pl">Niestety nie udało ci się zestrzelić samolotów wroga. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded to destroy all the enemy aircrafts. On September 21st 1944 Bolesław Gładych shot down two German Bf 109 fighters over Arnhem. However operation "Market Garden" was unsuccessful. Arnhem remained in German hands.</text>
+   <text lang="pl">Udało ci się zestrzelić wszystkie wrogie samoloty. 21 września 1944 roku  Bolesław Gładych zestrzelił nad Arnhem dwa niemieckie myśliwce Bf 109. Jednakże operacja "Market Garden" zakończyła się niepowodzeniem. Arnhem pozostało w rękach niemieckich.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p47d.xml</file>
+    <position>0 0 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/p47d_usaaf_1944_stripes_hvm.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter hp="100" leader="ownship" name="wingman">
+    <offset>100 100 0</offset>
+    <file>entities/p47d.xml</file>
+    <position>-100 -100 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/p47d_usaaf_1944.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" name="ally_1">
+    <file>entities/p47d.xml</file>
+    <position>-500 0 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/p47d_usaaf_1944.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="ally_1" name="ally_2">
+    <offset>100 100 0</offset>
+    <file>entities/p47d.xml</file>
+    <position>-600 -100 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/p47d_usaaf_1944.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <fighter route="fighters" hp="100" name="fighter_1cf">
+    <file>entities/bf109.xml</file>
+    <position>9000 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_1cf" name="fighter_1lf">
+    <offset>100 -100 0</offset>
+    <file>entities/bf109.xml</file>
+    <position>9100 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" name="fighter_1cr">
+    <file>entities/bf109.xml</file>
+    <position>9500 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_1cr" name="fighter_1lr">
+    <offset>100 -100 0</offset>
+    <file>entities/bf109.xml</file>
+    <position>9600 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" name="fighter_2cf">
+    <file>entities/bf109.xml</file>
+    <position>9000 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_2cf" name="fighter_2lf">
+    <offset>100 -100 0</offset>
+    <file>entities/bf109.xml</file>
+    <position>9100 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" name="fighter_2cr">
+    <file>entities/bf109.xml</file>
+    <position>9500 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_2cr" name="fighter_2lr">
+    <offset>100 -100 0</offset>
+    <file>entities/bf109.xml</file>
+    <position>9600 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>2000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>4000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>6000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>8000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>10000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>12000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+  </route>
+  <route name="fighters">
+   <waypoint>
+    <position>6000 -3000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -3000 305</position>
+    <speed>129</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <init_units>
+    <unit name="wingman"/>
+    <unit name="ally_1"/>
+    <unit name="ally_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Patrol area around Arnhem.</text>
+      <text lang="pl">Patroluj okolice Arnhem.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Fighters 1">
+   <init_units>
+    <unit name="fighter_1cf"/>
+    <unit name="fighter_1lf"/>
+    <unit name="fighter_1cr"/>
+    <unit name="fighter_1lr"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy fighters at 2 o'clock.</text>
+      <text lang="pl">Wrogie myśliwce na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="fighter_1cf"/>
+     <unit name="fighter_1lf"/>
+     <unit name="fighter_1cr"/>
+     <unit name="fighter_1lr"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Timeout 1">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Fighters 2">
+   <init_units>
+    <unit name="fighter_2cf"/>
+    <unit name="fighter_2lf"/>
+    <unit name="fighter_2cr"/>
+    <unit name="fighter_2lr"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">More enemy fighters incoming.</text>
+      <text lang="pl">Nadlatuje więcej myśliwców wroga.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="fighter_2cf"/>
+     <unit name="fighter_2lf"/>
+     <unit name="fighter_2cr"/>
+     <unit name="fighter_2lr"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

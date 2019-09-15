@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/09b_ico.png</icon>
+  <icon_locked>missions/09b_ico_locked.png</icon_locked>
+  <image>missions/09b_img.png</image>
+  <image_locked>missions/09b_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Poles in USAAF. Part 3</text>
+   <text lang="pl">Polacy w USAAF, Część III</text>
+  </name>
+  <introduction>
+   <text lang="en">On May 22nd 1944 Polish pilots of the 61st Fighter Squadron fought over Lower Saxony in Germany.
+</text>
+   <text lang="pl">22 maja 1944 roku polscy piloci 61-go Dywizjonu Myśliwskiego USAAF toczyli walki nad Dolną Saksonią w Niemczech.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy aircrafts. Try again.</text>
+   <text lang="pl">Niestety nie udało ci się zestrzelić samolotów wroga. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">On May 22nd 1944, Witold Łanowski and Francis Gabreski of the 61st Fighter Squadron shot down four Focke-Wulfs Fw 190.</text>
+   <text lang="pl">22 maja 1944 roku Witold Łanowski i Franciszek Gabreski z 61-go Dywizjonu Myśliwskiego USAAF zestrzelili cztery Focke-Wulfy Fw 190.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_3.rgb</sky_dome>
+  <visibility>4800</visibility>
+  <sun_coef>0.8</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p47d.xml</file>
+    <position>0 0 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/p47d_usaaf_1944_hva.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter hp="100" leader="ownship" name="wingman">
+    <offset>100 100 0</offset>
+    <file>entities/p47d.xml</file>
+    <position>-100 -100 305</position>
+    <heading>90</heading>
+    <velocity>166</velocity>
+    <livery>entities/p47d_usaaf_1944.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <fighter route="fighters" hp="100" name="fighter_1c">
+    <file>entities/fw190a.xml</file>
+    <position>9000 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_1c" name="fighter_1l">
+    <offset>100 -100 0</offset>
+    <file>entities/fw190a.xml</file>
+    <position>9100 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" name="fighter_2c">
+    <file>entities/fw190a.xml</file>
+    <position>11000 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_2c" name="fighter_2l">
+    <offset>100 -100 0</offset>
+    <file>entities/fw190a.xml</file>
+    <position>11100 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>2000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>4000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>6000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>8000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>10000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>12000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+  </route>
+  <route name="fighters">
+   <waypoint>
+    <position>6000 -3000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -3000 305</position>
+    <speed>129</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <init_units>
+    <unit name="wingman"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Patrol sky over Lower Saxony.</text>
+      <text lang="pl">Patroluj niebo nad Dolną Saksonią.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Fighters 1">
+   <init_units>
+    <unit name="fighter_1c"/>
+    <unit name="fighter_1l"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy fighters at 2 o'clock.</text>
+      <text lang="pl">Wrogie myśliwce na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="fighter_1c"/>
+     <unit name="fighter_1l"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Timeout 1">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Fighters 2">
+   <init_units>
+    <unit name="fighter_2c"/>
+    <unit name="fighter_2l"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">More enemy fighters incoming.</text>
+      <text lang="pl">Nadlatuje więcej myśliwców wroga.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="fighter_2c"/>
+     <unit name="fighter_2l"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

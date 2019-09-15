@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/12a_ico.png</icon>
+  <icon_locked>missions/12a_ico_locked.png</icon_locked>
+  <image>missions/12a_img.png</image>
+  <image_locked>missions/12a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Intercept Flying Bombs</text>
+   <text lang="pl">Zniszcz bomby latające</text>
+  </name>
+  <introduction>
+   <text lang="en">In June 1944 German forces launched V-1 flying bombs offensive against London. Mustang, due to its high speed, was an excellent weapon against this missiles. Intercept all incoming V-1s.</text>
+   <text lang="pl">W czerwcu 1944 wojska niemieckie rozpoczęły ostrzał Londynu przy użyciu bomb latających V-1. Ze względu na wysoką prędkość Mustang był idealną bronią przeciwko tym pociskom. Przechwyć wszystkie nadlatujące V-1.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to destroy all V-1 flying bombs. Try again.</text>
+   <text lang="pl">Nie udało ci się zniszczyć wszystkich nadlatujących bomb V-1. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Great job. You have managed to destroy all the flying bombs. Flight sergeant Stanisław Rudowski of No. 306 Polish Fighter Squadron shot down 11 V-1s. All pilots of Polish Fighter Squadrons shot down 192 flying bombs.</text>
+   <text lang="pl">Dobra robota. Udało ci się zniszczyć wszystkie bomby latające V-1. Sierżant Stanisław Rudowski z Dywizjonu 306 zestrzelił 11 V-1, a wszyscy piloci polskich dywizjonów myśliwskich  łącznie 192.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_2.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p51c.xml</file>
+    <position>0 0 305</position>
+    <heading>180</heading>
+    <velocity>166</velocity>
+    <livery>entities/p51c_raf_1944_uzb.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends/>
+  <hostiles>
+   <aircraft route="bomb_1" hp="100" name="bomb_1">
+    <file>entities/v1.xml</file>
+    <position>-3000 -9000 305</position>
+    <heading>0</heading>
+    <velocity>180</velocity>
+    <livery>entities/v1_luftwaffe_1944.rgb</livery>
+   </aircraft>
+   <aircraft route="bomb_1" hp="100" name="bomb_2">
+    <file>entities/v1.xml</file>
+    <position>-3000 -10000 305</position>
+    <heading>0</heading>
+    <velocity>180</velocity>
+    <livery>entities/v1_luftwaffe_1944.rgb</livery>
+   </aircraft>
+   <aircraft route="bomb_2b" hp="100" name="bomb_2b">
+    <file>entities/v1.xml</file>
+    <position>-3500 -10500 305</position>
+    <heading>-1.5708</heading>
+    <velocity>180</velocity>
+    <livery>entities/v1_luftwaffe_1944.rgb</livery>
+   </aircraft>
+   <aircraft route="bomb_1" hp="100" name="bomb_3">
+    <file>entities/v1.xml</file>
+    <position>-3000 -3500 305</position>
+    <heading>-1.5708</heading>
+    <velocity>180</velocity>
+    <livery>entities/v1_luftwaffe_1944.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>0 -2000 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -4000 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -6000 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -8000 305</position>
+    <speed>166</speed>
+   </waypoint>
+  </route>
+  <route name="bomb_1">
+   <waypoint>
+    <position>-3000 0 305</position>
+    <speed>180</speed>
+   </waypoint>
+   <waypoint>
+    <position>-3000 10000 305</position>
+    <speed>180</speed>
+   </waypoint>
+  </route>
+  <route name="bomb_2b">
+   <waypoint>
+    <position>-3500 0 305</position>
+    <speed>180</speed>
+   </waypoint>
+   <waypoint>
+    <position>-3500 10000 305</position>
+    <speed>180</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <init_units/>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Patrol area south of London.</text>
+      <text lang="pl">Patroluj południowe okolice Londynu.</text>
+     </line>
+     <line>
+      <text lang="en">Watch for incoming V-1 flying bombs.</text>
+      <text lang="pl">Wypatruj zbliżających się bomb latających V-1.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept 1">
+   <init_units>
+    <unit name="bomb_1"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">V-1 at 2 o'clock.</text>
+      <text lang="pl">V-1 na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="18"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept 2">
+   <init_units>
+    <unit name="bomb_2"/>
+    <unit name="bomb_2b"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">More V-1s incoming.</text>
+      <text lang="pl">Nadlatuje więcej V-1.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="12"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy 1">
+   <time_limit>30</time_limit>
+   <init_units/>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomb_1"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Destroy 2">
+   <time_limit>60</time_limit>
+   <init_units/>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomb_2"/>
+     <unit name="bomb_2b"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Timeout">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept 3">
+   <time_limit>90</time_limit>
+   <init_units>
+    <unit name="bomb_3"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Another one V-1 incoming.</text>
+      <text lang="pl">Nadlatuje jeszcze jedna V-1.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomb_3"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

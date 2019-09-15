@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenery_list>
+  
+  <scenery name="Ocean">
+    <terrain>scenery/ocean.osgb</terrain>
+    <generic>scenery/ocean.osgb</generic>
+    <objects/>
+    <initial_position>0 0 0</initial_position>
+  </scenery>
+  
+  <scenery name="Grassland">
+    <terrain>scenery/grassland.osgb</terrain>
+    <generic>scenery/grassland.osgb</generic>
+    <objects/>
+    <initial_position>0 0 0</initial_position>
+  </scenery>
+  
+  <scenery name="Pearl Harbor">
+    <elevation>scenery/oahu_elevation.csv</elevation>
+    <terrain>scenery/oahu_terrain.osgb</terrain>
+    <generic>scenery/ocean.osgb</generic>
+    <objects>
+      <object>scenery/oahu_objects.osgb</object>
+      <object>scenery/oahu_fleet_attack.osgb</object>
+    </objects>
+    <initial_position>-1000 -12000 0</initial_position>
+  </scenery>
+  
+  <scenery name="Midway">
+    <elevation>scenery/midway_elevation.csv</elevation>
+    <terrain>scenery/midway_terrain.osgb</terrain>
+    <generic>scenery/ocean.osgb</generic>
+    <objects>
+      <object>scenery/midway_objects.osgb</object>
+    </objects>
+    <initial_position>0 0 0</initial_position>
+  </scenery>
+  
+  <scenery name="Guadalcanal">
+    <elevation>scenery/guadalcanal_elevation.csv</elevation>
+    <terrain>scenery/guadalcanal_terrain.osgb</terrain>
+    <generic>scenery/ocean.osgb</generic>
+    <objects>
+      <object>scenery/guadalcanal_objects.osgb</object>
+    </objects>
+    <initial_position>-20000 -5000 0</initial_position>
+  </scenery>
+  
+  <scenery name="Nggela">
+    <elevation>scenery/nggela_elevation.csv</elevation>
+    <terrain>scenery/nggela_terrain.osgb</terrain>
+    <generic>scenery/ocean.osgb</generic>
+    <objects/>
+    <initial_position>-10000 30000 0</initial_position>
+  </scenery>
+  
+</scenery_list>

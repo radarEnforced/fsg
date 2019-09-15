@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/12a_ico.png</icon>
+  <icon_locked>missions/12a_ico_locked.png</icon_locked>
+  <image>missions/12a_img.png</image>
+  <image_locked>missions/12a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Escort bombers attacking Xichang</text>
+   <text lang="pl">Eskortuj bombowce atakujące Xichang</text>
+  </name>
+  <introduction>
+   <text lang="en">On May 31st 1943 a patrol of P-40s of the Flying Tigers encountered a formation of B-24 bombers returning from raid on Japanese base at Xichang. Defend bombers from Japanese attacks.</text>
+   <text lang="pl">31 maja 1943 roku patrol myśliwców P-40 Latających Tygrysów napotkał formację bombowców B-24 powracających z bombardowania japońskiej bazy w Xichang. Obroń bombowce przed japońskim atakiem.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to defend bombers. Try again.</text>
+   <text lang="pl">Nie udało ci się obronić bombowców. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded to defend bombers.</text>
+   <text lang="pl">Udało ci się obronić bombowce.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p40.xml</file>
+    <position>0 -6000 300</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_avg_1941.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman">
+    <offset>150 -150 0</offset>
+    <file>entities/p40.xml</file>
+    <position>-150 -6150 300</position>
+    <heading>-1.5708</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_avg_1941.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="bomber_2" name="escort_1">
+    <offset>50 0 0</offset>
+    <file>entities/p40.xml</file>
+    <position>-50 -5760 330</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_avg_1941.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="bomber_3" name="escort_2">
+    <offset>50 0 0</offset>
+    <file>entities/p40.xml</file>
+    <position>50 -5760 330</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_avg_1941.rgb</livery>
+   </fighter>
+   <bomber_level route="ownship" hp="100" name="bomber_1">
+    <file>entities/b24.xml</file>
+    <position>0 -5600 300</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/b24_usaaf_1943_308bg.rgb</livery>
+   </bomber_level>
+   <bomber_level route="ownship" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>40 -50 30</offset>
+    <file>entities/b24.xml</file>
+    <position>-50 -5680 330</position>
+    <heading>-1.5708</heading>
+    <velocity>128</velocity>
+    <livery>entities/b24_usaaf_1943_308bg.rgb</livery>
+   </bomber_level>
+   <bomber_level route="ownship" hp="100" leader="bomber_1" name="bomber_3">
+    <offset>40 50 30</offset>
+    <file>entities/b24.xml</file>
+    <position>50 -5680 330</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/b24_usaaf_1943_308bg.rgb</livery>
+   </bomber_level>
+  </friends>
+  <hostiles>
+   <fighter hp="100" name="fighter_1c">
+    <file>entities/ki43.xml</file>
+    <position>-2500 2500 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_1c" name="fighter_1l">
+    <offset>50 -100 0</offset>
+    <file>entities/ki43.xml</file>
+    <position>-2550 2600 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_1c" name="fighter_1r">
+    <offset>50 100 0</offset>
+    <file>entities/ki43.xml</file>
+    <position>-2550 2400 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+   <fighter hp="100" name="fighter_2c">
+    <file>entities/ki43.xml</file>
+    <position>-2500 7500 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_2c" name="fighter_2l">
+    <offset>50 -100 0</offset>
+    <file>entities/ki43.xml</file>
+    <position>-2550 7600 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_2c" name="fighter_2r">
+    <offset>50 100 0</offset>
+    <file>entities/ki43.xml</file>
+    <position>-2550 7400 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>0 -4000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -2000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 0 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 2000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 6000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 40000 300</position>
+    <speed>128</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <init_units>
+    <unit name="wingman"/>
+    <unit name="escort_1"/>
+    <unit name="escort_2"/>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+    <unit name="bomber_3"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Escort bombers returning from</text>
+      <text lang="pl">Eskortuj bombowce powracające</text>
+     </line>
+     <line>
+      <text lang="en">Japanese base at Xichang.</text>
+      <text lang="pl">znad japońskiej bazy w Xichang.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+    <objective_defend minimum="3">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+    </objective_defend>
+   </objectives>
+  </stage>
+  <stage name="Defend bombers">
+   <init_units>
+    <unit name="fighter_1c"/>
+    <unit name="fighter_1l"/>
+    <unit name="fighter_1r"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Bandits at 10 o'clock.</text>
+      <text lang="pl">Bandyci na godzinie 10.</text>
+     </line>
+     <line>
+      <text lang="en">Defend bombers.</text>
+      <text lang="pl">Broń bombowców.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_defend minimum="3">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+    </objective_defend>
+    <objective_timeout limit="30"/>
+   </objectives>
+  </stage>
+  <stage name="Defend bombers">
+   <init_units>
+    <unit name="fighter_2c"/>
+    <unit name="fighter_2l"/>
+    <unit name="fighter_2r"/>
+   </init_units>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">More bandits incoming.</text>
+      <text lang="pl">Nadlatuje więcej myśliwców.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_defend minimum="3">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+    </objective_defend>
+    <objective_destroy>
+     <unit name="fighter_1c"/>
+     <unit name="fighter_1l"/>
+     <unit name="fighter_1r"/>
+     <unit name="fighter_2c"/>
+     <unit name="fighter_2l"/>
+     <unit name="fighter_2r"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+    <objective_defend minimum="3">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+    </objective_defend>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

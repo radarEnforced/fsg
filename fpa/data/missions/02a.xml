@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/02a_ico.png</icon>
+  <icon_locked>missions/02a_ico_locked.png</icon_locked>
+  <image>missions/02a_img.png</image>
+  <image_locked>missions/02a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Route Flying Training</text>
+   <text lang="pl">Trening lotu po trasie</text>
+  </name>
+  <introduction>
+   <text lang="en">It is time to practice your route flying skills. Fly your aircraft from the Mokotów Airfield to the Zielonka Fighter Strip. You have 3 minutes.</text>
+   <text lang="pl">Nadszedł czas aby przećwiczyć umiejętności lotu po trasie. Przeleć z lotniska mokotowskiego na lotnisko polowe w Zielonce. Masz na to 3 minuty.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to reach Zielonka Fighter Strip under 3 minutes. Route flying is an essential skill. Try again.</text>
+   <text lang="pl">Nie udało ci się dolecieć do lotniska w Zielonce w 3 minuty. Umiejętność lotu po wyznaczonej trasie jest niezbędna do kontynuowania twojego szkolenia. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Congratulations. You have succeeded to reach Zielonka Fighter Strip within time limit. Your route flying skill is good enough to proceed with further training.</text>
+   <text lang="pl">Gratulacje. Udało ci się dotrzeć do lotniska w Zielonce w wyznaczonym czasie. Twoje umiejętności są wystarczająco dobre aby kontynuować szkolenie.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/warsaw_elevation.csv</elevation>
+  <terrain>scenery/warsaw_terrain.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_4.rgb</sky_dome>
+  <visibility>4800</visibility>
+  <sun_coef>0.8</sun_coef>
+  <objects>
+   <object>scenery/warsaw_objects.osgb</object>
+  </objects>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p11.xml</file>
+    <position>-100 -2048 120</position>
+    <heading>90</heading>
+    <velocity>110</velocity>
+    <livery>entities/p11_lwrp_1939.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends/>
+  <hostiles/>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>2048 -2048 244</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>3298 -1713 244</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>4213 -798 244</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>4700 200 244</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>5549 1949 244</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>6399 3699 244</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>7249 5448 244</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>8099 7198 244</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>9014 8113 244</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>10264 8448 244</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>11264 8448 160</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>12600 8448 120</position>
+    <speed>110</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Route">
+   <time_limit>180</time_limit>
+   <init_units/>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Go to the Zielonka Fighter Strip.</text>
+      <text lang="pl">Leć na lotnisko polowe w Zielonce.</text>
+     </line>
+     <line>
+      <text lang="en"></text>
+      <text lang="pl"></text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="10"/>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

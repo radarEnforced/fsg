@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/02b_ico.png</icon>
+  <icon_locked>missions/02b_ico_locked.png</icon_locked>
+  <image>missions/02b_img.png</image>
+  <image_locked>missions/02b_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Gunnery Practice</text>
+   <text lang="pl">Ćwiczenia strzeleckie</text>
+  </name>
+  <introduction>
+   <text lang="en">Practice your shooting skills on the open sea. There are three stationary targets above ORP Grom. Try to destroy all of them. You have 1 minute.</text>
+   <text lang="pl">Przećwiczyć swoje umiejętności strzeleckie na otwartym morzu. Nad ORP Grom unoszą się trzy cele ćwiczebne. Postaraj się zniszczyć je wszystkie. Masz na to 1 minutę.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to destroy practice targets within time limit. Engaging targets is the most essential skill of every fighter pilot. It is not acceptable for a fighter pilot to be unable to shoot down its target. Try again.</text>
+   <text lang="pl">Nie udało ci się zniszczyć celów ćwiczebnych w wyznaczonym czasie. Atakowanie celów powietrznych jest jedną z kluczowych umiejętności każdego myśliwca. Nie do zaakceptowania jest aby pilot myśliwca nie był w stanie zestrzelić celu. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You are doing fine. You have managed to destroy all practice targets. You can proceed with your training.</text>
+   <text lang="pl">Idzie ci świetnie. Zdołałeś zniszczyć wszystkie cele ćwiczebne. Możesz kontynuować swoje szkolenie.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/ocean.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_3.rgb</sky_dome>
+  <visibility>6400</visibility>
+  <sun_coef>0.9</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" hp="100" name="ownship">
+    <file>entities/p11.xml</file>
+    <position>0 -2000 91</position>
+    <heading>0</heading>
+    <velocity>70</velocity>
+    <livery>entities/p11_lwrp_1939.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <warship hp="100" name="grom">
+    <file>entities/grom.xml</file>
+    <position>0 0 0</position>
+    <heading>90</heading>
+   </warship>
+  </friends>
+  <hostiles>
+   <balloon hp="100" name="target_1">
+    <file>entities/balloon.xml</file>
+    <position>-50 0 88</position>
+    <heading>93</heading>
+   </balloon>
+   <balloon hp="100" name="target_2">
+    <file>entities/balloon.xml</file>
+    <position>0 0 91</position>
+    <heading>90</heading>
+   </balloon>
+   <balloon hp="100" name="target_3">
+    <file>entities/balloon.xml</file>
+    <position>50 0 90</position>
+    <heading>87</heading>
+   </balloon>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes/>
+ <stages>
+  <stage name="Destroy targets">
+   <time_limit>60</time_limit>
+   <init_units>
+    <unit name="grom"/>
+    <unit name="target_1"/>
+    <unit name="target_2"/>
+    <unit name="target_3"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Shoot down all the practice targets.</text>
+      <text lang="pl">Zestrzel wszystkie cele ćwiczebne.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="target_1"/>
+     <unit name="target_2"/>
+     <unit name="target_3"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="1">
+ <data>
+  <icon>missions/01a_ico.png</icon>
+  <icon_locked>missions/01a_ico_locked.png</icon_locked>
+  <image>missions/01a_img.png</image>
+  <image_locked>missions/01a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Tutorial</text>
+   <text lang="pl">Samouczek</text>
+  </name>
+  <introduction>
+   <text lang="en">In this  fighter aircraft flying course you will learn how to control your aircraft attitude, position and speed as well as basic weapons handling.</text>
+   <text lang="pl">W trakcie tego kursu pilotażu myśliwca nauczysz się jak kontrolować położenie, prędkość i orientację przestrzenną twojego samolotu, a także poznasz podstawy obsługi uzbrojenia.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to finish fighter aircraft flying course. Don't worry it is not mandatory. You can start campaign now or try again. You can also go back to this tutorial at any time.</text>
+   <text lang="pl">Nie udało ci się ukończyć kursu pilotażu myśliwca. Nie przejmuj się nie jest on obowiązkowy. Możesz już rozpocząć kampanię lub spróbować ponownie. Będziesz mógł powrócić do tego kursy w każdej chwili.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Congratulations. You have finished fighter aircraft flying course. You have learned how to control your aircraft attitude, position and speed as well as basic weapons handling. You are now ready to start your career as fighter pilot.</text>
+   <text lang="pl">Gratulacje. Udało ci się ukończyć kurs pilotażu samolotu myśliwskiego. Teraz potrafisz kontrolować  położenie, prędkość i orientację przestrzenną twojego samolotu, a także obsługiwać uzbrojenie. Możesz teraz rozpocząć karierę pilota myśliwskiego.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/ocean.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/at6.xml</file>
+    <position>0 0 305</position>
+    <heading>90</heading>
+    <velocity>73</velocity>
+    <livery>entities/at6_usaaf_1941.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <warship hp="100" name="farragut">
+    <file>entities/farragut.xml</file>
+    <position>-5000 6000 0</position>
+    <heading>90</heading>
+   </warship>
+  </friends>
+  <hostiles>
+   <balloon hp="100" name="balloon">
+    <file>entities/balloon.xml</file>
+    <position>-5000 6000 91</position>
+    <heading>90</heading>
+   </balloon>
+   <aircraft route="radioplane" hp="100" name="radioplane">
+    <file>entities/oq2.xml</file>
+    <position>-5500 11500 152</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/oq2_1941.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>-2000 0 305</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-3000 0 305</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-4000 268 305</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-4732 1000 305</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-5000 2000 305</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-5000 8000 152</position>
+    <speed>95</speed>
+   </waypoint>
+  </route>
+  <route name="radioplane">
+   <waypoint>
+    <position>-10000 20000 152</position>
+    <speed>77</speed>
+   </waypoint>
+   <waypoint>
+    <position>10000 20000 152</position>
+    <speed>77</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Initial Stage">
+   <init_units/>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">In this lesson you will learn how to control</text>
+      <text lang="pl">W trakcie tej lekcji nauczysz się kontrolować</text>
+     </line>
+     <line>
+      <text lang="en">aircraft attitude and airspeed.</text>
+      <text lang="pl">położenie, prędkość i orientację przestrzenną.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="6"/>
+   </objectives>
+  </stage>
+  <stage name="Turn Left">
+   <init_units/>
+   <message overlay="0" tutorial_tip="1">
+    <duration>3600</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Bank the aircraft left to perform a turn.</text>
+      <text lang="pl">Przechyl samolot w lewo aby wykonać zakręt.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_heading above="40" below="50"/>
+   </objectives>
+  </stage>
+  <stage name="Turn Right">
+   <init_units/>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">OK. That's enough.</text>
+      <text lang="pl">OK. Tyle wystarczy.</text>
+     </line>
+    </caption>
+   </message>
+   <message overlay="0" tutorial_tip="2">
+    <duration>60</duration>
+    <delay>6</delay>
+    <caption>
+     <line>
+      <text lang="en">Now do the same in the opposite direction.</text>
+      <text lang="pl">Teraz zrób to samo ale w przeciwnym kierunku.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_heading above="85" below="95"/>
+   </objectives>
+  </stage>
+  <stage name="Pitch Up">
+   <init_units/>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Great job.</text>
+      <text lang="pl">Świetna robota.</text>
+     </line>
+    </caption>
+   </message>
+   <message pointer_custom="1" overlay="0" tutorial_tip="3">
+    <duration>60</duration>
+    <delay>6</delay>
+    <caption>
+     <line>
+      <text lang="en">Pitch up and climb to 1,500 feet.</text>
+      <text lang="pl">Zadrzyj nos i wznieś się na 1.500 stóp.</text>
+     </line>
+     <line>
+      <text lang="en">Watch your altimeter during the climb.</text>
+      <text lang="pl">Podczas wznoszenie obserwój wysokościomierz.</text>
+     </line>
+    </caption>
+    <pointer_custom>
+     <x>66</x>
+     <y>-55</y>
+     <phi>-135</phi>
+    </pointer_custom>
+   </message>
+   <objectives>
+    <objective_altitude above="457" below="5000"/>
+   </objectives>
+  </stage>
+  <stage name="Pitch Down">
+   <init_units/>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">OK. That's enough.</text>
+      <text lang="pl">OK. Tyle wystarczy.</text>
+     </line>
+    </caption>
+   </message>
+   <message pointer_custom="1" overlay="0" tutorial_tip="4">
+    <duration>60</duration>
+    <delay>6</delay>
+    <caption>
+     <line>
+      <text lang="en">Now pitch down and descend to 1,000 feet.</text>
+      <text lang="pl">Teraz opuść nos i zejdź na 1.000 stóp.</text>
+     </line>
+    </caption>
+    <pointer_custom>
+     <x>66</x>
+     <y>-55</y>
+     <phi>-135</phi>
+    </pointer_custom>
+   </message>
+   <objectives>
+    <objective_altitude above="0" below="305"/>
+   </objectives>
+  </stage>
+  <stage name="Maintain 1,000 ft">
+   <init_units/>
+   <message overlay="0">
+    <duration>60</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Maintain 1,000 feet.</text>
+      <text lang="pl">Utrzymuj 1.000 stóp.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_altitude above="302" below="313"/>
+    <objective_timeout limit="6"/>
+   </objectives>
+  </stage>
+  <stage name="Speed Up">
+   <init_units/>
+   <message pointer_custom="1" overlay="0" pointer_rpm_inc="1">
+    <duration>60</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Move throttle up to increase your speed.</text>
+      <text lang="pl">Przesuń przepustnicę do góry aby przyspieszyć.</text>
+     </line>
+     <line>
+      <text lang="en">Watch your airspeed indicator.</text>
+      <text lang="pl">Obserwuj prędkościomierz.</text>
+     </line>
+    </caption>
+    <pointer_custom>
+     <x>-32</x>
+     <y>-65</y>
+     <phi>-225</phi>
+    </pointer_custom>
+   </message>
+   <objectives>
+    <objective_airspeed above="83" below="300"/>
+   </objectives>
+  </stage>
+  <stage name="Speed Down">
+   <init_units/>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Well done.</text>
+      <text lang="pl">Dobra robota.</text>
+     </line>
+    </caption>
+   </message>
+   <message pointer_custom="1" overlay="0" pointer_rpm_dec="1">
+    <duration>60</duration>
+    <delay>6</delay>
+    <caption>
+     <line>
+      <text lang="en">Now move throttle all the way down.</text>
+      <text lang="pl">Teraz ustaw przepustnicę na minimum.</text>
+     </line>
+     <line>
+      <text lang="en">to reduce your speed.</text>
+      <text lang="pl"></text>
+     </line>
+    </caption>
+    <pointer_custom>
+     <x>-32</x>
+     <y>-65</y>
+     <phi>-225</phi>
+    </pointer_custom>
+   </message>
+   <objectives>
+    <objective_airspeed above="0" below="72"/>
+   </objectives>
+  </stage>
+  <stage name="Practice">
+   <init_units>
+    <unit name="farragut"/>
+   </init_units>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">OK.</text>
+      <text lang="pl">OK.</text>
+     </line>
+    </caption>
+   </message>
+   <message overlay="0" tutorial_tip="-1">
+    <duration>12</duration>
+    <delay>6</delay>
+    <caption>
+     <line>
+      <text lang="en">Now practice your skills</text>
+      <text lang="pl">Przećwicz nabyte umiejętności wykonując lot</text>
+     </line>
+     <line>
+      <text lang="en">by flying through a series of waypoints.</text>
+      <text lang="pl">po trasie złożonej z serii bramek.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="4"/>
+   </objectives>
+  </stage>
+  <stage name="Engaging Aerial Targets">
+   <init_units>
+    <unit name="balloon"/>
+   </init_units>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">So far so good.</text>
+      <text lang="pl">Póki co idzie ci świetnie.</text>
+     </line>
+    </caption>
+   </message>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>6</delay>
+    <caption>
+     <line>
+      <text lang="en">Let's go to the second lesson.</text>
+      <text lang="pl">Przejdźmi do drugiej lekcji.</text>
+     </line>
+    </caption>
+   </message>
+   <message overlay="0" pointer_target="1" pointer_trigger="1">
+    <duration>12</duration>
+    <delay>12</delay>
+    <caption>
+     <line>
+      <text lang="en">Try to shoot down this practice target.</text>
+      <text lang="pl">Spróbuj zestrzelić ten cel ćwiczebny.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="balloon"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Next Waypoint">
+   <init_units/>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Great job.</text>
+      <text lang="pl">Świetna robota.</text>
+     </line>
+    </caption>
+   </message>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>6</delay>
+    <caption>
+     <line>
+      <text lang="en">Fly to the next waypoint.</text>
+      <text lang="pl">Leć do następnej bramki.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="5"/>
+   </objectives>
+  </stage>
+  <stage name="Engaging Aerial Targets">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="radioplane"/>
+   </init_units>
+   <message overlay="0" pointer_target="1" pointer_trigger="1">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Engaging moving targets is more difficult.</text>
+      <text lang="pl">Atakowanie ruchomych celów jest trudniejsze.</text>
+     </line>
+     <line>
+      <text lang="en">Try to shoot down this radio controlled plane.</text>
+      <text lang="pl">Spróbuj zniszczyć ten zdalnie sterowany samolot.</text>
+     </line>
+    </caption>
+   </message>
+   <message overlay="0" pointer_target="1" pointer_trigger="1">
+    <duration>3600</duration>
+    <delay>12</delay>
+    <caption>
+     <line>
+      <text lang="en">You have to aim ahead of the target.</text>
+      <text lang="pl">Musisz celować przed niego.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="radioplane"/>
+    </objective_destroy>
+    <objective_timeout limit="10"/>
+   </objectives>
+  </stage>
+  <stage name="Closing Stage">
+   <init_units/>
+   <message overlay="0">
+    <duration>3600</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">You have finished this course.</text>
+      <text lang="pl">Udało ci się ukończyć ten kurs.</text>
+     </line>
+     <line>
+      <text lang="en">Congratulations.</text>
+      <text lang="pl">Gratulacje.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="10"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

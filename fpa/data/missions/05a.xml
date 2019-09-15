@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/05a_ico.png</icon>
+  <icon_locked>missions/05a_ico_locked.png</icon_locked>
+  <image>missions/05a_img.png</image>
+  <image_locked>missions/05a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Battle of Britain. Part 1</text>
+   <text lang="pl">Bitwa o Anglię. Część I</text>
+  </name>
+  <introduction>
+   <text lang="en">After the collapse of France in 1940, Polish Air Force contingent was withdrawn to the United Kingdom. Polish pilot Witold Urbanowicz was assigned to No. 601 Squadron RAF. On August 12th 1940 Urbanowicz took off his Hurricane and flew on a patrol mission.</text>
+   <text lang="pl">Po upadku Francji w 1940 roku kontyngent polskich sił powietrznych został wycofany do Wielkiej Brytanii. Polski pilot Witold Urbanowicz został przydzielony do 145. Dywizjonu RAF. 8 sierpnia 1940 roku Urbanowicz wystartował swoim Hurricanem na misję patrolową.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy aircrafts. Try again.</text>
+   <text lang="pl">Niestety nie udało Ci się zestrzelić niemieckich samolotów. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have accomplished the mission. On August 8th 1940 Witold Urbanowicz, just 4 days after joining squadron, shot down first enemy aircraft, few days later, on August 12th, he shot down another one. On August 21st he was transfered to No. 303 Polish Fighter Squadron and became flight commander for "A" team. </text>
+   <text lang="pl">Udało Ci się ukończyć misje. 8 sierpnia 1940 roku, zaledwie 4 dni po dołączeniu do dywizjonu, Witold Urbanowicz zestrzelił pierwszy wrogi samolot, a kilka dni później, 12 sierpnia, kolejny. 21 sierpnia, został przeniesiony do polskiego Dywizjonu 303 gdzie objął dowództwo eskadry "A".</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/seuk_elevation.csv</elevation>
+  <terrain>scenery/seuk_terrain.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_4.rgb</sky_dome>
+  <visibility>4800</visibility>
+  <sun_coef>0.8</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/hurricane.xml</file>
+    <position>50000 -11300 305</position>
+    <heading>180</heading>
+    <velocity>134</velocity>
+    <livery>entities/hurricane_raf_1940_sot.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends/>
+  <hostiles>
+   <aircraft route="bombers" hp="100" name="bomber_1">
+    <file>entities/ju88.xml</file>
+    <position>53000 -21000 305</position>
+    <heading>315</heading>
+    <velocity>129</velocity>
+    <livery>entities/ju88_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>50 50 0</offset>
+    <file>entities/ju88.xml</file>
+    <position>53050 -21000 305</position>
+    <heading>315</heading>
+    <velocity>129</velocity>
+    <livery>entities/ju88_luftwaffe_1939.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>50000 -12000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>50000 -14000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>50000 -16000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>50000 -18000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>50000 -20000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>49598 -21500 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>48500 -22598 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>47000 -23000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>45000 -23000 305</position>
+    <speed>134</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>50000 -11000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>43000 -11000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>33000 -1000 305</position>
+    <speed>129</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Enroute">
+   <init_units/>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Patrol area around Dover.</text>
+      <text lang="pl">Patroluj okolice Dover.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="3"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy">
+   <time_limit>300</time_limit>
+   <init_units>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy bombers at 10 o'clock.</text>
+      <text lang="pl">Wrogie bombowce na godzinie 10.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

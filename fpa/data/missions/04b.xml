@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/04b_ico.png</icon>
+  <icon_locked>missions/04b_ico_locked.png</icon_locked>
+  <image>missions/04b_img.png</image>
+  <image_locked>missions/04b_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Battle of France. Part 2</text>
+   <text lang="pl">Bitwa o Francję. Część II</text>
+  </name>
+  <introduction>
+   <text lang="en">On May 16th 1940 second lieutenant Władysław Gnyś of the Groupe de Chasse III/1 flew again to meet incoming German bombers.</text>
+   <text lang="pl">16 maja 1940 podporucznik Władysław Gnyś z Groupe de Chasse III/1 ponownie poleciał na spotkanie zbliżających się niemieckich bombowców.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy bombers. Try again.</text>
+   <text lang="pl">Niestety nie udało Ci się zestrzelić niemieckich samolotów. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have successfully destroyed all the enemy bombers. Polish pilots, fighting during Battle of France, scored 52 aerial victories.</text>
+   <text lang="pl">Udało ci się zniszczyć wszystkie wrogie bombowce. Polscy lotnicy walczący w bitwie o Francję zaliczyli łącznie 52 zwycięstwa w walce powietrznej.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_3.rgb</sky_dome>
+  <visibility>4800</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/ms406.xml</file>
+    <position>0 -6000 305</position>
+    <heading>0</heading>
+    <velocity>135</velocity>
+    <livery>entities/ms406_fr_1940_l979.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_1">
+    <offset>100 100 0</offset>
+    <file>entities/ms406.xml</file>
+    <position>50 -6050 305</position>
+    <heading>-1.5708</heading>
+    <velocity>135</velocity>
+    <livery>entities/ms406_fr_1940.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_2">
+    <offset>100 -100 0</offset>
+    <file>entities/ms406.xml</file>
+    <position>-50 -6050 305</position>
+    <heading>0</heading>
+    <velocity>135</velocity>
+    <livery>entities/ms406_fr_1940.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <aircraft route="bombers" hp="100" name="bomber_1c">
+    <file>entities/do17.xml</file>
+    <position>0 5500 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1c" name="bomber_1l">
+    <offset>100 -100 0</offset>
+    <file>entities/do17.xml</file>
+    <position>100 5600 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1c" name="bomber_1r">
+    <offset>100 100 0</offset>
+    <file>entities/do17.xml</file>
+    <position>-100 5600 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" name="bomber_2c">
+    <file>entities/do17.xml</file>
+    <position>0 5900 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_2c" name="bomber_2l">
+    <offset>100 -100 0</offset>
+    <file>entities/do17.xml</file>
+    <position>100 6000 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_2c" name="bomber_2r">
+    <offset>100 100 0</offset>
+    <file>entities/do17.xml</file>
+    <position>-100 6000 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>0 -4000 305</position>
+    <speed>135</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -2000 305</position>
+    <speed>135</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 0 305</position>
+    <speed>135</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 2000 305</position>
+    <speed>135</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>0 0 305</position>
+    <speed>77</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -10000 305</position>
+    <speed>77</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <init_units>
+    <unit name="wingman_1"/>
+    <unit name="wingman_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Intercept incoming bombers.</text>
+      <text lang="pl">Przechwyć nadlatujące bombowce.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy bombers">
+   <init_units>
+    <unit name="bomber_1c"/>
+    <unit name="bomber_1l"/>
+    <unit name="bomber_1r"/>
+    <unit name="bomber_2c"/>
+    <unit name="bomber_2l"/>
+    <unit name="bomber_2r"/>
+   </init_units>
+   <message overlay="0">
+    <duration>8</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy bombers at 12 o'clock.</text>
+      <text lang="pl">Wrogie bombowce na godzinie 12.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1c"/>
+     <unit name="bomber_1l"/>
+     <unit name="bomber_1r"/>
+     <unit name="bomber_2c"/>
+     <unit name="bomber_2l"/>
+     <unit name="bomber_2r"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

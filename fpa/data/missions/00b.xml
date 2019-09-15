@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/00_ico.png</icon>
+  <icon_locked>missions/00_ico_locked.png</icon_locked>
+  <image>missions/00_img.png</image>
+  <image_locked>missions/00_img_locked.png</image_locked>
+  <name>
+   <text lang="en">MISSION SCREENSHOT</text>
+   <text lang="pl">MISSION SCREENSHOT</text>
+  </name>
+  <introduction>
+   <text lang="en">INTRODUCTION EN</text>
+   <text lang="pl">INTRODUCTION PL</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">SUMMARY FAILURE EN</text>
+   <text lang="pl">SUMMARY FAILURE PL</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">SUMMARY SUCCESS EN</text>
+   <text lang="pl">SUMMARY SUCCESS PL</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation></elevation>
+  <terrain>scenery/desert.osgb</terrain>
+  <generic>scenery/desert.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" hp="100" name="ownship">
+    <file>entities/spitfire.xml</file>
+    <position>0 0 305</position>
+    <heading>90</heading>
+    <velocity>50</velocity>
+    <livery>entities/spitfire_raf_1943_zx6.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends/>
+  <hostiles>
+   <aircraft hp="100" name="bomber_1">
+    <file>entities/ju88.xml</file>
+    <position>50 0 457</position>
+    <heading>90</heading>
+    <velocity>50</velocity>
+    <livery>entities/ju88_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft hp="100" name="bomber_2">
+    <file>entities/do17.xml</file>
+    <position>330 -20 457</position>
+    <heading>90</heading>
+    <velocity>50</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <fighter hp="100" name="fighter">
+    <file>entities/bf109.xml</file>
+    <position>50 0 305</position>
+    <heading>91</heading>
+    <velocity>50</velocity>
+    <livery>entities/bf109_luftwaffe_1943.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes/>
+ <stages>
+  <stage name="Stage 1">
+   <init_units>
+    <unit name="fighter"/>
+   </init_units>
+   <objectives>
+    <objective_timeout limit="5"/>
+   </objectives>
+  </stage>
+  <stage name="Stage 2">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3600"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/10a_ico.png</icon>
+  <icon_locked>missions/10a_ico_locked.png</icon_locked>
+  <image>missions/10a_img.png</image>
+  <image_locked>missions/10a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Operation Overlord</text>
+   <text lang="pl">Operacja Overlord</text>
+  </name>
+  <introduction>
+   <text lang="en">On April 6th 1944, Stanisław Skalski took command of the 133 Fighter Wing. On June 6th Operation Overlord, the allied invasion of Normandy, begun. Cover ground operations. Watch out for enemy aircrafts.</text>
+   <text lang="pl">6 kwietnia 1944 roku Stanisław Skalski objął dowództwo 133 Skrzydła Myśliwskiego RAF. 6 czerwca 1944 roku rozpoczęła się "Operacją Overlord", aliancka inwazja na Normandię. Osłaniaj działania wojsk lądowych. Wypatruj wrogich samolotów.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy aircrafts. Try again.</text>
+   <text lang="pl">Niestety nie udało Ci się zestrzelić samolotów wroga. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">June 24th, 1944 Stanisław Skalski shot down 2 Bf 109. For him it was last victory before handing over the command of 133 Fighter Wing on August 2nd.</text>
+   <text lang="pl">24 czerwca 1944 Skalski odniósł swoje ostatnie zwycięstwo powietrzne zestrzeliwując dwa samoloty Bf 109, 2 sierpnia przekazał dowództwo 133 Skrzydła Myśliwskiego.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_2.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p51c.xml</file>
+    <position>0 0 305</position>
+    <heading>90</heading>
+    <velocity>170</velocity>
+    <livery>entities/p51c_raf_1944_ss.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter hp="100" leader="ownship" name="wingman">
+    <offset>100 100 0</offset>
+    <file>entities/p51c.xml</file>
+    <position>-100 -100 305</position>
+    <heading>90</heading>
+    <velocity>170</velocity>
+    <livery>entities/p51c_raf_1944_stripes.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <fighter route="fighters" hp="100" name="fighter_1c">
+    <file>entities/bf109.xml</file>
+    <position>9000 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_1c" name="fighter_1l">
+    <offset>100 -100 0</offset>
+    <file>entities/bf109.xml</file>
+    <position>9100 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" name="fighter_2c">
+    <file>entities/bf109.xml</file>
+    <position>11000 -3000 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="fighter_2c" name="fighter_2l">
+    <offset>100 -100 0</offset>
+    <file>entities/bf109.xml</file>
+    <position>11100 -3100 305</position>
+    <heading>270</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>2000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>4000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>6000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>8000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>10000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+   <waypoint>
+    <position>12000 0 305</position>
+    <speed>166</speed>
+   </waypoint>
+  </route>
+  <route name="fighters">
+   <waypoint>
+    <position>6000 -3000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -3000 305</position>
+    <speed>129</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <init_units>
+    <unit name="wingman"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Patrol sky over Normandy.</text>
+      <text lang="pl">Patroluj niebo nad Normandią.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Fighters 1">
+   <init_units>
+    <unit name="fighter_1c"/>
+    <unit name="fighter_1l"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy fighters at 2 o'clock.</text>
+      <text lang="pl">Wrogie myśliwce na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="fighter_1c"/>
+     <unit name="fighter_1l"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Timeout 1">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Fighters 2">
+   <init_units>
+    <unit name="fighter_2c"/>
+    <unit name="fighter_2l"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">More enemy fighters incoming.</text>
+      <text lang="pl">Nadlatuje więcej myśliwców wroga.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="fighter_2c"/>
+     <unit name="fighter_2l"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

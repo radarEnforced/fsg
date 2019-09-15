@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/03b_ico.png</icon>
+  <icon_locked>missions/03b_ico_locked.png</icon_locked>
+  <image>missions/03b_img.png</image>
+  <image_locked>missions/03b_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Intercept Bombers over Barbers Point</text>
+   <text lang="pl">Przechwyć bombowce nad Barbers Point</text>
+  </name>
+  <introduction>
+   <text lang="en">Two P-40 fighter aircrafts took off from Haleiwa Fighter Strip during Japanese attack on Pearl Harbor. They flew south to defend the naval base from enemy bombers.</text>
+   <text lang="pl">Dwa myśliwce P-40 wystartowały z Haleiwa Fighter Strip podczas japońskiego ataku na Pearl Harbor. Poleciały na południe aby bronić bazy marynarki wojennej przed wrogimi bombowcami.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy bombers. Try again.</text>
+   <text lang="pl">Nie udało ci się zestrzelić wrogich bombowców. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Japanese attack was over in less than two hours. Over two thousand US sailors, soldiers and airmen were killed. Four battleships sunk, four more were heavily damaged, nearly two hundred aircrafts have been destroyed. War has begun.</text>
+   <text lang="pl">Japoński atak trwał mniej niż dwie godziny. Ponad dwa tysiące amerykańskich marynarzy, żołnierzy i lotników straciło życie. Cztery pancerniki zostały zatopione, a cztery kolejne poważnie uszkodzone. Rozpoczęła się wojna.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/oahu_elevation.csv</elevation>
+  <terrain>scenery/oahu_terrain.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects>
+   <object>scenery/oahu_objects.osgb</object>
+   <object>scenery/oahu_fleet_attack.osgb</object>
+  </objects>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p40.xml</file>
+    <position>-7205 1768 290</position>
+    <heading>135</heading>
+    <velocity>160</velocity>
+    <livery>entities/p40_usaaf_1941_160.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman">
+    <offset>100 100 0</offset>
+    <file>entities/p40.xml</file>
+    <position>-7305 1768 290</position>
+    <heading>135</heading>
+    <velocity>160</velocity>
+    <livery>entities/p40_usaaf_1941_155.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <aircraft route="bombers" hp="100" name="bomber_1">
+    <file>entities/d3a.xml</file>
+    <position>-1165 -11000 914</position>
+    <heading>225</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1941.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-1165 -10900 914</position>
+    <heading>225</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1941.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_2" name="bomber_3">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-1065 -11000 914</position>
+    <heading>225</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1941.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="bombers">
+   <waypoint>
+    <position>-18000 -15000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 -11000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-30000 -1000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-30000 20000 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+  <route name="ownship">
+   <waypoint>
+    <position>-6200 770 350</position>
+    <speed>160</speed>
+   </waypoint>
+   <waypoint>
+    <position>-4200 -1200 550</position>
+    <speed>160</speed>
+   </waypoint>
+   <waypoint>
+    <position>-2200 -3200 750</position>
+    <speed>160</speed>
+   </waypoint>
+   <waypoint>
+    <position>-1165 -4993 914</position>
+    <speed>160</speed>
+   </waypoint>
+   <waypoint>
+    <position>-1165 -7064 914</position>
+    <speed>160</speed>
+   </waypoint>
+   <waypoint>
+    <position>-1165 -9000 914</position>
+    <speed>160</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Fly to Pearl Harbor">
+   <init_units>
+    <unit name="wingman"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Pearl Harbor is under attack.</text>
+      <text lang="pl">Pearl Harbor jest atakowane.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="4"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept bombers">
+   <init_units>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+    <unit name="bomber_3"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Intercept bombers attacking Pearl Harbor.</text>
+      <text lang="pl">Przechwyć bombowce atakujące Pearl Harbor.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

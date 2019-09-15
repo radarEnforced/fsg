@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/d4y.osgb</model>
+  <ap>5</ap>
+  <radius>5.8</radius>
+  <gunners>
+    <gunner_rear>2.0 0.0 1.1</gunner_rear>
+  </gunners>
+  <aircraft>
+    <time_p>0.1</time_p>
+    <time_q>0.6</time_q>
+    <time_r>0.6</time_r>
+    <time_v>10.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>160.0</speed_max>
+    <roll_max>72.0</roll_max>
+  </aircraft>
+  <bomber_dive>
+    <bomb model="entities/type99.osgb"><position>0.5 0.0 -0.9</position></bomb>
+  </bomber_dive>
+</unit>

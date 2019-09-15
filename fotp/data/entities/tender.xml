@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/tender.osgb</model>
+  <ap>200</ap>
+  <radius>12</radius>
+  <gunners>
+    <gunner>  -40.0   0.0  12.0  </gunner>
+    <gunner>   60.0   0.0  10.0  </gunner>
+  </gunners>
+</unit>

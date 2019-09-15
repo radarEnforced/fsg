@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/09c_ico.png</icon>
+  <icon_locked>missions/09c_ico_locked.png</icon_locked>
+  <image>missions/09c_img.png</image>
+  <image_locked>missions/09c_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Defend Tulagi Harbor</text>
+   <text lang="pl">Obrona zatoki Tulagi</text>
+  </name>
+  <introduction>
+   <text lang="en">On April 7th 1943 Japanese launched aerial attack against Tulagi harbor. There were only four Wildcats which stood up against this attack.</text>
+   <text lang="pl">7 kwietnia 1943 roku Japończycy wysłali samoloty aby zaatakować zatokę Tulagi. Tylko 4 myśliwce Wildcat przeciwstawiły się temu atakowi.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to defend ships in Tulagi harbor. Try again.</text>
+   <text lang="pl">Nie udało ci się obronić okrętów w zatoce Tulagi. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have successfully destroyed all the enemy bombers.</text>
+   <text lang="pl">Udało ci się zniszczyć wszystkie wrogie bombowce.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/nggela_elevation.csv</elevation>
+  <terrain>scenery/nggela_terrain.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_3.rgb</sky_dome>
+  <visibility>6400</visibility>
+  <sun_coef>0.9</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/f4f.xml</file>
+    <position>-31000 30000 914</position>
+    <heading>90</heading>
+    <velocity>155</velocity>
+    <livery>entities/f4f_usn_1942_77.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_1">
+    <offset>100 100 0</offset>
+    <file>entities/f4f.xml</file>
+    <position>-31100 29900 914</position>
+    <heading>90</heading>
+    <velocity>155</velocity>
+    <livery>entities/f4f_usn_1942.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_2">
+    <offset>100 -100 0</offset>
+    <file>entities/f4f.xml</file>
+    <position>-31100 30100 914</position>
+    <heading>90</heading>
+    <velocity>155</velocity>
+    <livery>entities/f4f_usn_1942.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="wingman_2" name="wingman_3">
+    <offset>100 -100 0</offset>
+    <file>entities/f4f.xml</file>
+    <position>-31200 30200 914</position>
+    <heading>90</heading>
+    <velocity>155</velocity>
+    <livery>entities/f4f_usn_1942.rgb</livery>
+   </fighter>
+   <warship hp="100" name="ship_1">
+    <file>entities/farragut.xml</file>
+    <position>-9000 31000 0</position>
+    <heading>135</heading>
+   </warship>
+   <warship hp="100" name="ship_2">
+    <file>entities/farragut.xml</file>
+    <position>-9200 30800 0</position>
+    <heading>120</heading>
+   </warship>
+  </friends>
+  <hostiles>
+   <bomber_dive route="bombers_l" hp="100" name="bomber_1_1">
+    <file>entities/d3a.xml</file>
+    <position>-26000 33000 914</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_l" hp="100" leader="bomber_1_1" name="bomber_1_2">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-26100 32900 914</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_l" hp="100" leader="bomber_1_2" name="bomber_1_3">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-26100 33100 914</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_l" hp="100" leader="bomber_1_2" name="bomber_1_4">
+    <offset>100 100 50</offset>
+    <file>entities/d3a.xml</file>
+    <position>-26200 32800 914</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_l" hp="100" leader="bomber_1_4" name="bomber_1_5">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-26300 32700 914</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_l" hp="100" leader="bomber_1_5" name="bomber_1_6">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-26300 32900 914</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_h" hp="100" name="bomber_2_1">
+    <file>entities/d3a.xml</file>
+    <position>-26100 33100 1006</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_h" hp="100" leader="bomber_2_1" name="bomber_2_2">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-26200 33000 1006</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_h" hp="100" leader="bomber_2_2" name="bomber_2_3">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-26200 33200 1006</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_h" hp="100" leader="bomber_2_3" name="bomber_2_4">
+    <offset>100 -100 -50</offset>
+    <file>entities/d3a.xml</file>
+    <position>-26300 33300 1006</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_h" hp="100" leader="bomber_2_4" name="bomber_2_5">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-26400 33200 1006</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_h" hp="100" leader="bomber_2_5" name="bomber_2_6">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-26400 33400 1006</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>-30000 30000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-28000 30000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-26000 30000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-24000 30000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-22000 30000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 30000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-18000 30000 914</position>
+    <speed>155</speed>
+   </waypoint>
+  </route>
+  <route name="bombers_l">
+   <waypoint>
+    <position>-24000 31000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-9000 31000 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+  <route name="bombers_h">
+   <waypoint>
+    <position>-24000 31100 1006</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-9000 31100 1006</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <init_units>
+    <unit name="wingman_1"/>
+    <unit name="wingman_2"/>
+    <unit name="wingman_3"/>
+    <unit name="ship_1"/>
+    <unit name="ship_2"/>
+   </init_units>
+   <objectives>
+    <objective_timeout limit="12"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept">
+   <init_units>
+    <unit name="bomber_1_1"/>
+    <unit name="bomber_1_2"/>
+    <unit name="bomber_1_3"/>
+    <unit name="bomber_1_4"/>
+    <unit name="bomber_1_5"/>
+    <unit name="bomber_1_6"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy aircrafts formation at 10 o'clock.</text>
+      <text lang="pl">Formacja wrogich samolotów na godzinie 10.</text>
+     </line>
+     <line>
+      <text lang="en">They are flying towards Tulagi harbor.</text>
+      <text lang="pl">Lecą w kierunku zatoki Tulagi.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="45"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept">
+   <init_units>
+    <unit name="bomber_2_1"/>
+    <unit name="bomber_2_2"/>
+    <unit name="bomber_2_3"/>
+    <unit name="bomber_2_4"/>
+    <unit name="bomber_2_5"/>
+    <unit name="bomber_2_6"/>
+   </init_units>
+   <objectives>
+    <objective_defend minimum="2">
+     <unit name="ship_1"/>
+     <unit name="ship_2"/>
+    </objective_defend>
+    <objective_destroy>
+     <unit name="bomber_1_1"/>
+     <unit name="bomber_1_2"/>
+     <unit name="bomber_1_3"/>
+     <unit name="bomber_1_4"/>
+     <unit name="bomber_1_5"/>
+     <unit name="bomber_1_6"/>
+     <unit name="bomber_2_1"/>
+     <unit name="bomber_2_2"/>
+     <unit name="bomber_2_3"/>
+     <unit name="bomber_2_4"/>
+     <unit name="bomber_2_5"/>
+     <unit name="bomber_2_6"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

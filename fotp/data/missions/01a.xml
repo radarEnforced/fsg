@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/02a_ico.png</icon>
+  <icon_locked>missions/02a_ico_locked.png</icon_locked>
+  <image>missions/02a_img.png</image>
+  <image_locked>missions/02a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Route Flying Training</text>
+   <text lang="pl">Trening lotu po trasie</text>
+  </name>
+  <introduction>
+   <text lang="en">It is time to practice your route flying skills. Fly your aircraft from Haleiwa Fighter Strip to the Wheeler Army Airfield on Oahu island of Hawaii. Don't miss any waypoint. You have 4 minutes.</text>
+   <text lang="pl">Nadszedł czas aby przećwiczyć umiejętności lotu po trasie. Przeleć z lotniska polowego Haleiwa na lotnisko armii Wheeler na wyspie Oahu archipelagu Hawajów. Masz na to 4 minuty.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to reach Wheeler Army Airfield under 4 minutes. Route flying is an essential skill. Try again.</text>
+   <text lang="pl">Nie udało ci się dolecieć do lotniska Wheeler w 4 minuty. Umiejętność lotu po wyznaczonej trasie jest niezbędna do kontynuowania twojego szkolenia. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Congratulations. You have succeed to reach Wheeler Army Airfield within time limit. Your route flying skill is good enough to proceed with further training.</text>
+   <text lang="pl">Gratulacje. Udało ci się dotrzeć do lotniska Wheeler w wyznaczonym czasie. Twoje umiejętności są wystarczająco dobre aby kontynuować szkolenie.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/oahu_elevation.csv</elevation>
+  <terrain>scenery/oahu_terrain.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_4.rgb</sky_dome>
+  <visibility>4800</visibility>
+  <sun_coef>0.8</sun_coef>
+  <objects>
+   <object>scenery/oahu_objects.osgb</object>
+   <object>scenery/oahu_fleet.osgb</object>
+  </objects>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/at6.xml</file>
+    <position>-14500 13600 20</position>
+    <heading>225</heading>
+    <velocity>95</velocity>
+    <livery>entities/at6_usaaf_1941.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends/>
+  <hostiles/>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>-16000 12100 152</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-16259 11652 152</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-16259 11134 152</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-16125 10634 152</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-15759 10268 152</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-14000 8700 457</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-11000 6000 457</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-10000 5000 390</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-9741 4552 390</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-9741 4034 390</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-9741 3000 390</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-9607 2500 390</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-9241 2134 390</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-8741 2000 390</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-8000 1850 330</position>
+    <speed>95</speed>
+   </waypoint>
+   <waypoint>
+    <position>-6000 1850 305</position>
+    <speed>95</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Route">
+   <time_limit>240</time_limit>
+   <init_units/>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Go to the Wheeler Airfield.</text>
+      <text lang="pl">Leć na lotnisko Wheeler.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="14"/>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

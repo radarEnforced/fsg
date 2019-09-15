@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/16b_ico.png</icon>
+  <icon_locked>missions/16b_ico_locked.png</icon_locked>
+  <image>missions/16b_img.png</image>
+  <image_locked>missions/16b_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Defend USS Laffey</text>
+   <text lang="pl">Obrona USS Laffey</text>
+  </name>
+  <introduction>
+   <text lang="en">On April 16th 1945 Japanese launched massive kamikaze attack against USS Laffey. Defend heavily damaged destroyer.</text>
+   <text lang="pl">16 kwietnia 1945 roku Japończycy przeprowadzili samobójcze ataki kamikaze na USS Laffey. Broń ciężko uszkodzonego niszczyciela.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to defend USS Laffey from kamikaze attack. Try again.</text>
+   <text lang="pl">Nie udało ci się obronić USS Laffey przed atakami kamikaze. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded to defend USS Laffey from kamikaze attack.</text>
+   <text lang="pl">Udało ci się obronić USS Laffey przed atakami kamikaze.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/ocean.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" hp="100" name="ownship">
+    <file>entities/f4u.xml</file>
+    <position>-2000 0 91</position>
+    <heading>90</heading>
+    <velocity>200</velocity>
+    <livery>entities/f4u_usn_1944.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter hp="100" leader="ownship" name="wingman">
+    <offset>100 100 0</offset>
+    <file>entities/f4u.xml</file>
+    <position>-2100 -100 91</position>
+    <heading>90</heading>
+    <velocity>200</velocity>
+    <livery>entities/f4u_usn_1944.rgb</livery>
+   </fighter>
+   <warship hp="49" name="ship_1">
+    <file>entities/fletcher.xml</file>
+    <position>0 0 0</position>
+    <heading>315</heading>
+   </warship>
+  </friends>
+  <hostiles>
+   <kamikaze route="kamikaze" hp="100" name="kamikaze_1l">
+    <file>entities/ki43.xml</file>
+    <position>5500 0 305</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </kamikaze>
+   <kamikaze route="kamikaze" hp="100" leader="kamikaze_1l" name="kamikaze_1w">
+    <offset>100 100 0</offset>
+    <file>entities/ki43.xml</file>
+    <position>5600 100 305</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </kamikaze>
+   <kamikaze route="kamikaze" hp="100" name="kamikaze_2l">
+    <file>entities/d3a.xml</file>
+    <position>7500 0 305</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </kamikaze>
+   <kamikaze route="kamikaze" hp="100" leader="kamikaze_2l" name="kamikaze_2w">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>7600 100 305</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </kamikaze>
+   <kamikaze route="kamikaze" hp="100" name="kamikaze_3l">
+    <file>entities/d4y.xml</file>
+    <position>9500 1000 305</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d4y_ijn_1943.rgb</livery>
+   </kamikaze>
+   <kamikaze route="kamikaze" hp="100" leader="kamikaze_3l" name="kamikaze_3w">
+    <offset>100 100 0</offset>
+    <file>entities/d4y.xml</file>
+    <position>9600 1100 305</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d4y_ijn_1943.rgb</livery>
+   </kamikaze>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="kamikaze">
+   <waypoint>
+    <position>3000 0 305</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-3000 0 305</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <init_units>
+    <unit name="wingman"/>
+    <unit name="ship_1"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Defend USS Laffey</text>
+      <text lang="pl">Broń USS Laffey</text>
+     </line>
+     <line>
+      <text lang="en">from kamikaze attacks.</text>
+      <text lang="pl">przed atakami kamikaze.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="12"/>
+   </objectives>
+  </stage>
+  <stage name="Defend">
+   <init_units>
+    <unit name="kamikaze_1l"/>
+    <unit name="kamikaze_1w"/>
+    <unit name="kamikaze_2l"/>
+    <unit name="kamikaze_2w"/>
+    <unit name="kamikaze_3l"/>
+    <unit name="kamikaze_3w"/>
+   </init_units>
+   <objectives>
+    <objective_defend minimum="1">
+     <unit name="ship_1"/>
+    </objective_defend>
+    <objective_destroy>
+     <unit name="kamikaze_1l"/>
+     <unit name="kamikaze_1w"/>
+     <unit name="kamikaze_2l"/>
+     <unit name="kamikaze_2w"/>
+     <unit name="kamikaze_3l"/>
+     <unit name="kamikaze_3w"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_defend minimum="1">
+     <unit name="ship_1"/>
+    </objective_defend>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

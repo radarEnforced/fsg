@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/03a_ico.png</icon>
+  <icon_locked>missions/03a_ico_locked.png</icon_locked>
+  <image>missions/03a_img.png</image>
+  <image_locked>missions/03a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Intercept Bombers over Kaena Point</text>
+   <text lang="pl">Przechwyć bombowce nad Kaena Point</text>
+  </name>
+  <introduction>
+   <text lang="en">Japanese aircrafts attacked Pearl Harbor naval base on the morning of December 7th 1941. Among very few US fighter aircrafts resisting this attack, there were two P-36 heading Kaena Point.</text>
+   <text lang="pl">Rankiem 7 grudnia 1941 japońskie samoloty zaatakowały bazę marynarki wojennej w Pearl Harbor. Pośród bardzo nielicznych amerykańskich myśliwców odpierających atak były dwa P-36 kierujące się w stronę Kaena Point.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy bombers. Try again.</text>
+   <text lang="pl">Nie udało ci się zniszczyć wrogich bombowców. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have shot down enemy bombers. But the japanese attack is not over yet. More enemy aircrafts are incoming.</text>
+   <text lang="pl">Zestrzeliłeś bombowce nieprzyjaciela ale japoński atak jeszcze się nie skończył. Nadlatuje więcej wrogich samolotów.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/oahu_elevation.csv</elevation>
+  <terrain>scenery/oahu_terrain.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_2.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects>
+   <object>scenery/oahu_objects.osgb</object>
+   <object>scenery/oahu_fleet_attack.osgb</object>
+  </objects>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p36.xml</file>
+    <position>-14300 13800 30</position>
+    <heading>225</heading>
+    <velocity>140</velocity>
+    <livery>entities/p36_usaaf_1941_2.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman">
+    <offset>100 100 0</offset>
+    <file>entities/p36.xml</file>
+    <position>-14300 13900 30</position>
+    <heading>225</heading>
+    <velocity>140</velocity>
+    <livery>entities/p36_usaaf_1941_86.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <aircraft route="bombers" hp="100" name="bomber_1">
+    <file>entities/b5n.xml</file>
+    <position>-32000 10500 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/b5n_ijn_1941_soryu.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>100 100 0</offset>
+    <file>entities/b5n.xml</file>
+    <position>-31950 10450 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/b5n_ijn_1941_soryu.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>-15300 12800 92</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-17093 11765 247</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-19164 11765 401</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-23000 11765 689</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-26000 11765 914</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-29000 11765 914</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-32000 11765 914</position>
+    <speed>140</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>-32000 13000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-37000 18000 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="wingman"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Pearl Harbor is under attack.</text>
+      <text lang="pl">Pearl Harbor jest atakowane.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="5"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept bombers">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy bombers at 10 o'clock.</text>
+      <text lang="pl">Wrogie bombowce na godzinie 10.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

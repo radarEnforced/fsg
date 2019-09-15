@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<units>
+
+  <aerial>
+    
+    <unit unlock_mission="0">
+      <name>
+        <text lang="en">B-17 Flying Fortress</text>
+        <text lang="pl">B-17 Flying Fortress</text>
+      </name>
+      <file>entities/b17.xml</file>
+      <icon>entities/b17.png</icon>
+      <icon_locked>entities/b17_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Army Air Forces 1944">entities/b17_usaaf_1944.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/b17_usaaf_1944.rgb</texture>
+        <distance>50</distance>
+        <heading>45</heading>
+        <offset_x>4</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Bomber</text>
+          <text lang="pl">bombowiec</text>
+        </role>
+        <manufacturer>Boeing</manufacturer>
+        <first_flight>1935-07-28</first_flight>
+        <introduction>1968</introduction>
+        <retired>1945</retired>
+        <number_built>12,731</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>10</crew>
+        <length>22.66 m</length>
+        <wingspan>31.62 m</wingspan>
+        <height>5.82 m</height>
+        <mtow>29,700 kg</mtow>
+        <max_speed>462 km/h</max_speed>
+        <range>3,220 km</range>
+        <powerplant>
+          <text lang="en">4x Pratt &#038; Whitney R-1820 Cyclone 1,200 HP air-cooled radial piston engine</text>
+          <text lang="pl">4 silniki gwiazdowe Pratt &#038; Whitney R-1820 Cyclone o mocy 1200 KM każdy</text>
+        </powerplant>
+        <armament>
+          <text lang="en">13x .50-inch M2 Browning machine guns, 3,600 kg of bombs</text>
+          <text lang="pl">13 karabinów maszynowych M2 Browning kalibru 12,7mm, 3600 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit unlock_mission="0">
+      <name>
+        <text lang="en">B-25 Mitchell</text>
+        <text lang="pl">B-25 Mitchell</text>
+      </name>
+      <file>entities/b25.xml</file>
+      <icon>entities/b25.png</icon>
+      <icon_locked>entities/b25_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Army Air Forces 1943">entities/b25_usaaf_1943.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/b25_usaaf_1943.rgb</texture>
+        <distance>35</distance>
+        <heading>45</heading>
+        <offset_x>2</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Bomber</text>
+          <text lang="pl">bombowiec</text>
+        </role>
+        <manufacturer>North American Aviation</manufacturer>
+        <first_flight>1940-08-19</first_flight>
+        <introduction>1941</introduction>
+        <retired>1960</retired>
+        <number_built>9,816</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>6</crew>
+        <length>16.1 m</length>
+        <wingspan>20.6 m</wingspan>
+        <height>5.0 m</height>
+        <mtow>15,910 kg</mtow>
+        <max_speed>438 km/h</max_speed>
+        <range>2,175 km</range>
+        <powerplant>
+          <text lang="en">2x Wright R-2600-92 Twin Cyclone 1,900 HP radial piston engine</text>
+          <text lang="pl">2 silniki gwiazdowe Wright R-2600-92 Twin Cyclone o mocy 1900 KM każdy</text>
+        </powerplant>
+        <armament>
+          <text lang="en">12x .50-inch M2 Browning machine guns, 1,360 kg of bombs</text>
+          <text lang="pl">13 karabinów maszynowych M2 Browning kalibru 12,7mm, 1360 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">Bf 109</text>
+        <text lang="pl">Bf 109</text>
+      </name>
+      <file>entities/bf109.xml</file>
+      <icon>entities/bf109.png</icon>
+      <icon_locked>entities/bf109_locked.png</icon_locked>
+      <liveries>
+        <livery name="Luftwaffe 1939">entities/bf109_luftwaffe_1939.rgb</livery>
+        <livery name="Luftwaffe 1940">entities/bf109_luftwaffe_1940.rgb</livery>
+        <livery name="Luftwaffe 1943 (North Africa)">entities/bf109_luftwaffe_1943.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/bf109_luftwaffe_1940.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>1.3</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Messerschmitt</manufacturer>
+        <first_flight>1935-05-29</first_flight>
+        <introduction>1937</introduction>
+        <retired>1965</retired>
+        <number_built>33,984</number_built>
+        <primary_user>Luftwaffe</primary_user>
+        <crew>1 pilot</crew>
+        <length>8.95 m</length>
+        <wingspan>9.92 m</wingspan>
+        <height>2.60 m</height>
+        <mtow>3,400 kg</mtow>
+        <max_speed>640 km/h</max_speed>
+        <range>850 km</range>
+        <powerplant>
+          <text lang="en">Daimler-Benz DB 601A 1,175 HP V12 engine</text>
+          <text lang="pl">Silnik V12 Daimler-Benz DB 601A o mocy 1175 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">3x 20mm MG FF cannon, 2x 7.92mm MG 17 machine guns, 250kg bombs</text>
+          <text lang="pl">3 działka MG FF kalibru 20mm, 2 karabiny maszynowe MG 17 kalibru 7,92mm, 250 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">Bf 110</text>
+        <text lang="pl">Bf 110</text>
+      </name>
+      <file>entities/bf110.xml</file>
+      <icon>entities/bf110.png</icon>
+      <icon_locked>entities/bf110_locked.png</icon_locked>
+      <liveries>
+        <livery name="Luftwaffe 1939">entities/bf110_luftwaffe_1939.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/bf110_luftwaffe_1939.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>2.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Heavy fighter</text>
+          <text lang="pl">ciężki myśliwiec</text>
+        </role>
+        <manufacturer>Messerschmitt</manufacturer>
+        <first_flight>1936-05-12</first_flight>
+        <introduction>1937</introduction>
+        <retired>1945</retired>
+        <number_built>6,170</number_built>
+        <primary_user>Luftwaffe</primary_user>
+        <crew>2</crew>
+        <length>12.3 m</length>
+        <wingspan>16.3 m</wingspan>
+        <height>3.3 m</height>
+        <mtow>6,750 kg</mtow>
+        <max_speed>595 km/h</max_speed>
+        <range>900 km</range>
+        <powerplant>
+          <text lang="en">2x Daimler-Benz DB 601B 1,455 HP V12 engine</text>
+          <text lang="pl">2 silniki V12 Daimler-Benz DB 601B o mocy 1455 KM każdy</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x 20mm MG 151 cannon, 4x 7.92mm MG 17 machine guns, 1x 7.92mm MG 81Z machine gun in rear cockpit</text>
+          <text lang="pl">2 działka MG 151 kalibru 20mm, 4 karabiny maszynowe MG 17 kalibru 7,92mm, karabin maszynowy MG 17 kalibru 7,92mm w tylniej kabinie</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" unlock_mission="0">
+      <name>
+        <text lang="en">Do 17</text>
+        <text lang="pl">Do 17</text>
+      </name>
+      <file>entities/do17.xml</file>
+      <icon>entities/do17.png</icon>
+      <icon_locked>entities/do17_locked.png</icon_locked>
+      <liveries>
+        <livery name="Luftwaffe 1939">entities/do17_luftwaffe_1939.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/do17_luftwaffe_1939.rgb</texture>
+        <distance>30</distance>
+        <heading>45</heading>
+        <offset_x>2.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Bomber</text>
+          <text lang="pl">bombowiec</text>
+        </role>
+        <manufacturer>Dornier Flugzeugwerke</manufacturer>
+        <first_flight>1934-11-23</first_flight>
+        <introduction>1937</introduction>
+        <retired>1945</retired>
+        <number_built>2,139</number_built>
+        <primary_user>Luftwaffe</primary_user>
+        <crew>4</crew>
+        <length>15.8 m</length>
+        <wingspan>18.0 m</wingspan>
+        <height>4.6 m</height>
+        <mtow>5,210 kg</mtow>
+        <max_speed>410 km/h</max_speed>
+        <range>1,010 km</range>
+        <powerplant>
+          <text lang="en">2x Bramo 323P 986 HP air-cooled radial engine</text>
+          <text lang="pl">2 silniki gwiazdowe Bramo 323P o mocy 986 KM każdy</text>
+        </powerplant>
+        <armament>
+          <text lang="en">6x 7.92mm MG 15 machine gun, 1,000 kg of bombs</text>
+          <text lang="pl">6 karabinów maszynowych MG 17 kalibru 7,92mm, 1000 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">Fw 190 "Wurger"</text>
+        <text lang="pl">Fw 190 "Wurger"</text>
+      </name>
+      <file>entities/fw190a.xml</file>
+      <icon>entities/fw190a.png</icon>
+      <icon_locked>entities/fw190a_locked.png</icon_locked>
+      <liveries>
+        <livery name="Luftwaffe 1942">entities/fw190a_luftwaffe_1942.rgb</livery>
+        <livery name="Luftwaffe 1944">entities/fw190a_luftwaffe_1944.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/fw190a_luftwaffe_1944.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Focke-Wulf Flugzeugbau</manufacturer>
+        <first_flight>1939-06-01</first_flight>
+        <introduction>1941</introduction>
+        <retired>1945</retired>
+        <number_built>33,984</number_built>
+        <primary_user>Luftwaffe</primary_user>
+        <crew>1 pilot</crew>
+        <length>9.00 m</length>
+        <wingspan>10.51 m</wingspan>
+        <height>3.95 m</height>
+        <mtow>4,900 kg</mtow>
+        <max_speed>655 km/h</max_speed>
+        <range>800 km</range>
+        <powerplant>
+          <text lang="en">BMW 801 D-2 1,677 HP air-cooled radial engine</text>
+          <text lang="pl">Silnik gwiazdowy BMW 801 D-2 o mocy 1677 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">4x 20mm MG 151 cannon, 2x 13mm MG 131 machine gun</text>
+          <text lang="pl">4 działka MG 151 kalibru 20mm, 2 karabiny maszynowe MG 131 kalibru 13mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" unlock_mission="0">
+      <name>
+        <text lang="en">He 111</text>
+        <text lang="pl">He 111</text>
+      </name>
+      <file>entities/he111.xml</file>
+      <icon>entities/he111.png</icon>
+      <icon_locked>entities/he111_locked.png</icon_locked>
+      <liveries>
+        <livery name="Luftwaffe 1939">entities/he111_luftwaffe_1939.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/he111_luftwaffe_1939.rgb</texture>
+        <distance>35</distance>
+        <heading>45</heading>
+        <offset_x>4</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Bomber</text>
+          <text lang="pl">bombowiec</text>
+        </role>
+        <manufacturer>Heinkel Flugzeugwerke</manufacturer>
+        <first_flight>1935-02-24</first_flight>
+        <introduction>1935</introduction>
+        <retired>1945</retired>
+        <number_built>5,656</number_built>
+        <primary_user>Luftwaffe</primary_user>
+        <crew>5</crew>
+        <length>16.4 m</length>
+        <wingspan>22.6 m</wingspan>
+        <height>4.0 m</height>
+        <mtow>12,030 kg</mtow>
+        <max_speed>440 km/h</max_speed>
+        <range>2,300 km</range>
+        <powerplant>
+          <text lang="en">2x Jumo 211F-1 or 211F-2 1,300 HP V12 engines</text>
+          <text lang="pl">2 silniki V12 Jumo 211F-1 lub 211F-2 o mocy 1300 KM każdy</text>
+        </powerplant>
+        <armament>
+          <text lang="en">7x 7.92mm MG 15 machine gun, 1x 13mm MG 131 machine gun, 1x 20mm MG FF cannon, 2,000 kg of bombs</text>
+          <text lang="pl">7 karabinów maszynowych MG 15 kalibru 7,92mm, 1 karabin maszynowy MG 131 kalibru 13mm, 1 działko MG FF kalibru 20mm, 2000 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">Hurricane</text>
+        <text lang="pl">Hurricane</text>
+      </name>
+      <file>entities/hurricane.xml</file>
+      <icon>entities/hurricane.png</icon>
+      <icon_locked>entities/hurricane_locked.png</icon_locked>
+      <liveries>
+        <livery name="Royal Air Force 1940">entities/hurricane_raf_1940.rgb</livery>
+        <livery name="Royal Air Force 1940 (Witold Urbanowicz SO-T)">entities/hurricane_raf_1940_sot.rgb</livery>
+        <livery name="Royal Air Force 1940 (Witold Urbanowicz RF-E)">entities/hurricane_raf_1940_rfe.rgb</livery>
+        <livery name="Royal Air Force 1940 (Witold Urbanowicz RF-F)">entities/hurricane_raf_1940_rff.rgb</livery>
+        <livery name="Royal Air Force 1940 (Ludwik Paszkiewicz)">entities/hurricane_raf_1940_rfv.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/hurricane_raf_1940_rff.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Hawker Aircraft</manufacturer>
+        <first_flight>1935-11-06</first_flight>
+        <introduction>1937</introduction>
+        <retired>1945</retired>
+        <number_built>14,583</number_built>
+        <primary_user>Royal Air Force</primary_user>
+        <crew>1 pilot</crew>
+        <length>9.84 m</length>
+        <wingspan>12.2 m</wingspan>
+        <height>4.0 m</height>
+        <mtow>3,950 kg</mtow>
+        <max_speed>547 km/h</max_speed>
+        <range>965 km</range>
+        <powerplant>
+          <text lang="en">Rolls-Royce Merlin 1,185 HP V12 engine</text>
+          <text lang="pl">Silnik V12 Rolls-Royce Merlin o mocy 1185 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">8x .303-inch Browning Mk II machine guns</text>
+          <text lang="pl">8 karabinów maszynowych Browning Mk II kalibru 7,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">Yak-9</text>
+        <text lang="pl">Jak-9</text>
+      </name>
+      <file>entities/yak9.xml</file>
+      <icon>entities/yak9.png</icon>
+      <icon_locked>entities/yak9_locked.png</icon_locked>
+      <liveries>
+        <livery name="Lotnictwo Ludowego Wojska Polskiego 1945">entities/yak9_llwp_1945.rgb</livery>
+        <livery name="Lotnictwo Ludowego Wojska Polskiego 1945 (Wiesław Bobrowski)">entities/yak9_llwp_1945_68.rgb</livery>
+        <livery name="Lotnictwo Ludowego Wojska Polskiego 1945 (Wiktor Kalinowski)">entities/yak9_llwp_1945_87.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/yak9_llwp_1945_87.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>1.2</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Yakovlev OKB</manufacturer>
+        <first_flight>1942</first_flight>
+        <introduction>1942</introduction>
+        <retired>1956</retired>
+        <number_built>16,769</number_built>
+        <primary_user>Voyenno Vozdushnye Sily</primary_user>
+        <crew>1 pilot</crew>
+        <length>8.55 m</length>
+        <wingspan>9.74 m</wingspan>
+        <height>3.00 m</height>
+        <mtow>3,174 kg</mtow>
+        <max_speed>591 km/h</max_speed>
+        <range>1,360 km</range>
+        <powerplant>
+          <text lang="en">Klimov BK-105 PF 1,180 HP V12 engine</text>
+          <text lang="pl">Silnik V12 Klimov BK-105 PF o mocy 1180 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x 20mm ShVAK cannons, 4x 12.7mm UBS machine guns</text>
+          <text lang="pl">2 działka SzWAK kalibru 20mm, 4 karabiny maszynowe OBS kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" unlock_mission="0">
+      <name>
+        <text lang="en">Ju 88</text>
+        <text lang="pl">Ju 88</text>
+      </name>
+      <file>entities/ju88.xml</file>
+      <icon>entities/ju88.png</icon>
+      <icon_locked>entities/ju88_locked.png</icon_locked>
+      <liveries>
+        <livery name="Luftwaffe 1939">entities/ju88_luftwaffe_1939.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/ju88_luftwaffe_1939.rgb</texture>
+        <distance>30</distance>
+        <heading>45</heading>
+        <offset_x>3</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Bomber</text>
+          <text lang="pl">bombowiec</text>
+        </role>
+        <manufacturer>Junkers</manufacturer>
+        <first_flight>1936-12-21</first_flight>
+        <introduction>1939</introduction>
+        <retired>1951</retired>
+        <number_built>15,183</number_built>
+        <primary_user>Luftwaffe</primary_user>
+        <crew>4</crew>
+        <length>14.36 m</length>
+        <wingspan>20.08 m</wingspan>
+        <height>5.07 m</height>
+        <mtow>14,000 kg</mtow>
+        <max_speed>510 km/h</max_speed>
+        <range>2,430 km</range>
+        <powerplant>
+          <text lang="en">2x Junkers Jumo 211J 1,420 HP V12 engines</text>
+          <text lang="pl">2 silniki V12 Junkers Jumo 211J o mocy 1420 KM każdy</text>
+        </powerplant>
+        <armament>
+          <text lang="en">5x 7.92mm MG 81 machine gun, 3,000 kg of bombs</text>
+          <text lang="pl">5 karabinów maszynowych MG 81 kalibru 7,92mm, 3000 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">Ki-43 "Oscar"</text>
+        <text lang="pl">Ki-43 "Oscar"</text>
+      </name>
+      <file>entities/ki43.xml</file>
+      <icon>entities/ki43.png</icon>
+      <icon_locked>entities/ki43_locked.png</icon_locked>
+      <liveries>
+        <livery name="Imperial Japanese Army Air Service 1943">entities/ki43_ija_1942.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/ki43_ija_1942.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Nakajima Aircraft Company</manufacturer>
+        <first_flight>1938-12-12</first_flight>
+        <introduction>1941</introduction>
+        <retired>1952</retired>
+        <number_built>5,919</number_built>
+        <primary_user>Imperial Japanese Army Air Service</primary_user>
+        <crew>1 pilot</crew>
+        <length>8.92 m</length>
+        <wingspan>10.84 m</wingspan>
+        <height>3.27 m</height>
+        <mtow>2,925 kg</mtow>
+        <max_speed>530 km/h</max_speed>
+        <range>1,760 km</range>
+        <powerplant>
+          <text lang="en">Nakajima Ha-115 14-cylinder 1,150 HP air-cooled radial piston engine</text>
+          <text lang="pl">Silnik gwiazdowy Nakajima Ha-115 o mocy 1150 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x 12.7mm Ho-103 machine guns</text>
+          <text lang="pl">2 karabiny maszynowe Ho-103 kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">MS.406</text>
+        <text lang="pl">MS.406</text>
+      </name>
+      <file>entities/ms406.xml</file>
+      <icon>entities/ms406.png</icon>
+      <icon_locked>entities/ms406_locked.png</icon_locked>
+      <liveries>
+        <livery name="Armée de l'Air 1940">entities/ms406_fr_1940.rgb</livery>
+        <livery name="Armée de l'Air 1940 (Władysław Gnyś)">entities/ms406_fr_1940_l979.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/ms406_fr_1940_l979.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Morane-Saulnier</manufacturer>
+        <first_flight>1935-08-08</first_flight>
+        <introduction>1938</introduction>
+        <retired>1959</retired>
+        <number_built>1,176</number_built>
+        <primary_user>Armée de l'Air</primary_user>
+        <crew>1 pilot</crew>
+        <length>8.17 m</length>
+        <wingspan>10.62 m</wingspan>
+        <height>2.71 m</height>
+        <mtow>2,720 kg</mtow>
+        <max_speed>486 km/h</max_speed>
+        <range>1,000 km</range>
+        <powerplant>
+          <text lang="en">Hispano-Suiza 12Y-31 liquid-cooled V12 860 HP piston engine</text>
+          <text lang="pl">Silnik V12 Hispano-Suiza 12Y-31 o mocy 860 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">1x 20mm Hispano-Suiza HS.404 cannon, 2x 7.5mm MAC 34 machine guns</text>
+          <text lang="pl">działko Hispano-Suiza HS.404 kalibru 20mm, 2 karabiny maszynowe MAC 34 kalibru 7,5mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">Mustang</text>
+        <text lang="pl">Mustang</text>
+      </name>
+      <file>entities/p51c.xml</file>
+      <icon>entities/p51c.png</icon>
+      <icon_locked>entities/p51c_locked.png</icon_locked>
+      <liveries>
+        <livery name="Royal Air Force 1944">entities/p51c_raf_1944.rgb</livery>
+        <livery name="Royal Air Force 1944 (Invasion)">entities/p51c_raf_1944_stripes.rgb</livery>
+        <livery name="Royal Air Force 1944 (Rudowski Stanisław)">entities/p51c_raf_1944_uzb.rgb</livery>
+        <livery name="Royal Air Force 1944 (Stanisław Skalski)">entities/p51c_raf_1944_ss.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/p51c_raf_1944_uzb.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>North American Aviation</manufacturer>
+        <first_flight>1940-10-26</first_flight>
+        <introduction>1942</introduction>
+        <retired>1957</retired>
+        <number_built>ca. 15,000</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>1 pilot</crew>
+        <length>9.83 m</length>
+        <wingspan>11.23 m</wingspan>
+        <height>4.08 m</height>
+        <mtow>5,490 kg</mtow>
+        <max_speed>708 km/h</max_speed>
+        <range>2,650 km</range>
+        <powerplant>
+          <text lang="en">Rolls-Royce Merlin 68 liquid-cooled V12 1,670 HP piston engine</text>
+          <text lang="pl">Silnik V12 Rolls-Royce Merlin 68 o mocy 1670 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">6x .50-inch M2 Browning machine guns</text>
+          <text lang="pl">6 karabinów maszynowych M2 Browning kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">P.11</text>
+        <text lang="pl">P.11</text>
+      </name>
+      <file>entities/p11.xml</file>
+      <icon>entities/p11.png</icon>
+      <icon_locked>entities/p11_locked.png</icon_locked>
+      <liveries>
+        <livery name="Lotnictwo Wojskowe RP 1939">entities/p11_lwrp_1939.rgb</livery>
+        <livery name="Lotnictwo Wojskowe RP 1939 (Władysław Gnyś)">entities/p11_lwrp_1939_34k.rgb</livery>
+        <livery name="Lotnictwo Wojskowe RP 1939 (Hieronim Dudwał)">entities/p11_lwrp_1939_170n.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/p11_lwrp_1939_170n.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>PZL</manufacturer>
+        <first_flight>1931</first_flight>
+        <introduction>1934</introduction>
+        <retired>1944</retired>
+        <number_built>350</number_built>
+        <primary_user>Lotnictwo Wojskowe RP</primary_user>
+        <crew>1 pilot</crew>
+        <length>7.55 m</length>
+        <wingspan>10.72 m</wingspan>
+        <height>2.85 m</height>
+        <mtow>1,800 kg</mtow>
+        <max_speed>360 km/h</max_speed>
+        <range>550 km</range>
+        <powerplant>
+          <text lang="en">Bristol Mercury VIS2 645 HP 9-cylinder air-cooled radial engine</text>
+          <text lang="pl">Silnik gwiazdowy Bristol Mercury VIS2 o mocy 645 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">4x 7.92mm PUW wz.33 machine guns</text>
+          <text lang="pl">4 karabiny maszynowe PUW wz.33 kalibru 7,92mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">P-40 Warhawk</text>
+        <text lang="pl">P-40 Warhawk</text>
+      </name>
+      <file>entities/p40.xml</file>
+      <icon>entities/p40.png</icon>
+      <icon_locked>entities/p40_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Army Air Forces 1943">entities/p40_usaaf_1943.rgb</livery>
+        <livery name="US Army Air Forces 1943 (Witold Urbanowicz)">entities/p40_usaaf_1943_188.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/p40_usaaf_1943_188.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>1.3</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Curtiss-Wright Corporation</manufacturer>
+        <first_flight>1938-10-14</first_flight>
+        <introduction>1939</introduction>
+        <retired>1958</retired>
+        <number_built>13,738</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>1 pilot</crew>
+        <length>9.68 m</length>
+        <wingspan>11.38 m</wingspan>
+        <height>3.76 m</height>
+        <mtow>4,000 kg</mtow>
+        <max_speed>580 km/h</max_speed>
+        <range>1,100 km</range>
+        <powerplant>
+          <text lang="en">Allison V-1710-39 liquid-cooled V12 1,150 HP piston engine</text>
+          <text lang="pl">Silnik V12 Allison V-1710-39 o mocy 1150 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">6x .50-inch M2 Browning machine guns</text>
+          <text lang="pl">6 karabinów maszynowych M2 Browning kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">P-47 Thunderbolt</text>
+        <text lang="pl">P-47 Thunderbolt</text>
+      </name>
+      <file>entities/p47d.xml</file>
+      <icon>entities/p47d.png</icon>
+      <icon_locked>entities/p47d_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Army Air Forces 1944">entities/p47d_usaaf_1944_stripes.rgb</livery>
+        <livery name="US Army Air Forces 1944 (Francis 'Gabby' Gabreski)">entities/p47d_usaaf_1944_stripes_hva.rgb</livery>
+        <livery name="US Army Air Forces 1944 (Bolesław 'Mike' Gładych)">entities/p47d_usaaf_1944_stripes_hvm.rgb</livery>
+        <livery name="US Army Air Forces 1945">entities/p47d_usaaf_1945.rgb</livery>
+        <livery name="US Army Air Forces 1945 (Witold 'Lanny' Łanowski)">entities/p47d_usaaf_1945_hvz.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/p47d_usaaf_1945_hvz.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>1.4</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Republic Aviation</manufacturer>
+        <first_flight>1941-05-06</first_flight>
+        <introduction>1942</introduction>
+        <retired>1966</retired>
+        <number_built>15,636</number_built>
+        <primary_user>USAAF</primary_user>
+        <crew>1 pilot</crew>
+        <length>11.00 m</length>
+        <wingspan>12.42 m</wingspan>
+        <height>4.47 m</height>
+        <mtow>7,940 kg</mtow>
+        <max_speed>700 km/h</max_speed>
+        <range>2,900 km</range>
+        <powerplant>
+          <text lang="en">Pratt &#038; Whitney R-2800-18W Double Wasp 2,600 HP radial piston engine</text>
+          <text lang="pl">Silnik gwiazdowy Pratt &#038; Whitney R-2800-18W Double Wasp o mocy 2600 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">8x .50-inch M2 Browning machine guns</text>
+          <text lang="pl">8 karabinów maszynowych M2 Browning kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" unlock_mission="0">
+      <name>
+        <text lang="en">RWD-8</text>
+        <text lang="pl">RWD-8</text>
+      </name>
+      <file>entities/rwd8.xml</file>
+      <icon>entities/rwd8.png</icon>
+      <icon_locked>entities/rwd8_locked.png</icon_locked>
+      <liveries>
+        <livery name="Lotnictwo Wojskowe RP 1939">entities/rwd8_lwrp_1939.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/rwd8_lwrp_1939.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>2.0</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Trainer</text>
+          <text lang="pl">szkolny</text>
+        </role>
+        <manufacturer>RWD</manufacturer>
+        <first_flight>1933</first_flight>
+        <introduction>1934</introduction>
+        <retired>1948</retired>
+        <number_built>550</number_built>
+        <primary_user>Lotnictwo Wojskowe RP</primary_user>
+        <crew>2</crew>
+        <length>8.00 m</length>
+        <wingspan>11.00 m</wingspan>
+        <height>2.30 m</height>
+        <mtow>750 kg</mtow>
+        <max_speed>175 km/h</max_speed>
+        <range>500 km</range>
+        <powerplant>
+          <text lang="en">PZ Inż. Junior 120 HP piston engine</text>
+          <text lang="pl">Silnik rzędowy PZ Inż. Junior o mocy 120 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">none</text>
+          <text lang="pl">brak</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">Spitfire</text>
+        <text lang="pl">Spitfire</text>
+      </name>
+      <file>entities/spitfire.xml</file>
+      <icon>entities/spitfire.png</icon>
+      <icon_locked>entities/spitfire_locked.png</icon_locked>
+      <liveries>
+        <livery name="Royal Air Force 1942">entities/spitfire_raf_1942.rgb</livery>
+        <livery name="Royal Air Force 1942 (Jan Zumbach)">entities/spitfire_raf_1942_rfd.rgb</livery>
+        <livery name="Royal Air Force 1943 (North Africa)">entities/spitfire_raf_1943.rgb</livery>
+        <livery name="Royal Air Force 1943 (Stanisław Skalski)">entities/spitfire_raf_1943_zx6.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/spitfire_raf_1943_zx6.rgb</texture>
+        <distance>20</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Supermarine</manufacturer>
+        <first_flight>1936-03-05</first_flight>
+        <introduction>1938</introduction>
+        <retired>1961</retired>
+        <number_built>20,351</number_built>
+        <primary_user>Royal Air Force</primary_user>
+        <crew>1 pilot</crew>
+        <length>9.21 m</length>
+        <wingspan>11.22 m</wingspan>
+        <height>3.48 m</height>
+        <mtow>2,814 kg</mtow>
+        <max_speed>578 km/h</max_speed>
+        <range>825 km</range>
+        <powerplant>
+          <text lang="en">Rolls-Royce Merlin 45M supercharged 1,470 HP V12 engine</text>
+          <text lang="pl">Silnik V12 Rolls-Royce Merlin 45M o mocy 1470 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x 20mm Hispano Mk II cannon, 4x .303-inch Browning Mk II machine guns</text>
+          <text lang="pl">2 działka Hispano Mk II kalibru 20mm, 4 karabiny maszynowe Browning Mk II kalibru 7,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" unlock_mission="0">
+      <name>
+        <text lang="en">V-1</text>
+        <text lang="pl">V-1</text>
+      </name>
+      <file>entities/v1.xml</file>
+      <icon>entities/v1.png</icon>
+      <icon_locked>entities/v1_locked.png</icon_locked>
+      <liveries>
+        <livery name="Luftwaffe 1944">entities/v1_luftwaffe_1944.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/v1_luftwaffe_1944.rgb</texture>
+        <distance>15</distance>
+        <heading>45</heading>
+        <offset_x>0.8</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Flying bomb</text>
+          <text lang="pl">bomba latające</text>
+        </role>
+        <manufacturer>Fieseler</manufacturer>
+        <first_flight>1942</first_flight>
+        <introduction>1944</introduction>
+        <retired>1945</retired>
+        <number_built>ca. 10,000</number_built>
+        <primary_user>Luftwaffe</primary_user>
+        <crew>0</crew>
+        <length>8.32 m</length>
+        <wingspan>5.37 m</wingspan>
+        <height>1.42 m</height>
+        <mtow>2150 kg</mtow>
+        <max_speed>640 km/h</max_speed>
+        <range>250 km</range>
+        <powerplant>
+          <text lang="en">Argus As 109-014 20 2.7 kN thrust pulsejet</text>
+          <text lang="pl">Silnik pulsacyjny Argus As 109-014 20 o ciągu 2,7 kN</text>
+        </powerplant>
+        <armament>
+          <text lang="en">850 kg warhead</text>
+          <text lang="pl">głowica o masie 850 kg</text>
+        </armament>
+      </info>
+    </unit>
+
+  </aerial>
+  
+  <marine>
+    
+    <unit>
+      <name>
+        <text lang="en">Grom-class destroyer</text>
+        <text lang="pl">Niszczyciel typu Grom</text>
+      </name>
+      <file>entities/grom.xml</file>
+      <icon>entities/grom.png</icon>
+      <view>
+        <distance>150</distance>
+        <heading>30</heading>
+        <offset_x>-10</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Destroyer</text>
+          <text lang="pl">niszczyciel</text>
+        </type>
+        <number_built>2</number_built>
+        <displacement>2144 t</displacement>
+        <length>114 m</length>
+        <beam>11.2 m</beam>
+        <draft>3.3 m</draft>
+        <max_speed>40 kts</max_speed>
+        <complement>192</complement>
+        <armament>
+          <text lang="en">7x 120mm Bofors wz.36 guns, 4x 40mm Bofors wz.36 AA guns, 4x 13.7mm Hotchkiss wz.30 machine guns, 6x 550mm torpedo tubes</text>
+          <text lang="pl">7 dział Bofors wz.36 kalibru 120 mm, 4 działa przeciwlotnicze Bofors wz.40 kalibru 40mm, 4 karabiny maszynowe Hotchkiss wz.30 kalibru 13,7mm, 6 wyrzutni torped kalibru 550mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+  </marine>
+  
+  <ground></ground>
+</units>

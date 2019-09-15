@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/v1.osgb</model>
+  <ap>3</ap>
+  <radius>2.6</radius>
+  <aircraft>
+    <time_p>0.1</time_p>
+    <time_q>0.5</time_q>
+    <time_r>0.5</time_r>
+    <time_v>10.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>180.0</speed_max>
+    <roll_max>30.0</roll_max>
+  </aircraft>
+</unit>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/02d_ico.png</icon>
+  <icon_locked>missions/02d_ico_locked.png</icon_locked>
+  <image>missions/02d_img.png</image>
+  <image_locked>missions/02d_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Advanced Gunnery Practice</text>
+   <text lang="pl">Zaawansowane ćwiczenia strzeleckie</text>
+  </name>
+  <introduction>
+   <text lang="en">Engaging moving targets is much more difficult than shooting to stationary ones. To hit a moving target you have to aim and shoot ahead of it. Try to destroy all the radio controlled airplanes. You have 1 minute.</text>
+   <text lang="pl">Atakowanie poruszających się celów jest o wiele trudniejsze niż nieruchomych. Musisz celować przed lecący samolot aby go trafić. Postaraj się zniszczyć wszystkie zdalnie sterowane samoloty. Masz na to 1 minutę.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to destroy practice targets. Fighter pilot is expected to shoot down enemy aircrafts. If you are going to be an ace you have to improve your skills. Try again.</text>
+   <text lang="pl">Nie udało ci zniszczyć celów ćwiczebnych. Od pilota myśliwskiego oczekuje się aby był w stanie zestrzelić samolot wroga. Jeżeli chcesz zostać asem myśliwskim musisz się poprawić. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Congratulations. You have finished your training. You are now fully trained fighter pilot prepared for a real combat. This could be sooner than you expect.</text>
+   <text lang="pl">Gratulacje. Udało ci się ukończyć trening. Teraz jesteś w pełni wyszkolonym pilotem myśliwskim. Prawdziwa walka może nadejść szybciej niż się tego spodziewasz.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/oahu_elevation.csv</elevation>
+  <terrain>scenery/oahu_terrain.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects>
+   <object>scenery/oahu_objects.osgb</object>
+   <object>scenery/oahu_fleet.osgb</object>
+  </objects>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" hp="100" name="ownship">
+    <file>entities/p40.xml</file>
+    <position>-18000 13000 153</position>
+    <heading>90</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_usaaf_1941.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends/>
+  <hostiles>
+   <aircraft route="target" hp="100" name="target_1">
+    <file>entities/oq2.xml</file>
+    <position>-15000 13400 153</position>
+    <heading>0</heading>
+    <velocity>77</velocity>
+    <livery>entities/oq2_1941.rgb</livery>
+   </aircraft>
+   <aircraft route="target" hp="100" leader="target_1" name="target_2">
+    <offset>200 50 0</offset>
+    <file>entities/oq2.xml</file>
+    <position>-15000 13200 153</position>
+    <heading>0</heading>
+    <velocity>77</velocity>
+    <livery>entities/oq2_1941.rgb</livery>
+   </aircraft>
+   <aircraft route="target" hp="100" leader="target_2" name="target_3">
+    <offset>200 -50 0</offset>
+    <file>entities/oq2.xml</file>
+    <position>-15000 13000 153</position>
+    <heading>0</heading>
+    <velocity>77</velocity>
+    <livery>entities/oq2_1941.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="target">
+   <waypoint>
+    <position>-15000 14000 153</position>
+    <speed>77</speed>
+   </waypoint>
+   <waypoint>
+    <position>-15000 20000 153</position>
+    <speed>77</speed>
+   </waypoint>
+   <waypoint>
+    <position>-15000 45000 153</position>
+    <speed>77</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Destroy targets">
+   <time_limit>60</time_limit>
+   <init_units>
+    <unit name="target_1"/>
+    <unit name="target_2"/>
+    <unit name="target_3"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Shoot down all the practice targets.</text>
+      <text lang="pl">Zestrzel wszystkie cele ćwiczebne.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="target_1"/>
+     <unit name="target_2"/>
+     <unit name="target_3"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

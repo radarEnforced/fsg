@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/p51d.osgb</model>
+  <ap>7</ap>
+  <radius>5.7</radius>
+  <aircraft>
+    <time_p>0.1</time_p>
+    <time_q>0.5</time_q>
+    <time_r>0.5</time_r>
+    <time_v>10.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>200.0</speed_max>
+    <roll_max>72.0</roll_max>
+    <max_ailerons>20.0</max_ailerons>
+    <max_elevator>30.0</max_elevator>
+    <max_rudder>60.0</max_rudder>
+    
+    <flash light="1">-0.55  2.27 -0.52</flash>
+    <flash light="1">-0.55 -2.27 -0.52</flash>
+    <flash>-0.56  2.06 -0.54</flash>
+    <flash>-0.56 -2.06 -0.54</flash>
+    <flash>-0.53  2.46 -0.50</flash>
+    <flash>-0.53 -2.46 -0.50</flash>
+    
+    <muzzle trail="1">-55.0 -2.1 0.0</muzzle>
+    <muzzle trail="1">-55.0  2.1 0.0</muzzle>
+    <muzzle trail="1">-35.0 -2.3 0.0</muzzle>
+    <muzzle trail="1">-35.0  2.3 0.0</muzzle>
+    <muzzle trail="1">-15.0 -2.5 0.0</muzzle>
+    <muzzle trail="1">-15.0  2.5 0.0</muzzle>
+    
+  </aircraft>
+</unit>

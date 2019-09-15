@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/16a_ico.png</icon>
+  <icon_locked>missions/16a_ico_locked.png</icon_locked>
+  <image>missions/16a_img.png</image>
+  <image_locked>missions/16a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Excort Bombers Attacking Yamato</text>
+   <text lang="pl">Eskortuj bombowce atakujące Yamato</text>
+  </name>
+  <introduction>
+   <text lang="en">On April 6th 1945 American PBM Mariner flying boats spotted Japanese battleship Yamato together with cruiser and a few destroyers. The next day US bombers were sent to destroy world's mightiest battleship. Defend bombers attacking Yamato.</text>
+   <text lang="pl">6 kwietnia 1945 amerykańska łódź latające PBM Mariner namierzyła japoński pancernik Yamato oraz towarzyszący mu krążownik i grupę niszczycieli. Następnego dnia z lotniskowców amerykańskich wystartowały bombowce w celu zniszczenia najpotężniejszego okrętu świata. Eskortuj samoloty atakujące Yamato.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to defend bombers attacking Japanese battleship Yamato. Try again.</text>
+   <text lang="pl">Nie udało ci się obronić bombowców atakujących pancernik Yamato. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Battleship Yamato, cruiser Yahagi and four destroyers have sunk. Imperial Japanese Navy in fact ceased to exist.</text>
+   <text lang="pl">Pancernik Yamato, krążownik Yahagi i cztery niszczyciele zostały zatopione. Japońska Cesarska Marynarka Wojenna w praktyce przestała istnieć.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/ocean.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_2.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <bomber_level unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/f4u.xml</file>
+    <position>0 -12000 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/f4u_usn_1944.rgb</livery>
+   </bomber_level>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman">
+    <offset>100 100 0</offset>
+    <file>entities/f4u.xml</file>
+    <position>100 -12100 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/f4u_usn_1944.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" name="ecsort_1">
+    <file>entities/f4u.xml</file>
+    <position>0 -12500 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/f4u_usn_1944.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="ecsort_1" name="escort_2">
+    <offset>100 100 0</offset>
+    <file>entities/f4u.xml</file>
+    <position>100 -12600 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/f4u_usn_1944.rgb</livery>
+   </fighter>
+   <bomber_dive route="bombers_rr" hp="100" name="bomber_r1">
+    <file>entities/sb2c.xml</file>
+    <position>2000 2500 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/sb2c_usn_1944.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_rr" hp="100" name="bomber_r2">
+    <file>entities/sb2c.xml</file>
+    <position>2000 1500 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/sb2c_usn_1944.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_ll" hp="100" name="bomber_l1">
+    <file>entities/sb2c.xml</file>
+    <position>-2000 2500 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/sb2c_usn_1944.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_ll" hp="100" name="bomber_l2">
+    <file>entities/sb2c.xml</file>
+    <position>-2000 1500 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/sb2c_usn_1944.rgb</livery>
+   </bomber_dive>
+   <bomber_torpedo route="bombers_r" hp="100" name="bomber_rf1">
+    <file>entities/tbf.xml</file>
+    <position>1000 -2400 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/tbf_usn_1942.rgb</livery>
+   </bomber_torpedo>
+   <bomber_torpedo route="bombers_r" hp="100" leader="bomber_rf1" name="bomber_rf2">
+    <offset>100 100 0</offset>
+    <file>entities/tbf.xml</file>
+    <position>1100 -2500 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/tbf_usn_1942.rgb</livery>
+   </bomber_torpedo>
+   <bomber_dive route="bombers_r" hp="100" name="bomber_rr1">
+    <file>entities/sb2c.xml</file>
+    <position>1100 -5400 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/sb2c_usn_1944.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_r" hp="100" leader="bomber_rr1" name="bomber_rr2">
+    <offset>100 100 0</offset>
+    <file>entities/sb2c.xml</file>
+    <position>1200 -5500 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/sb2c_usn_1944.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_l" hp="100" name="bomber_lf1">
+    <file>entities/sb2c.xml</file>
+    <position>-1000 -4500 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/sb2c_usn_1944.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers_l" hp="100" leader="bomber_lf1" name="bomber_lf2">
+    <offset>100 -100 0</offset>
+    <file>entities/sb2c.xml</file>
+    <position>-1100 -4600 914</position>
+    <heading>0</heading>
+    <velocity>103</velocity>
+    <livery>entities/sb2c_usn_1944.rgb</livery>
+   </bomber_dive>
+  </friends>
+  <hostiles>
+   <warship hp="100" name="yamato">
+    <file>entities/yamato.xml</file>
+    <position>500 8000 0</position>
+    <heading>90</heading>
+   </warship>
+   <warship hp="100" name="agano">
+    <file>entities/agano.xml</file>
+    <position>-700 8050 0</position>
+    <heading>90</heading>
+   </warship>
+   <warship hp="100" name="destroyer_1">
+    <file>entities/kagero.xml</file>
+    <position>2200 7400 0</position>
+    <heading>90</heading>
+   </warship>
+   <warship hp="100" name="destroyer_2">
+    <file>entities/kagero.xml</file>
+    <position>-2200 7500 0</position>
+    <heading>90</heading>
+   </warship>
+   <warship hp="100" name="destroyer_3">
+    <file>entities/matsu.xml</file>
+    <position>1800 8400 0</position>
+    <heading>90</heading>
+   </warship>
+   <warship hp="100" name="destroyer_4">
+    <file>entities/matsu.xml</file>
+    <position>-1800 8500 0</position>
+    <heading>90</heading>
+   </warship>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>0 -10000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -8000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -6000 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+  <route name="bombers_r">
+   <waypoint>
+    <position>500 1000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>500 17000 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+  <route name="bombers_rr">
+   <waypoint>
+    <position>2000 4000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>2000 17000 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+  <route name="bombers_l">
+   <waypoint>
+    <position>-500 1000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-500 17000 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+  <route name="bombers_ll">
+   <waypoint>
+    <position>-2000 4000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-2000 17000 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Rendezvous with bombers">
+   <time_limit>90</time_limit>
+   <init_units>
+    <unit name="wingman"/>
+    <unit name="ecsort_1"/>
+    <unit name="escort_2"/>
+    <unit name="yamato"/>
+    <unit name="agano"/>
+    <unit name="destroyer_1"/>
+    <unit name="destroyer_2"/>
+    <unit name="destroyer_3"/>
+    <unit name="destroyer_4"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Make a rendezvous with the bombers</text>
+      <text lang="pl">Spotkaj się z bombowcami</text>
+     </line>
+     <line>
+      <text lang="en">attacking Japanese fleet.</text>
+      <text lang="pl">atakującymi japońską flotę.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Escort bombers">
+   <init_units>
+    <unit name="bomber_l1"/>
+    <unit name="bomber_l2"/>
+    <unit name="bomber_r1"/>
+    <unit name="bomber_r2"/>
+    <unit name="bomber_lf1"/>
+    <unit name="bomber_lf2"/>
+    <unit name="bomber_rf1"/>
+    <unit name="bomber_rf2"/>
+    <unit name="bomber_rr1"/>
+    <unit name="bomber_rr2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Escort bombers attacking</text>
+      <text lang="pl">Eskortuj bombowce atakujące</text>
+     </line>
+     <line>
+      <text lang="en">Japanese fleet.</text>
+      <text lang="pl">japońską flotę.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="30"/>
+   </objectives>
+  </stage>
+  <stage name="Defend bombers">
+   <init_units/>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">It seems that there is no air cover.</text>
+      <text lang="pl">Wygląda na to, że flota nie ma osłony z powietrza.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="yamato"/>
+     <unit name="agano"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

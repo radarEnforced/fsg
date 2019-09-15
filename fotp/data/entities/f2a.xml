@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/f2a.osgb</model>
+  <ap>5</ap>
+  <radius>5.8</radius>
+  <aircraft>
+    <time_p>0.1</time_p>
+    <time_q>0.5</time_q>
+    <time_r>0.5</time_r>
+    <time_v>10.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>145.0</speed_max>
+    <roll_max>72.0</roll_max>
+    <max_ailerons>20.0</max_ailerons>
+    <max_elevator>30.0</max_elevator>
+    <max_rudder>60.0</max_rudder>
+    
+    <flash light="1">-0.49 -2.1 -0.01</flash>
+    <flash light="1">-0.49  2.1 -0.01</flash>
+    
+    <muzzle trail="1">-15.0 -2.1 0.0</muzzle>
+    <muzzle trail="1">-15.0  2.1 0.0</muzzle>
+    
+  </aircraft>
+  <bomber_level>
+    <bomb model="entities/anm30.osgb"><position>0.1 -2.9 -0.15</position></bomb>
+    <bomb model="entities/anm30.osgb"><position>0.1  2.9 -0.15</position></bomb>
+  </bomber_level>
+</unit>

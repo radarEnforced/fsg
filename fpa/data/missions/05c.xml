@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/05c_ico.png</icon>
+  <icon_locked>missions/05c_ico_locked.png</icon_locked>
+  <image>missions/05c_img.png</image>
+  <image_locked>missions/05c_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Battle of Britain. Part 3. The Blitz</text>
+   <text lang="pl">Bitwa o Anglię. Część III. Blitz</text>
+  </name>
+  <introduction>
+   <text lang="en">German high command changed its strategy due lack of success in the Battle of Britain. On September 7th 1940 Luftwaffe started series of terror bombing raids against Britain, known as the Blitz. On September 15th 1940 more than one thausand German aircrafts were launched to attack Great Britain. Over 600 British Spitfires and Hurricanes, including those of Polish No. 302 and 303 Squadrons, stood up against this raid.</text>
+   <text lang="pl">Brak sukcesów w bitwie o Anglię skłonił niemieckie dowództwo do zmiany strategi. 7 września 1940 Luftwaffe rozpoczęła serię, siejących terror, nalotów na cele cywilne, znanych jako Blitz (niem. "błyskawica"). 15 września 1940 roku rozpoczął się największy nalot, w którym wzięło udział ponad tysiąc niemieckich samolotów. W obronie brało udział ponad 600 myśliwców, w tym polskie dywizjony 302 i 303 uzbrojone w samoloty Hurricane.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy aircrafts. Try again.</text>
+   <text lang="pl">Niestety nie udało Ci się zestrzelić niemieckich samolotów. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Congratulations. You have succeeded to destroy all the enemeny aircrafts. September 15th 1940 was the climax of the Battle of Britain. On this day Witold Urbanowicz shot down 2 German bombers and No. 303 Polish Squadron 16 enemy aircrafts. In the aftermath, German high command was forced to postponed Operation "Sea Lion" - the plan for an invasion of the United Kingdom.</text>
+   <text lang="pl">Gratulacje. Udało ci się zniszczyć wszystkie wrogie samoloty. 15 września 1940 roku był przełomowy w bitwie o Anglię. Tego dnia Witold Urbanowicz zestrzelił 2 niemieckie bombowce, a cały polski dywizjon 303 16 maszyn wroga. W konsekwencji niemieckie dowództwo zostało zmuszone do odroczenia operacji "Lew Morski" - planu inwazji na Wielką Brytanię.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/seuk_elevation.csv</elevation>
+  <terrain>scenery/seuk_terrain.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/hurricane.xml</file>
+    <position>-20000 -37000 305</position>
+    <heading>180</heading>
+    <velocity>155</velocity>
+    <livery>entities/hurricane_raf_1940_rff.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman">
+    <offset>100 100 0</offset>
+    <file>entities/hurricane.xml</file>
+    <position>-20100 -36900 305</position>
+    <heading>180</heading>
+    <velocity>155</velocity>
+    <livery>entities/hurricane_raf_1940.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" name="fighter_1a">
+    <file>entities/hurricane.xml</file>
+    <position>-20000 -36500 305</position>
+    <heading>180</heading>
+    <velocity>155</velocity>
+    <livery>entities/hurricane_raf_1940.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="fighter_1a" name="fighter_1b">
+    <offset>100 -100 0</offset>
+    <file>entities/hurricane.xml</file>
+    <position>-19900 -36400 305</position>
+    <heading>180</heading>
+    <velocity>155</velocity>
+    <livery>entities/hurricane_raf_1940.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <fighter route="bombers" hp="100" name="escort_1a">
+    <file>entities/bf109.xml</file>
+    <position>-20000 -49600 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="bombers" hp="100" leader="escort_1a" name="escort_1b">
+    <offset>50 50 0</offset>
+    <file>entities/bf109.xml</file>
+    <position>-19950 -49650 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="bombers" hp="100" name="escort_2a">
+    <file>entities/bf109.xml</file>
+    <position>-20000 -49800 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <fighter route="bombers" hp="100" leader="escort_2a" name="escort_2b">
+    <offset>50 -50 0</offset>
+    <file>entities/bf109.xml</file>
+    <position>-20050 -49850 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf109_luftwaffe_1940.rgb</livery>
+   </fighter>
+   <aircraft route="bombers" hp="100" name="bomber_1a">
+    <file>entities/do17.xml</file>
+    <position>-20000 -50000 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1a" name="bomber_1b">
+    <offset>15 -50 0</offset>
+    <file>entities/do17.xml</file>
+    <position>-20050 -50050 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1a" name="bomber_1c">
+    <offset>15 50 0</offset>
+    <file>entities/do17.xml</file>
+    <position>-19950 -50050 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1a" name="bomber_1d">
+    <offset>100 0 0</offset>
+    <file>entities/do17.xml</file>
+    <position>-20000 -50100 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>-20000 -39000 305</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 -41000 305</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 -43000 305</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 -45000 305</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 -47000 305</position>
+    <speed>155</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>-20000 -40000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 -20000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 0 305</position>
+    <speed>129</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <init_units>
+    <unit name="wingman"/>
+    <unit name="fighter_1a"/>
+    <unit name="fighter_1b"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Intercept incoming enemy bombers.</text>
+      <text lang="pl">Przechwyć zbliżające się bombowce nieprzyjaciela.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="3"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Bombers">
+   <time_limit>300</time_limit>
+   <init_units>
+    <unit name="escort_1a"/>
+    <unit name="escort_1b"/>
+    <unit name="escort_2a"/>
+    <unit name="escort_2b"/>
+    <unit name="bomber_1a"/>
+    <unit name="bomber_1b"/>
+    <unit name="bomber_1c"/>
+    <unit name="bomber_1d"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy bombers at 12 o'clock.</text>
+      <text lang="pl">Wrogie bombowce na godzinie 12.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out. There is a fighter escort.</text>
+      <text lang="pl">Uważaj. Mają eskortę myśliwską.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1a"/>
+     <unit name="bomber_1b"/>
+     <unit name="bomber_1c"/>
+     <unit name="bomber_1d"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Destroy Escort">
+   <init_units/>
+   <objectives>
+    <objective_destroy>
+     <unit name="escort_1a"/>
+     <unit name="escort_1b"/>
+     <unit name="escort_2a"/>
+     <unit name="escort_2b"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

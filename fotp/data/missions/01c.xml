@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/02c_ico.png</icon>
+  <icon_locked>missions/02c_ico_locked.png</icon_locked>
+  <image>missions/02c_img.png</image>
+  <image_locked>missions/02c_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Formation Flying Training</text>
+   <text lang="pl">Trening lotu w formacji</text>
+  </name>
+  <introduction>
+   <text lang="en">Formation flying is an excellent way to train controlling aircraft position, attitude and speed. Those skills are very important in combat. Follow your leader. Don't get farther than 1,000 feet from him.</text>
+   <text lang="pl">Lot w formacji jest doskonałym sposobem treningu kontroli położenia i prędkości samolotu. Są to umiejętności bardzo przydatne w walce. Podążaj za swoim prowadzącym. Utrzymuj odległość nie większą niż 1000 stóp.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to keep within required distance to your leader. Try again.</text>
+   <text lang="pl">Nie udało ci się utrzymywać wymaganej odległości od swojego prowadzącego. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Great job. You have succeeded to follow your formation leader. Please proceed with your training.</text>
+   <text lang="pl">Świetna robota. Udało ci się utrzymywać wymaganą odległość od twojego prowadzącego. Możesz teraz przystąpić do kolejnego zadania.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/oahu_elevation.csv</elevation>
+  <terrain>scenery/oahu_terrain.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_0.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects>
+   <object>scenery/oahu_objects.osgb</object>
+   <object>scenery/oahu_fleet.osgb</object>
+  </objects>
+ </scenery>
+ <units>
+  <ownship>
+   <aircraft unique="1" route="leader" hp="100" name="ownship">
+    <file>entities/p36.xml</file>
+    <position>-17000 12000 152</position>
+    <heading>270</heading>
+    <velocity>140</velocity>
+    <livery>entities/p36_usaaf_1941.rgb</livery>
+   </aircraft>
+  </ownship>
+  <friends>
+   <aircraft route="leader" hp="100" name="leader">
+    <file>entities/p36.xml</file>
+    <position>-17061 12000 152</position>
+    <heading>270</heading>
+    <velocity>140</velocity>
+    <livery>entities/p36_usaaf_1941.rgb</livery>
+   </aircraft>
+  </friends>
+  <hostiles/>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="leader">
+   <waypoint>
+    <position>-19000 12000 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20250 12335 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-21165 13250 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-21500 14500 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-21165 15750 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20250 16665 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-19000 17000 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-17000 17000 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-15750 16665 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-14835 15750 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-14500 14500 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-14835 13250 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-15750 12335 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-17000 12000 152</position>
+    <speed>140</speed>
+   </waypoint>
+   <waypoint>
+    <position>-27000 12000 152</position>
+    <speed>140</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Formation Flight">
+   <init_units>
+    <unit name="leader"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Follow your leader.</text>
+      <text lang="pl">Podążaj za swoim prowadzącym.</text>
+     </line>
+     <line>
+      <text lang="en">Don't get too far.</text>
+      <text lang="pl">Nie oddalaj się zanadto.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_distance limit="305" leader="leader"/>
+    <objective_timeout limit="120"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

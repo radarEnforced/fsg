@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/bf109.osgb</model>
+  <ap>5</ap>
+  <radius>5.7</radius>
+  <aircraft>
+    <time_p>0.1</time_p>
+    <time_q>0.5</time_q>
+    <time_r>0.5</time_r>
+    <time_v>10.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>165.0</speed_max>
+    <roll_max>72.0</roll_max>
+    <max_ailerons>20.0</max_ailerons>
+    <max_elevator>30.0</max_elevator>
+    <max_rudder>60.0</max_rudder>
+    <muzzle>-25.0 -2.1 0.0</muzzle>
+    <muzzle>-15.0  2.1 0.0</muzzle>
+    <muzzle>-35.0 -0.1 0.0</muzzle>
+    <muzzle>-15.0  0.1 0.0</muzzle>
+  </aircraft>
+</unit>

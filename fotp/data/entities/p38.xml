@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/p38.osgb</model>
+  <ap>8</ap>
+  <radius>8.0</radius>
+  <aircraft>
+    <time_p>0.1</time_p>
+    <time_q>0.5</time_q>
+    <time_r>0.5</time_r>
+    <time_v>10.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>185.0</speed_max>
+    <roll_max>72.0</roll_max>
+    <max_ailerons>20.0</max_ailerons>
+    <max_elevator>30.0</max_elevator>
+    <max_rudder>60.0</max_rudder>
+    
+    <flash>-3.4  0.24 0.08</flash>
+    <flash>-3.4  0.13 0.26</flash>
+    <flash>-3.4 -0.24 0.08</flash>
+    <flash>-3.4 -0.13 0.26</flash>
+    
+    <muzzle trail="1">-45.0 -0.3 0.0</muzzle>
+    <muzzle trail="1">-45.0  0.3 0.0</muzzle>
+    <muzzle trail="1">-20.0 -0.6 0.0</muzzle>
+    <muzzle trail="1">-20.0  0.6 0.0</muzzle>
+    
+  </aircraft>
+</unit>

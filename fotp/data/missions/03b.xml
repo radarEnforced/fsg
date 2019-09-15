@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/04b_ico.png</icon>
+  <icon_locked>missions/04b_ico_locked.png</icon_locked>
+  <image>missions/04b_img.png</image>
+  <image_locked>missions/04b_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Christmas present for the Emperor</text>
+   <text lang="pl">Gwiazdkowy prezent dla Cesarza</text>
+  </name>
+  <introduction>
+   <text lang="en">On the Christmas Day of 1941 joint patrol of Royal New Zealand Air Force and American Volunteer Group spotted formation of Japanese bombers heading Rangoon in Burma. Defend Rangoon and destroy all incoming bombers.</text>
+   <text lang="pl">W pierwszy dzień świąt Bożego Narodzenia 1941 roku patrol złożony z samolotów Królewskich Nowozelandzkich Sił Powietrznych oraz Latających Tygrysów namierzył formację japońskich bombowców kierującą się na Rangoon w Birmie. Obroń Rangoon przed nadlatującymi bombowcami.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy bombers. Try again.</text>
+   <text lang="pl">Nie udało ci się zniszczyć wrogich bombowców. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded to shoot down all enemy bombers.</text>
+   <text lang="pl">Udało ci się zestrzelić wszystkie wrogie bombowce.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/f2a.xml</file>
+    <position>0 -6000 305</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/f2a_rnzaf_1941.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="fighters" hp="100" name="leader">
+    <file>entities/p40.xml</file>
+    <position>-50 -5870 305</position>
+    <heading>-1.5708</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_avg_1941.rgb</livery>
+   </fighter>
+   <fighter route="fighters" hp="100" leader="leader" name="wingman_2">
+    <offset>50 -100 0</offset>
+    <file>entities/p40.xml</file>
+    <position>-150 -5950 305</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_avg_1941.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_3">
+    <offset>50 50 0</offset>
+    <file>entities/f2a.xml</file>
+    <position>100 -6100 305</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/f2a_rnzaf_1941.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <fighter route="bombers" hp="100" name="escort_1">
+    <file>entities/ki43.xml</file>
+    <position>150 5500 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+   <fighter route="bombers" hp="100" name="escort_2">
+    <file>entities/ki43.xml</file>
+    <position>-200 5500 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+   <aircraft route="bombers" hp="100" name="bomber_1">
+    <file>entities/ki21.xml</file>
+    <position>0 7000 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki21_ija_1942.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>-100 100 0</offset>
+    <file>entities/ki21.xml</file>
+    <position>100 7100 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki21_ija_1942.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1" name="bomber_3">
+    <offset>100 100 0</offset>
+    <file>entities/ki21.xml</file>
+    <position>-100 7100 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki21_ija_1942.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1" name="bomber_4">
+    <offset>0 200 0</offset>
+    <file>entities/ki21.xml</file>
+    <position>0 7200 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki21_ija_1942.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>0 -4000 305</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -2000 305</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 0 305</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 2000 305</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 3000 305</position>
+    <speed>154</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -10000 305</position>
+    <speed>180</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>0 -9000 305</position>
+    <speed>77</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -10000 305</position>
+    <speed>77</speed>
+   </waypoint>
+  </route>
+  <route name="fighters">
+   <waypoint>
+    <position>-50 -4000 305</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>-50 2000 305</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>-50 3000 305</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>-50 -10000 305</position>
+    <speed>128</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <init_units>
+    <unit name="leader"/>
+    <unit name="wingman_2"/>
+    <unit name="wingman_3"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Patrol area around Rangoon.</text>
+      <text lang="pl">Patroluj okolice Rangoon.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy bombers">
+   <init_units>
+    <unit name="escort_1"/>
+    <unit name="escort_2"/>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+    <unit name="bomber_3"/>
+    <unit name="bomber_4"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Engage enemy bombers.</text>
+      <text lang="pl">Przechwyć wrogie bombowce.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for escort fighters.</text>
+      <text lang="pl">Uważaj na eskortę myśliwską.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+     <unit name="bomber_4"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

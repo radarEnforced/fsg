@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/07a_ico.png</icon>
+  <icon_locked>missions/07a_ico_locked.png</icon_locked>
+  <image>missions/07a_img.png</image>
+  <image_locked>missions/07a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Polish Fighting Team</text>
+   <text lang="pl">Polski Zespół Myśliwski</text>
+  </name>
+  <introduction>
+   <text lang="en">Polish Fighting Team was a special unit composed of Polish volunteers formed to gain experience in cooperation with land forces. On March 4th the unit was dislocated to North Africa and became operational.</text>
+   <text lang="pl">Polski Zespół Myśliwski był specjalną jednostką składającą się z polskich ochotników, utworzoną w celu zdobywania doświadczenia we współpracy z wojskami lądowymi. 4 marca 1943 roku jednostka została przebazowana do Afryki Północnej i zaczęła wykonywać loty bojowe.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to destroy enemy aircrafts. Try again.</text>
+   <text lang="pl">Nie udało ci się zniszczyć wrogich samolotów. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded to destroy all the enemy aircrafts. From March 17th to may 13th 1943 15 pilots of Polish Fighting Team scored 28 victories which makes the unit the moste effective fighter team in North Africa. The unit was nicknamed "Skalski's Circus" after its commander Stanisław Skalski.</text>
+   <text lang="pl">Udało ci się zniszczyć wszystkie wrogie samoloty. Od 17 marca do 13 maja 1943 roku 15 pilotów z Polskiego Zespołu Myśliwskiego, odniosło 28 zwycięstw, co czyni z tej jednostki najskuteczniejszą eskadrę myśliwską w Afryce Północnej. Jednostka została nazwana, od nazwiska jej dowódcy, "Cyrkiem Skalskiego".</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/desert.osgb</terrain>
+  <generic>scenery/desert.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/spitfire.xml</file>
+    <position>4600 2000 229</position>
+    <heading>90</heading>
+    <velocity>142</velocity>
+    <livery>entities/spitfire_raf_1943_zx6.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_1">
+    <offset>100 100 0</offset>
+    <file>entities/spitfire.xml</file>
+    <position>4500 1900 229</position>
+    <heading>90</heading>
+    <velocity>142</velocity>
+    <livery>entities/spitfire_raf_1943.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <fighter route="bomber" hp="100" name="escort_1c">
+    <file>entities/bf109.xml</file>
+    <position>15000 0 229</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/bf109_luftwaffe_1943.rgb</livery>
+   </fighter>
+   <fighter route="bomber" hp="100" leader="escort_1c" name="escort_1r">
+    <offset>50 50 0</offset>
+    <file>entities/bf109.xml</file>
+    <position>15050 50 229</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/bf109_luftwaffe_1943.rgb</livery>
+   </fighter>
+   <fighter route="bomber" hp="100" name="escort_2c">
+    <file>entities/bf109.xml</file>
+    <position>16000 0 229</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/bf109_luftwaffe_1943.rgb</livery>
+   </fighter>
+   <fighter route="bomber" hp="100" leader="escort_2c" name="escort_2r">
+    <offset>50 50 0</offset>
+    <file>entities/bf109.xml</file>
+    <position>16050 50 229</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/bf109_luftwaffe_1943.rgb</livery>
+   </fighter>
+   <aircraft route="bomber" hp="100" name="bomber_1c">
+    <file>entities/ju88.xml</file>
+    <position>16000 0 229</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/ju88_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bomber" hp="100" leader="bomber_1c" name="bomber_1r">
+    <offset>50 50 0</offset>
+    <file>entities/ju88.xml</file>
+    <position>16050 50 229</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/ju88_luftwaffe_1939.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>6000 2000 229</position>
+    <speed>142</speed>
+   </waypoint>
+   <waypoint>
+    <position>8000 2000 229</position>
+    <speed>142</speed>
+   </waypoint>
+   <waypoint>
+    <position>10000 2000 229</position>
+    <speed>142</speed>
+   </waypoint>
+   <waypoint>
+    <position>12000 2000 229</position>
+    <speed>142</speed>
+   </waypoint>
+   <waypoint>
+    <position>13000 1000 229</position>
+    <speed>142</speed>
+   </waypoint>
+   <waypoint>
+    <position>12000 0 229</position>
+    <speed>142</speed>
+   </waypoint>
+   <waypoint>
+    <position>11000 0 229</position>
+    <speed>142</speed>
+   </waypoint>
+   <waypoint>
+    <position>10000 1000 229</position>
+    <speed>142</speed>
+   </waypoint>
+   <waypoint>
+    <position>11000 2000 229</position>
+    <speed>142</speed>
+   </waypoint>
+  </route>
+  <route name="bomber">
+   <waypoint>
+    <position>10000 0 229</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-10000 0 229</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 0 229</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="wingman_1"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Patrol area around Tunis.</text>
+      <text lang="pl">Patroluj okolice Tunisu.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept Fighters 1">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="escort_1c"/>
+    <unit name="escort_1r"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy fighters at 2 o'clock.</text>
+      <text lang="pl">Wrogie myśliwce na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="30"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept Fighters 2">
+   <init_units>
+    <unit name="escort_2c"/>
+    <unit name="escort_2r"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">More enemy fighters incoming.</text>
+      <text lang="pl">Nadlatuje więcej wrogich myśliwców.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="30"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Bombers">
+   <time_limit>180</time_limit>
+   <init_units>
+    <unit name="bomber_1c"/>
+    <unit name="bomber_1r"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Incoming enemy bombers.</text>
+      <text lang="pl">Zbliżają się wrogie bombowce.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1c"/>
+     <unit name="bomber_1r"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Destroy Fighters">
+   <init_units/>
+   <objectives>
+    <objective_destroy>
+     <unit name="escort_1c"/>
+     <unit name="escort_1r"/>
+     <unit name="escort_2c"/>
+     <unit name="escort_2r"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

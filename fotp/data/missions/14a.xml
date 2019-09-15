@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/15a_ico.png</icon>
+  <icon_locked>missions/15a_ico_locked.png</icon_locked>
+  <image>missions/15a_img.png</image>
+  <image_locked>missions/15a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Tactical Reconnaissance</text>
+   <text lang="pl">Rozpoznanie taktyczne</text>
+  </name>
+  <introduction>
+   <text lang="en">This time your job is to conduct an aerial photo-reconnaissance mission. Watch out for enemy fighters, you are on your own.</text>
+   <text lang="pl">Tym razem twoim zadaniem jest przeprowadzenia misji zwiadu fotograficznego. Uważaj na wrogie samoloty. Możesz liczyć tylko na siebie.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed. Try again.</text>
+   <text lang="pl">Odniosłeś klęskę. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded.</text>
+   <text lang="pl">Odniosłeś sukces. Gratulacje.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p51d.xml</file>
+    <position>0 -6000 610</position>
+    <heading>0</heading>
+    <velocity>200</velocity>
+    <livery>entities/p51d_usaaf_1943_118trs.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends/>
+  <hostiles>
+   <fighter hp="100" name="fighter_1">
+    <file>entities/ki43.xml</file>
+    <position>4000 11000 305</position>
+    <heading>180</heading>
+    <velocity>150</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_1" name="fighter_2">
+    <offset>100 100 0</offset>
+    <file>entities/ki43.xml</file>
+    <position>3900 11100 305</position>
+    <heading>180</heading>
+    <velocity>150</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>0 -4000 610</position>
+    <speed>200</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -2000 610</position>
+    <speed>200</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 0 610</position>
+    <speed>200</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 2000 610</position>
+    <speed>200</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 4000 610</position>
+    <speed>200</speed>
+   </waypoint>
+   <waypoint>
+    <position>536 6000 610</position>
+    <speed>200</speed>
+   </waypoint>
+   <waypoint>
+    <position>2000 7464 610</position>
+    <speed>200</speed>
+   </waypoint>
+   <waypoint>
+    <position>4000 8000 610</position>
+    <speed>200</speed>
+   </waypoint>
+   <waypoint>
+    <position>6000 7464 610</position>
+    <speed>200</speed>
+   </waypoint>
+   <waypoint>
+    <position>7464 6000 610</position>
+    <speed>200</speed>
+   </waypoint>
+   <waypoint>
+    <position>8000 4000 610</position>
+    <speed>200</speed>
+   </waypoint>
+   <waypoint>
+    <position>8000 -4000 610</position>
+    <speed>200</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <init_units/>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">You are on a reconnaissance mission.</text>
+      <text lang="pl">Jesteś na misji zwiadowczej.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Uważaj na samoloty nieprzyjaciela.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="7"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Enemy Fighters">
+   <init_units>
+    <unit name="fighter_1"/>
+    <unit name="fighter_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy fighters at 9 o'clock.</text>
+      <text lang="pl">Wrogie myśliwce na godzinie 9.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="fighter_1"/>
+     <unit name="fighter_2"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="6"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/17a_ico.png</icon>
+  <icon_locked>missions/17a_ico_locked.png</icon_locked>
+  <image>missions/17a_img.png</image>
+  <image_locked>missions/17a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Raid on Tokyo Bay</text>
+   <text lang="pl">Rajd na zatokę Tokijską</text>
+  </name>
+  <introduction>
+   <text lang="en">On August 15th 1945 British aircraft carrier HMS Indefatigable launch aerial attack against targets located in Tokyo Bay area. Your job is to defend bombers from enemy fighters.</text>
+   <text lang="pl">15 sierpnia 1945 roku z brytyjskiego lotniskowca HMS Indefatigable wystartowały samoloty mające uderzyć na cele położone w rejonie zatoki Tokijskiej. Twoim zadaniem jest obrona bombowców przed myśliwcami nieprzyjaciela.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to defend bombers. Try again.</text>
+   <text lang="pl">Nie udało ci się obronić bombowców. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded to defend bombers. This was last aerial combat of the World War II. On this very day Japan announced its surrender.</text>
+   <text lang="pl">Udało ci się obronić bombowce. To była ostatnie walka powietrzna stoczona podczas II Wojny Światowej. Tego samo dnia Japonia ogłosiła poddanie.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/ocean.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/spitfire.xml</file>
+    <position>-100 -2000 914</position>
+    <heading>0</heading>
+    <velocity>125</velocity>
+    <livery>entities/spitfire_faa_1945.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman">
+    <offset>50 50 0</offset>
+    <file>entities/spitfire.xml</file>
+    <position>-50 -2100 914</position>
+    <heading>0</heading>
+    <velocity>125</velocity>
+    <livery>entities/spitfire_faa_1945.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" name="ecsort_1">
+    <file>entities/spitfire.xml</file>
+    <position>-100 -2500 914</position>
+    <heading>0</heading>
+    <velocity>125</velocity>
+    <livery>entities/spitfire_faa_1945.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="ecsort_1" name="escort_2">
+    <offset>50 50 0</offset>
+    <file>entities/spitfire.xml</file>
+    <position>-50 -2600 914</position>
+    <heading>0</heading>
+    <velocity>125</velocity>
+    <livery>entities/spitfire_faa_1945.rgb</livery>
+   </fighter>
+   <bomber_dive route="bombers" hp="100" name="bomber_1">
+    <file>entities/tbf.xml</file>
+    <position>0 -1400 914</position>
+    <heading>0</heading>
+    <velocity>115</velocity>
+    <livery>entities/tbf_faa_1945.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>100 100 0</offset>
+    <file>entities/tbf.xml</file>
+    <position>100 -1550 914</position>
+    <heading>0</heading>
+    <velocity>115</velocity>
+    <livery>entities/tbf_faa_1945.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" name="bomber_3">
+    <file>entities/tbf.xml</file>
+    <position>0 -1700 914</position>
+    <heading>0</heading>
+    <velocity>115</velocity>
+    <livery>entities/tbf_faa_1945.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_3" name="bomber_4">
+    <offset>100 100 0</offset>
+    <file>entities/tbf.xml</file>
+    <position>100 -1850 914</position>
+    <heading>0</heading>
+    <velocity>115</velocity>
+    <livery>entities/tbf_faa_1945.rgb</livery>
+   </bomber_dive>
+  </friends>
+  <hostiles>
+   <fighter hp="100" name="fighter_1">
+    <file>entities/a6m.xml</file>
+    <position>-3000 2000 914</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_1" name="fighter_2">
+    <offset>0 100 100</offset>
+    <file>entities/a6m.xml</file>
+    <position>-3100 1900 914</position>
+    <heading>90</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <fighter hp="100" name="fighter_3">
+    <file>entities/a6m.xml</file>
+    <position>-3000 6000 914</position>
+    <heading>90</heading>
+    <velocity>129</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_3" name="fighter_4">
+    <offset>0 100 100</offset>
+    <file>entities/a6m.xml</file>
+    <position>-3100 5900 914</position>
+    <heading>90</heading>
+    <velocity>129</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>-100 0 914</position>
+    <speed>125</speed>
+   </waypoint>
+   <waypoint>
+    <position>-100 2000 914</position>
+    <speed>125</speed>
+   </waypoint>
+   <waypoint>
+    <position>-100 4000 914</position>
+    <speed>125</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>0 1000 914</position>
+    <speed>125</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 17000 914</position>
+    <speed>125</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Escort bombers">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="wingman"/>
+    <unit name="ecsort_1"/>
+    <unit name="escort_2"/>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+    <unit name="bomber_3"/>
+    <unit name="bomber_4"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Escort bombers attacking targets</text>
+      <text lang="pl">Eskortuj bombowce atakujące cele</text>
+     </line>
+     <line>
+      <text lang="en">in Tokyo Bay area.</text>
+      <text lang="pl">w rejonie zatoki Tokijskiej.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="1"/>
+   </objectives>
+  </stage>
+  <stage name="Defend bombers">
+   <init_units>
+    <unit name="fighter_1"/>
+    <unit name="fighter_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Bandits at 9 o'clock.</text>
+      <text lang="pl">Bandyci na godzinie 9.</text>
+     </line>
+     <line>
+      <text lang="en">Defend bombers.</text>
+      <text lang="pl">Broń bombowców.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_defend minimum="4">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+     <unit name="bomber_4"/>
+    </objective_defend>
+    <objective_timeout limit="30"/>
+   </objectives>
+  </stage>
+  <stage name="Defend bombers">
+   <init_units>
+    <unit name="fighter_3"/>
+    <unit name="fighter_4"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">More bandits incoming.</text>
+      <text lang="pl">Nadlatuje więcej myśliwców wroga.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_defend minimum="4">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+     <unit name="bomber_4"/>
+    </objective_defend>
+    <objective_destroy>
+     <unit name="fighter_1"/>
+     <unit name="fighter_2"/>
+     <unit name="fighter_3"/>
+     <unit name="fighter_4"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

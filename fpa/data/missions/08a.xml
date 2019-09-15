@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/08a_ico.png</icon>
+  <icon_locked>missions/08a_ico_locked.png</icon_locked>
+  <image>missions/08a_img.png</image>
+  <image_locked>missions/08a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Poles in USAAF. Part 1. Far East</text>
+   <text lang="pl">Polacy w USAAF, Część I. Daleki Wschód</text>
+  </name>
+  <introduction>
+   <text lang="en">In September 1943, Witold Urbanowicz, an air attaché in Polish embassy in Washington, requested a transfer to an active duty in USAAF. His application has been accepted and he was reassigned to the 75th Fighter Squadron based in China.</text>
+   <text lang="pl">We wrześniu 1943 roku Witold Urbanowicz, pełniący funkcję attaché lotniczego przy ambasadzie polskiej w Waszyngtonie, poprosił o przeniesienie do czynnej służby w lotnictwie amerykańskim. Jego wniosek został rozpatrzony pozytywnie i Urbanowicz został przydzielony do 75-go Dywizjonu Myśliwskiego bazującego w Chinach.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy aircrafts. Try again.</text>
+   <text lang="pl">Niestety nie udało Ci się zestrzelić samolotów wroga. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You did it! On December 11th, 1943 Witold Urbanowicz shoot down 2 Japanese Ki-43 fighters and defended american B-25 bombers.</text>
+   <text lang="pl">Udało ci się! 11 grudnia 1943 roku Witold Urbanowicz strącił dwa japońskie samoloty myśliwskie Ki-43 i obronił amerykańskie bombowce B-25.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p40.xml</file>
+    <position>0 -6000 300</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_usaaf_1943_188.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <bomber_level route="ownship" hp="100" name="bomber_1">
+    <file>entities/b25.xml</file>
+    <position>0 -5600 300</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/b25_usaaf_1943.rgb</livery>
+   </bomber_level>
+   <bomber_level route="ownship" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>40 -50 30</offset>
+    <file>entities/b25.xml</file>
+    <position>-50 -5680 330</position>
+    <heading>-1.5708</heading>
+    <velocity>128</velocity>
+    <livery>entities/b25_usaaf_1943.rgb</livery>
+   </bomber_level>
+   <bomber_level route="ownship" hp="100" leader="bomber_1" name="bomber_3">
+    <offset>40 50 30</offset>
+    <file>entities/b25.xml</file>
+    <position>50 -5680 330</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/b25_usaaf_1943.rgb</livery>
+   </bomber_level>
+   <bomber_level route="ownship" hp="100" leader="bomber_1" name="bomber_4">
+    <offset>100 0 -30</offset>
+    <file>entities/b25.xml</file>
+    <position>0 -5760 270</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/b25_usaaf_1943.rgb</livery>
+   </bomber_level>
+  </friends>
+  <hostiles>
+   <fighter hp="100" name="fighter_1c">
+    <file>entities/ki43.xml</file>
+    <position>-2500 2500 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_1c" name="fighter_1l">
+    <offset>50 -100 0</offset>
+    <file>entities/ki43.xml</file>
+    <position>-2550 2600 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_1c" name="fighter_1r">
+    <offset>50 100 0</offset>
+    <file>entities/ki43.xml</file>
+    <position>-2550 2400 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki43_ija_1942.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>0 -4000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -2000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 0 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 2000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 6000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 40000 300</position>
+    <speed>128</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <init_units>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+    <unit name="bomber_3"/>
+    <unit name="bomber_4"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Escort bombers.</text>
+      <text lang="pl">Eskortuj bombowce.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+    <objective_defend minimum="4">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+     <unit name="bomber_4"/>
+    </objective_defend>
+   </objectives>
+  </stage>
+  <stage name="Defend bombers">
+   <init_units>
+    <unit name="fighter_1c"/>
+    <unit name="fighter_1l"/>
+    <unit name="fighter_1r"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Japanese fighters at 10 o'clock.</text>
+      <text lang="pl">Japońskie myśliwce na godzinie 10.</text>
+     </line>
+     <line>
+      <text lang="en">Defend bombers.</text>
+      <text lang="pl">Broń bombowców.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_defend minimum="4">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+     <unit name="bomber_4"/>
+    </objective_defend>
+    <objective_destroy>
+     <unit name="fighter_1c"/>
+     <unit name="fighter_1l"/>
+     <unit name="fighter_1r"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+    <objective_defend minimum="4">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+     <unit name="bomber_4"/>
+    </objective_defend>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

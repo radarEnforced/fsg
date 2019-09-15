@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/05a_ico.png</icon>
+  <icon_locked>missions/05a_ico_locked.png</icon_locked>
+  <image>missions/05a_img.png</image>
+  <image_locked>missions/05a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Attack Japanese convoy</text>
+   <text lang="pl">Zniszcz japoński konwój</text>
+  </name>
+  <introduction>
+   <text lang="en">On January 23rd 1942 Royal Netherlands East Indies Army Air Force dispatched aircrafts to attack Japanese convoy near Balikpapan, on Borneo, in the Netherlands East Indies.</text>
+   <text lang="pl">23 stycznie 1942 roku Królewskie Siły Powietrzne Armii Holenderskich Indii Wschodnich wysłały samoloty w celu zaatakowania japońskiego konwoju w pobliżu Balikpapan na Borneo.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to destroy Japanese convoy. Try again.</text>
+   <text lang="pl">Nie udało ci się zatopić japońskiego konwoju. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded to destroy Japanese convoy.</text>
+   <text lang="pl">Udało ci się zatopić japoński konwój.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/ocean.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_3.rgb</sky_dome>
+  <visibility>6400</visibility>
+  <sun_coef>0.9</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <bomber_level unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/f2a.xml</file>
+    <position>50 -6100 100</position>
+    <heading>0</heading>
+    <velocity>145</velocity>
+    <livery>entities/f2a_mlknil_1941.rgb</livery>
+   </bomber_level>
+  </ownship>
+  <friends>
+   <bomber_level route="ownship" hp="100" name="wingman">
+    <file>entities/f2a.xml</file>
+    <position>50 -5800 100</position>
+    <heading>0</heading>
+    <velocity>145</velocity>
+    <livery>entities/f2a_mlknil_1941.rgb</livery>
+   </bomber_level>
+   <bomber_level route="left" hp="100" name="bomber_1">
+    <file>entities/f2a.xml</file>
+    <position>-50 -4500 100</position>
+    <heading>0</heading>
+    <velocity>145</velocity>
+    <livery>entities/f2a_mlknil_1941.rgb</livery>
+   </bomber_level>
+   <bomber_level route="left" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>50 -50 0</offset>
+    <file>entities/f2a.xml</file>
+    <position>-100 -4550 100</position>
+    <heading>0</heading>
+    <velocity>145</velocity>
+    <livery>entities/f2a_mlknil_1941.rgb</livery>
+   </bomber_level>
+  </friends>
+  <hostiles>
+   <warship hp="100" name="ship_1">
+    <file>entities/tender.xml</file>
+    <position>-250 0 0</position>
+    <heading>270</heading>
+   </warship>
+   <warship hp="100" name="ship_2">
+    <file>entities/tender.xml</file>
+    <position>250 0 0</position>
+    <heading>270</heading>
+   </warship>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>50 -4000 100</position>
+    <speed>145</speed>
+   </waypoint>
+   <waypoint>
+    <position>50 -2000 100</position>
+    <speed>145</speed>
+   </waypoint>
+   <waypoint>
+    <position>50 0 100</position>
+    <speed>145</speed>
+   </waypoint>
+   <waypoint>
+    <position>50 2000 100</position>
+    <speed>145</speed>
+   </waypoint>
+  </route>
+  <route name="left">
+   <waypoint>
+    <position>-50 -4000 100</position>
+    <speed>145</speed>
+   </waypoint>
+   <waypoint>
+    <position>-50 0 100</position>
+    <speed>145</speed>
+   </waypoint>
+   <waypoint>
+    <position>-50 2000 100</position>
+    <speed>145</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Destroy Ships">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="wingman"/>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+    <unit name="ship_1"/>
+    <unit name="ship_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Destroy enemy convoy.</text>
+      <text lang="pl">Zniszcz wrogi konwój.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="ship_1"/>
+     <unit name="ship_2"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

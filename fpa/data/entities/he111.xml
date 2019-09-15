@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/he111.osgb</model>
+  <ap>10</ap>
+  <radius>11.3</radius>
+  <gunners>
+    <gunner_rear>   3.0  0.0  1.7 </gunner_rear>
+    <gunner_front> -3.5  0.2  0.3 </gunner_front>
+    <gunner_left>   4.0 -1.1  0.8 </gunner_left>
+    <gunner_right>  4.0  1.1  0.8 </gunner_right>
+  </gunners>
+  <aircraft>
+    <time_p>0.2</time_p>
+    <time_q>0.7</time_q>
+    <time_r>0.7</time_r>
+    <time_v>30.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>125.0</speed_max>
+    <roll_max>30.0</roll_max>
+  </aircraft>
+  <bomber_level>
+    <bomb hidden="1" model="entities/sc250.osgb"><position>  0.1 -0.2 -1.0 </position></bomb>
+    <bomb hidden="1" model="entities/sc250.osgb"><position>  0.1  0.0 -1.0 </position></bomb>
+    <bomb hidden="1" model="entities/sc250.osgb"><position>  1.7 -0.2 -1.0 </position></bomb>
+    <bomb hidden="1" model="entities/sc250.osgb"><position>  1.7  0.0 -1.0 </position></bomb>
+  </bomber_level>
+</unit>

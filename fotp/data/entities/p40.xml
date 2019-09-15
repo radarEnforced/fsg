@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/p40.osgb</model>
+  <ap>6</ap>
+  <radius>5.7</radius>
+  <aircraft>
+    <time_p>0.1</time_p>
+    <time_q>0.5</time_q>
+    <time_r>0.5</time_r>
+    <time_v>10.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>160.0</speed_max>
+    <roll_max>72.0</roll_max>
+    <max_ailerons>20.0</max_ailerons>
+    <max_elevator>30.0</max_elevator>
+    <max_rudder>60.0</max_rudder>
+    
+    <flash light="1">-0.54  2.37 -0.57</flash>
+    <flash light="1">-0.54 -2.37 -0.57</flash>
+    <flash>-0.55  2.13 -0.59</flash>
+    <flash>-0.55 -2.13 -0.59</flash>
+    <flash>-0.53  2.61 -0.54</flash>
+    <flash>-0.53 -2.61 -0.54</flash>
+    
+    <muzzle trail="1">-35.0 -2.2 0.0</muzzle>
+    <muzzle trail="1">-35.0  2.2 0.0</muzzle>
+    <muzzle trail="1">-15.0 -2.6 0.0</muzzle>
+    <muzzle trail="1">-15.0  2.6 0.0</muzzle>
+    
+  </aircraft>
+</unit>

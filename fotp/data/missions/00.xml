@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/00_ico.png</icon>
+  <icon_locked>missions/00_ico_locked.png</icon_locked>
+  <image>missions/00_img.png</image>
+  <image_locked>missions/00_img_locked.png</image_locked>
+  <name>
+   <text lang="en">TEST</text>
+   <text lang="pl">TEST</text>
+  </name>
+  <introduction>
+   <text lang="en">TEST</text>
+   <text lang="pl">TEST</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">TEST</text>
+   <text lang="pl">TEST</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">TEST</text>
+   <text lang="pl">TEST</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/ocean.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="24" name="ownship">
+    <file>entities/spitfire.xml</file>
+    <position>0 0 91</position>
+    <heading>180</heading>
+    <velocity>50</velocity>
+    <livery>entities/spitfire_raaf_1943.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" name="bomber">
+    <file>entities/spitfire.xml</file>
+    <position>-50 50 91</position>
+    <heading>180</heading>
+    <velocity>50</velocity>
+    <livery>entities/spitfire_raaf_1943.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <warship hp="100" name="ship">
+    <file>entities/lexington.xml</file>
+    <position>0 5000 0</position>
+    <heading>90</heading>
+   </warship>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>0 5000 91</position>
+    <speed>50</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 10000 91</position>
+    <speed>50</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Timeout">
+   <init_units>
+    <unit name="ship"/>
+    <unit name="bomber"/>
+   </init_units>
+   <objectives>
+    <objective_timeout limit="3600"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

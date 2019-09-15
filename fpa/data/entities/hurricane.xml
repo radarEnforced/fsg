@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/hurricane.osgb</model>
+  <ap>6</ap>
+  <radius>6.1</radius>
+  <aircraft>
+    <time_p>0.1</time_p>
+    <time_q>0.5</time_q>
+    <time_r>0.5</time_r>
+    <time_v>10.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>155.0</speed_max>
+    <roll_max>72.0</roll_max>
+    <max_ailerons>20.0</max_ailerons>
+    <max_elevator>30.0</max_elevator>
+    <max_rudder>60.0</max_rudder>
+
+    <flash light="1">-0.55  2.28 -0.49</flash>
+    <flash light="1">-0.55 -2.28 -0.49</flash>
+    <flash>-0.53  2.44 -0.48</flash>
+    <flash>-0.53 -2.44 -0.48</flash>
+    <flash>-0.56  2.13 -0.50</flash>
+    <flash>-0.56 -2.13 -0.50</flash>
+    <flash>-0.58  1.97 -0.51</flash>
+    <flash>-0.58 -1.97 -0.51</flash>
+
+    <muzzle trail="1">-35.0 -2.0 0.0</muzzle>
+    <muzzle trail="1">-35.0  2.0 0.0</muzzle>
+    <muzzle trail="1">-15.0 -2.4 0.0</muzzle>
+    <muzzle trail="1">-15.0  2.4 0.0</muzzle>
+
+  </aircraft>
+</unit>

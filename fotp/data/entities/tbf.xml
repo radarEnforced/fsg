@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/tbf.osgb</model>
+  <ap>9</ap>
+  <radius>8.5</radius>
+  <gunners>
+    <gunner_rear>2.0 0.0 1.1</gunner_rear>
+  </gunners>
+  <aircraft>
+    <time_p>0.2</time_p>
+    <time_q>0.7</time_q>
+    <time_r>0.7</time_r>
+    <time_v>30.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>125.0</speed_max>
+    <roll_max>45.0</roll_max>
+  </aircraft>
+    <bomber_level>
+    <bomb hidden="1" model="entities/anm59.osgb"><position> 1.1 -0.3 -1.4 </position></bomb>
+    <bomb hidden="1" model="entities/anm59.osgb"><position> 1.1  0.3 -1.4 </position></bomb>
+  </bomber_level>
+  <bomber_torpedo>
+    <torpedo hidden="1" model="entities/mark13.osgb"><position>1.1 0.0 -1.4</position></torpedo>
+  </bomber_torpedo>
+</unit>

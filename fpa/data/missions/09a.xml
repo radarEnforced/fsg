@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/09a_ico.png</icon>
+  <icon_locked>missions/09a_ico_locked.png</icon_locked>
+  <image>missions/09a_img.png</image>
+  <image_locked>missions/09a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Poles in USAAF. Part 2. Escort bombers</text>
+   <text lang="pl">Polacy w USAAF, Część II. Eskortuj bombowce</text>
+  </name>
+  <introduction>
+   <text lang="en">On February 2nd 1944 Bolesław Gładych, pilot of the No. 302 Polish Squadron RAF, joined 61st Fighter Squadron of the United States. Escort bombers flying to Germany.</text>
+   <text lang="pl">2 lutego 1944 roku, pilot Dywizjonu 302, Bolesław Gładych dołączył do 61-go Dywizjonu Myśliwskiego Stanów Zjednoczonych. Eskortuj bombowce lecące nad Niemcy.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You failed to defend escorted aircraft. Try again.</text>
+   <text lang="pl">Nie udało Ci się obronić eskortowanych samolotów. Spróbuj ponownie. </text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">On March 8th 1944, while escorting B-17 bombers to Germany,  Bolesław Gładych engaged three Focke-Wulf Fw 190. For this action he was awarded Silver Star. </text>
+   <text lang="pl">8 marca 1944 roku Bolesław Gładych, eskortując Latające Fortece zmierzające do Niemiec, podjął walkę z trzema Focke-Wulfami Fw 190. Za tę misję odznaczony został amerykańską Srebrną Gwiazdą.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_2.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p47b.xml</file>
+    <position>0 -6000 300</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/p47b_usaaf_1944_hvm.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman">
+    <offset>150 -150 0</offset>
+    <file>entities/p47b.xml</file>
+    <position>-150 -6150 300</position>
+    <heading>-1.5708</heading>
+    <velocity>128</velocity>
+    <livery>entities/p47b_usaaf_1944.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="bomber_2" name="escort_1">
+    <offset>50 0 0</offset>
+    <file>entities/p47b.xml</file>
+    <position>-50 -5760 330</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/p47b_usaaf_1944.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="bomber_3" name="escort_2">
+    <offset>50 0 0</offset>
+    <file>entities/p47b.xml</file>
+    <position>50 -5760 330</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/p47b_usaaf_1944.rgb</livery>
+   </fighter>
+   <bomber_level route="ownship" hp="100" name="bomber_1">
+    <file>entities/b17.xml</file>
+    <position>0 -5600 300</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/b17_usaaf_1944.rgb</livery>
+   </bomber_level>
+   <bomber_level route="ownship" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>40 -50 30</offset>
+    <file>entities/b17.xml</file>
+    <position>-50 -5680 330</position>
+    <heading>-1.5708</heading>
+    <velocity>128</velocity>
+    <livery>entities/b17_usaaf_1944.rgb</livery>
+   </bomber_level>
+   <bomber_level route="ownship" hp="100" leader="bomber_1" name="bomber_3">
+    <offset>40 50 30</offset>
+    <file>entities/b17.xml</file>
+    <position>50 -5680 330</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/b17_usaaf_1944.rgb</livery>
+   </bomber_level>
+  </friends>
+  <hostiles>
+   <fighter hp="100" name="fighter_1c">
+    <file>entities/fw190a.xml</file>
+    <position>-2500 2500 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_1c" name="fighter_1l">
+    <offset>50 -100 0</offset>
+    <file>entities/fw190a.xml</file>
+    <position>-2550 2600 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_1c" name="fighter_1r">
+    <offset>50 100 0</offset>
+    <file>entities/fw190a.xml</file>
+    <position>-2550 2400 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter hp="100" name="fighter_2c">
+    <file>entities/fw190a.xml</file>
+    <position>-2500 7500 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_2c" name="fighter_2l">
+    <offset>50 -100 0</offset>
+    <file>entities/fw190a.xml</file>
+    <position>-2550 7600 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_2c" name="fighter_2r">
+    <offset>50 100 0</offset>
+    <file>entities/fw190a.xml</file>
+    <position>-2550 7400 305</position>
+    <heading>90</heading>
+    <velocity>77</velocity>
+    <livery>entities/fw190a_luftwaffe_1944.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>0 -4000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -2000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 0 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 2000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 6000 300</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 40000 300</position>
+    <speed>128</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <init_units>
+    <unit name="wingman"/>
+    <unit name="escort_1"/>
+    <unit name="escort_2"/>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+    <unit name="bomber_3"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Escort bombers flying to Germany.</text>
+      <text lang="pl">Eskortuj bombowce lecące nad Niemcy.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+    <objective_defend minimum="3">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+    </objective_defend>
+   </objectives>
+  </stage>
+  <stage name="Defend bombers">
+   <init_units>
+    <unit name="fighter_1c"/>
+    <unit name="fighter_1l"/>
+    <unit name="fighter_1r"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Bandits at 10 o'clock.</text>
+      <text lang="pl">Bandyci na godzinie 10.</text>
+     </line>
+     <line>
+      <text lang="en">Defend bombers.</text>
+      <text lang="pl">Broń bombowców.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_defend minimum="3">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+    </objective_defend>
+    <objective_timeout limit="30"/>
+   </objectives>
+  </stage>
+  <stage name="Defend bombers">
+   <init_units>
+    <unit name="fighter_2c"/>
+    <unit name="fighter_2l"/>
+    <unit name="fighter_2r"/>
+   </init_units>
+   <message overlay="0">
+    <duration>6</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">More bandits incoming.</text>
+      <text lang="pl">Nadlatuje więcej myśliwców.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_defend minimum="3">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+    </objective_defend>
+    <objective_destroy>
+     <unit name="fighter_1c"/>
+     <unit name="fighter_1l"/>
+     <unit name="fighter_1r"/>
+     <unit name="fighter_2c"/>
+     <unit name="fighter_2l"/>
+     <unit name="fighter_2r"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+    <objective_defend minimum="3">
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+    </objective_defend>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

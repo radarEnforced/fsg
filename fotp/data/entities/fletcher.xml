@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/fletcher.osgb</model>
+  <ap>500</ap>
+  <radius>15</radius>
+  <gunners>
+    <gunner_flak>  0.0  0.0  10.0 </gunner_flak>
+    <gunner_back> 50.0  0.0  10.0 </gunner_back>
+  </gunners>
+</unit>

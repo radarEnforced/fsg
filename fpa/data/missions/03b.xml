@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/03b_ico.png</icon>
+  <icon_locked>missions/03b_ico_locked.png</icon_locked>
+  <image>missions/03b_img.png</image>
+  <image_locked>missions/03b_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Defending Warsaw</text>
+   <text lang="pl">Obrona Warszawy</text>
+  </name>
+  <introduction>
+   <text lang="en">In the morning on September 1st 1939 obsolete Polish P.11 fighters of the Pursuit Brigade took off from Zielonka Fighter Strip to intercept German bombers threatening Warsaw.</text>
+   <text lang="pl">Rankiem 1 września 1939 roku przestarzałe polskie myśliwce PZL P.11 należące do Brygady Pościgowej wystartowały z lotniska polowego w Zielonce w celu przechwycenia niemieckich bombowców zbliżających się do Warszawy.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to destroy enemy aircrafts. Try again.</text>
+   <text lang="pl">Nie udało ci się zniszczyć wrogich samolotów. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded to stop enemy aircrafts from bombing Warsaw. In September 1939 second lieutenant Hieronim Dudwał of 113th Fighter Squadron, flying obsolete Polish P.11 fighter, shot down 4 German aircraft. All Polish pilots, despite severe disadvantage against Luftwaffe, shot down 126 enemy aircrafts.</text>
+   <text lang="pl">Udało ci się powstrzymać samoloty wroga przed zbombardowaniem Warszawy. We wrześniu 1939 podporucznik Hieronim Dudwał z 113. eskadry myśliwskiej, latający na przestarzałym polskim myśliwcu P.11, zestrzelił 4 niemieckie maszyny, a wszyscy polscy lotnicy, pomimo przytłaczającej przewagi Luftwaffe, zniszczyli 126 samolotów wroga.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/warsaw_elevation.csv</elevation>
+  <terrain>scenery/warsaw_terrain.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects>
+   <object>scenery/warsaw_objects.osgb</object>
+  </objects>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p11.xml</file>
+    <position>12200 8448 115</position>
+    <heading>270</heading>
+    <velocity>110</velocity>
+    <livery>entities/p11_lwrp_1939_170n.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter hp="100" leader="ownship" name="wingman_1">
+    <offset>50 50 0</offset>
+    <file>entities/p11.xml</file>
+    <position>12250 8500 115</position>
+    <heading>270</heading>
+    <velocity>110</velocity>
+    <livery>entities/p11_lwrp_1939.rgb</livery>
+   </fighter>
+   <fighter hp="100" name="fighter_1">
+    <file>entities/p11.xml</file>
+    <position>8500 12000 457</position>
+    <heading>0</heading>
+    <velocity>110</velocity>
+    <livery>entities/p11_lwrp_1939.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_1" name="fighter_2">
+    <offset>200 -100 0</offset>
+    <file>entities/p11.xml</file>
+    <position>8400 11800 475</position>
+    <heading>0</heading>
+    <velocity>110</velocity>
+    <livery>entities/p11_lwrp_1939.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <fighter route="bombers" hp="100" name="escort_1">
+    <file>entities/bf109.xml</file>
+    <position>5500 18000 457</position>
+    <heading>180</heading>
+    <velocity>100</velocity>
+    <livery>entities/bf109_luftwaffe_1939.rgb</livery>
+   </fighter>
+   <fighter route="bombers" hp="100" leader="escort_1" name="escort_2">
+    <offset>50 50 0</offset>
+    <file>entities/bf109.xml</file>
+    <position>5450 18050 457</position>
+    <heading>180</heading>
+    <velocity>100</velocity>
+    <livery>entities/bf109_luftwaffe_1939.rgb</livery>
+   </fighter>
+   <aircraft route="bombers" hp="100" name="bomber_1c">
+    <file>entities/he111.xml</file>
+    <position>5500 18200 457</position>
+    <heading>180</heading>
+    <velocity>100</velocity>
+    <livery>entities/he111_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1c" name="bomber_1l">
+    <offset>100 -100 0</offset>
+    <file>entities/he111.xml</file>
+    <position>5600 18300 457</position>
+    <heading>180</heading>
+    <velocity>100</velocity>
+    <livery>entities/he111_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" name="bomber_2c">
+    <file>entities/do17.xml</file>
+    <position>5500 18600 457</position>
+    <heading>180</heading>
+    <velocity>100</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_2c" name="bomber_2r">
+    <offset>100 100 0</offset>
+    <file>entities/do17.xml</file>
+    <position>5400 18700 457</position>
+    <heading>180</heading>
+    <velocity>100</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>11000 8448 200</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>9750 8783 274</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>8835 9698 366</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>8500 10948 457</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>8500 13000 457</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>8500 15000 457</position>
+    <speed>110</speed>
+   </waypoint>
+   <waypoint>
+    <position>8500 21000 457</position>
+    <speed>110</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>5500 10000 457</position>
+    <speed>100</speed>
+   </waypoint>
+   <waypoint>
+    <position>5500 8000 457</position>
+    <speed>100</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 0 457</position>
+    <speed>100</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <time_limit>150</time_limit>
+   <init_units>
+    <unit name="wingman_1"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Intercept enemy bombers heading</text>
+      <text lang="pl">Przechwyć wrogie bombowce</text>
+     </line>
+     <line>
+      <text lang="en">towards Warsaw.</text>
+      <text lang="pl">zmierzające w stronę Warszawy.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="5"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept">
+   <init_units>
+    <unit name="escort_1"/>
+    <unit name="escort_2"/>
+    <unit name="bomber_1c"/>
+    <unit name="bomber_1l"/>
+    <unit name="bomber_2c"/>
+    <unit name="bomber_2r"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy aircrafts at 10 o'clock.</text>
+      <text lang="pl">Wrogie samoloty na godzinie 10.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="12"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Bombers">
+   <time_limit>180</time_limit>
+   <init_units>
+    <unit name="fighter_1"/>
+    <unit name="fighter_2"/>
+   </init_units>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1c"/>
+     <unit name="bomber_1l"/>
+     <unit name="bomber_2c"/>
+     <unit name="bomber_2r"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Destroy Escort">
+   <init_units/>
+   <objectives>
+    <objective_destroy>
+     <unit name="escort_1"/>
+     <unit name="escort_2"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

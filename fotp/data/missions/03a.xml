@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/04a_ico.png</icon>
+  <icon_locked>missions/04a_ico_locked.png</icon_locked>
+  <image>missions/04a_img.png</image>
+  <image_locked>missions/04a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Patrol area arround Kunming</text>
+   <text lang="pl">Patroluj okolice Kunming</text>
+  </name>
+  <introduction>
+   <text lang="en">Before United States joined the war American military pilots were allowed to sign contracts with Chinese Air Force. Unit composed of these pilots was called American Volunteer Group, nicknamed the Flying Tigers. On December 20th 1941 pilots of the Flying Tigers saw their first combat against Japanese aircafts near Kunming in southwest China.</text>
+   <text lang="pl">Zanim Stany Zjednoczone przystąpiły do wojny amerykańscy piloci wojskowi otrzymali zgodę na podpisanie kontraktów z chińskimi siłami powietrznymi. Jednostka wojskowa złożona z tych pilotów nazywała się American Volunteer Group, ale znana była pod nazwą Latające Tygrysy. 20 grudnia 1941 roku piloci Latających Tygrysów stoczyli pierwszą walkę przeciwko Japończykom w pobliżu miasta Kunming w Chinach.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy bombers. Try again.</text>
+   <text lang="pl">Nie udało ci się zestrzelić wrogich bombowców. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded to shoot down all enemy bombers.</text>
+   <text lang="pl">Udało ci się zestrzelić wszystkie wrogie bombowce.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p40.xml</file>
+    <position>0 -6000 305</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_avg_1941.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman">
+    <offset>50 50 0</offset>
+    <file>entities/p40.xml</file>
+    <position>50 -6050 305</position>
+    <heading>-1.5708</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_avg_1941.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" name="fighter_1">
+    <file>entities/p40.xml</file>
+    <position>0 -6200 305</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_avg_1941.rgb</livery>
+   </fighter>
+   <fighter hp="100" leader="fighter_1" name="fighter_2">
+    <offset>50 50 0</offset>
+    <file>entities/p40.xml</file>
+    <position>50 -6250 305</position>
+    <heading>0</heading>
+    <velocity>128</velocity>
+    <livery>entities/p40_avg_1941.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <aircraft route="bombers" hp="100" name="bomber_1">
+    <file>entities/ki21.xml</file>
+    <position>0 5500 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki21_ija_1942.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>-100 100 0</offset>
+    <file>entities/ki21.xml</file>
+    <position>100 5600 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki21_ija_1942.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1" name="bomber_3">
+    <offset>100 100 0</offset>
+    <file>entities/ki21.xml</file>
+    <position>-100 5600 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki21_ija_1942.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1" name="bomber_4">
+    <offset>0 200 0</offset>
+    <file>entities/ki21.xml</file>
+    <position>0 5700 305</position>
+    <heading>180</heading>
+    <velocity>77</velocity>
+    <livery>entities/ki21_ija_1942.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>0 -4000 305</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -2000 305</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 0 305</position>
+    <speed>128</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 2000 305</position>
+    <speed>128</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>0 0 305</position>
+    <speed>77</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -10000 305</position>
+    <speed>77</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <init_units>
+    <unit name="wingman"/>
+    <unit name="fighter_1"/>
+    <unit name="fighter_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Patrol area around Kunming.</text>
+      <text lang="pl">Patroluj okolice Kunming.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy bombers">
+   <init_units>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+    <unit name="bomber_3"/>
+    <unit name="bomber_4"/>
+   </init_units>
+   <message overlay="0">
+    <duration>8</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Engage enemy bombers.</text>
+      <text lang="pl">Przechwyć wrogie bombowce.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+     <unit name="bomber_4"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/iowa.osgb</model>
+  <ap>1500</ap>
+  <radius>30</radius>
+  <gunners>
+    <gunner_flak>  -50.0   0.0  15.0  </gunner_flak>
+    <gunner_flak>   50.0   0.0  15.0  </gunner_flak>
+    <gunner_left>  -75.0 -10.0  15.0  </gunner_left>
+    <gunner_right> -75.0  10.0  15.0  </gunner_right>
+    <gunner_left>   75.0 -10.0  15.0  </gunner_left>
+    <gunner_right>  75.0  10.0  15.0  </gunner_right>
+  </gunners>
+</unit>

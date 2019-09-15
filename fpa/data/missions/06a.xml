@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/06a_ico.png</icon>
+  <icon_locked>missions/06a_ico_locked.png</icon_locked>
+  <image>missions/06a_img.png</image>
+  <image_locked>missions/06a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">The Spitfire</text>
+   <text lang="pl">Spitfire</text>
+  </name>
+  <introduction>
+   <text lang="en">Early 1941 No. 303 Polish Squadron was equiped with Spitfire fighters. New aircraft prooved to be an effective weapon against bombers as well as fighters.  Intercept incoming bombers. Be careful, there can be a fighter escort.</text>
+   <text lang="pl">Na początku 1941 roku Dywizjon 303 został wyposażony w myśliwce Spitfire. Nowe samoloty okazały się skuteczną bronią zarówno przeciwko bombowcom jak i myśliwcom. Przechwyć nadlatujące bombowce, Uważaj, mogą mieć eskortę myśliwców.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy aircrafts. Try again.</text>
+   <text lang="pl">Niestety nie udało Ci się zestrzelić niemieckich samolotów. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">On May 19th 1942 Jan Zumbach took command of the No. 303 Polish Squadron. On August 19th 1942 he shot down two Fw 190 and a He 111. Throuout the whole war he scored 13 victories, which makes him one of the top Polish fighter aces of World War 2.</text>
+   <text lang="pl">Jan Zumbach był dowódcą Dywizjonu 303 od 19 maja 1942 roku. W dniu 19 sierpnia 1942 roku, pilotując swojego Spitfire'a, zestrzelił dwa Fw 190 i He 111. Przez całą wojnę zaliczył zestrzelenie 13 samolotów co plasuje go w czołówce polskich asów myśliwskich II Wojny Światowej.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/seuk_elevation.csv</elevation>
+  <terrain>scenery/seuk_terrain.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/spitfire.xml</file>
+    <position>-20000 -37000 305</position>
+    <heading>180</heading>
+    <velocity>165</velocity>
+    <livery>entities/spitfire_raf_1942_rfd.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman">
+    <offset>100 100 0</offset>
+    <file>entities/spitfire.xml</file>
+    <position>-20100 -36900 305</position>
+    <heading>180</heading>
+    <velocity>165</velocity>
+    <livery>entities/spitfire_raf_1942.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <fighter route="bombers" hp="100" name="escort_1a">
+    <file>entities/fw190a.xml</file>
+    <position>-20000 -49600 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1942.rgb</livery>
+   </fighter>
+   <fighter route="bombers" hp="100" leader="escort_1a" name="escort_1b">
+    <offset>50 50 0</offset>
+    <file>entities/fw190a.xml</file>
+    <position>-19950 -49650 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/fw190a_luftwaffe_1942.rgb</livery>
+   </fighter>
+   <aircraft route="bombers" hp="100" name="bomber_1a">
+    <file>entities/he111.xml</file>
+    <position>-20000 -50000 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/he111_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1a" name="bomber_1b">
+    <offset>15 -50 0</offset>
+    <file>entities/he111.xml</file>
+    <position>-20050 -50050 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/he111_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1a" name="bomber_1c">
+    <offset>15 50 0</offset>
+    <file>entities/he111.xml</file>
+    <position>-19950 -50050 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/he111_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1a" name="bomber_1d">
+    <offset>100 0 0</offset>
+    <file>entities/he111.xml</file>
+    <position>-20000 -50100 305</position>
+    <heading>-1.5708</heading>
+    <velocity>129</velocity>
+    <livery>entities/he111_luftwaffe_1939.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>-20000 -39000 305</position>
+    <speed>165</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 -41000 305</position>
+    <speed>165</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 -43000 305</position>
+    <speed>165</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 -45000 305</position>
+    <speed>165</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 -47000 305</position>
+    <speed>165</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>-20000 -40000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 -20000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 0 305</position>
+    <speed>129</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <init_units>
+    <unit name="wingman"/>
+    <unit name="fighter_1a"/>
+    <unit name="fighter_1b"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Intercept incoming enemy bombers.</text>
+      <text lang="pl">Przechwyć zbliżające się bombowce nieprzyjaciela.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="3"/>
+   </objectives>
+  </stage>
+  <stage name="Destroy Bombers">
+   <time_limit>300</time_limit>
+   <init_units>
+    <unit name="escort_1a"/>
+    <unit name="escort_1b"/>
+    <unit name="bomber_1a"/>
+    <unit name="bomber_1b"/>
+    <unit name="bomber_1c"/>
+    <unit name="bomber_1d"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy bombers at 12 o'clock.</text>
+      <text lang="pl">Wrogie bombowce na godzinie 12.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out. There is a fighter escort.</text>
+      <text lang="pl">Uważaj. Mają eskortę myśliwską.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1a"/>
+     <unit name="bomber_1b"/>
+     <unit name="bomber_1c"/>
+     <unit name="bomber_1d"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Destroy Escort">
+   <init_units/>
+   <objectives>
+    <objective_destroy>
+     <unit name="escort_1a"/>
+     <unit name="escort_1b"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

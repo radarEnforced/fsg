@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/08a_ico.png</icon>
+  <icon_locked>missions/08a_ico_locked.png</icon_locked>
+  <image>missions/08a_img.png</image>
+  <image_locked>missions/08a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Defend Midway</text>
+   <text lang="pl">Obrona Midway</text>
+  </name>
+  <introduction>
+   <text lang="en">On June 4th 1942 Imperial Japanese Navy aircraft carriers launched aerial attack on the Midway island. Your job is to defend Midway. Destroy all incoming enemy bombers. Be careful. There can be a fighter escort.
+</text>
+   <text lang="pl">4 czerwca 1942 roku Japońska Cesarska Marynarka Wojenna wysłała samoloty w celu zaatakowania wyspy Midway. Twoim zadaniem jest obrona Midway. Zniszcz wszystkie nadlatujące bombowce. Uważaj. Mogą mieć osłonę myśliwską.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to defend Midway island. Try again.</text>
+   <text lang="pl">Nie dałeś rady obronić wyspy Midway. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have managed to shoot down all bombers, but other fighters were not so successful. Midway was bombed but the battle is not over yet.</text>
+   <text lang="pl">Dałeś radę zestrzelić wszystkie bombowce ale innym myśliwcom nie poszło tak dobrze. Midway została zbombardowania, jednak bitwa nie jest jeszcze skończona.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/midway_elevation.csv</elevation>
+  <terrain>scenery/midway_terrain.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects>
+   <object>scenery/midway_objects.osgb</object>
+  </objects>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/f2a.xml</file>
+    <position>-5600 5600 915</position>
+    <heading>315</heading>
+    <velocity>155</velocity>
+    <livery>entities/f2a_usn_1942.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_1">
+    <offset>100 100 0</offset>
+    <file>entities/f2a.xml</file>
+    <position>-5500 5600 914</position>
+    <heading>315</heading>
+    <velocity>155</velocity>
+    <livery>entities/f2a_usn_1942.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" name="fighter_1">
+    <file>entities/f2a.xml</file>
+    <position>-6000 6000 914</position>
+    <heading>315</heading>
+    <velocity>154</velocity>
+    <livery>entities/f2a_usn_1942.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="fighter_1" name="fighter_2">
+    <offset>100 100 0</offset>
+    <file>entities/f2a.xml</file>
+    <position>-5800 5900 914</position>
+    <heading>315</heading>
+    <velocity>154</velocity>
+    <livery>entities/f2a_usn_1942.rgb</livery>
+   </fighter>
+   <building hp="100" name="Midway">
+    <file>entities/quonset_40.xml</file>
+    <position>1792 1152 4</position>
+    <heading>135</heading>
+   </building>
+  </friends>
+  <hostiles>
+   <fighter route="bombers" hp="100" name="escort_1">
+    <file>entities/a6m.xml</file>
+    <position>-14500 14000 914</position>
+    <heading>135</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1941.rgb</livery>
+   </fighter>
+   <fighter route="bombers" hp="100" leader="escort_1" name="escort_2">
+    <offset>100 100 0</offset>
+    <file>entities/a6m.xml</file>
+    <position>-14600 14100 914</position>
+    <heading>135</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1941.rgb</livery>
+   </fighter>
+   <bomber_level route="bombers" hp="100" name="bomber_1">
+    <file>entities/b5n.xml</file>
+    <position>-14000 16000 914</position>
+    <heading>135</heading>
+    <velocity>103</velocity>
+    <livery>entities/b5n_ijn_1941.rgb</livery>
+   </bomber_level>
+   <bomber_level route="bombers" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>100 100 0</offset>
+    <file>entities/b5n.xml</file>
+    <position>-14100 16100 914</position>
+    <heading>135</heading>
+    <velocity>103</velocity>
+    <livery>entities/b5n_ijn_1941.rgb</livery>
+   </bomber_level>
+   <bomber_level route="bombers" hp="100" leader="bomber_2" name="bomber_3">
+    <offset>0 -200 0</offset>
+    <file>entities/b5n.xml</file>
+    <position>-13900 16100 914</position>
+    <heading>135</heading>
+    <velocity>103</velocity>
+    <livery>entities/b5n_ijn_1941.rgb</livery>
+   </bomber_level>
+   <bomber_dive route="bombers" hp="100" name="bomber_4">
+    <file>entities/d3a.xml</file>
+    <position>-14000 16000 914</position>
+    <heading>135</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_4" name="bomber_5">
+    <offset>100 100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-14100 16100 914</position>
+    <heading>135</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bombers" hp="100" leader="bomber_5" name="bomber_6">
+    <offset>0 -200 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>-13900 16100 914</position>
+    <heading>135</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>-8000 8000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-10000 10000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-12000 12000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-14000 14000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>-16000 16000 914</position>
+    <speed>155</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>2000 2000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>2000 -2000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-4000 -8000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-8000 -8000 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 4000 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Go north-west">
+   <time_limit>120</time_limit>
+   <init_units>
+    <unit name="wingman_1"/>
+    <unit name="fighter_1"/>
+    <unit name="fighter_2"/>
+    <unit name="Midway"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Radar detected enemy aircrafts</text>
+      <text lang="pl">Radar wykrył wrogie samoloty</text>
+     </line>
+     <line>
+      <text lang="en">north-west of Midway.</text>
+      <text lang="pl">na północny-zachód od Midway.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept Fighters">
+   <init_units>
+    <unit name="escort_1"/>
+    <unit name="escort_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy fighters at 12 o'clock.</text>
+      <text lang="pl">Wrogie myśliwce na godzinie 12.</text>
+     </line>
+    </caption>>
+   </message>
+   <objectives>
+    <objective_timeout limit="60"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept Bombers 1">
+   <init_units>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+    <unit name="bomber_3"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Incoming enemy bombers.</text>
+      <text lang="pl">Nadlatują wrogie bombowce.</text>
+     </line>
+     <line>
+      <text lang="en">Defend Midway.</text>
+      <text lang="pl">Broń Midway.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="30"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept Bombers 2">
+   <init_units>
+    <unit name="bomber_4"/>
+    <unit name="bomber_5"/>
+    <unit name="bomber_6"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">More enemy bombers incoming.</text>
+      <text lang="pl">Nadlatuje więcej bombowców.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+    </objective_destroy>
+    <objective_defend minimum="1">
+     <unit name="Midway"/>
+    </objective_defend>
+   </objectives>
+  </stage>
+  <stage name="Defend Midway">
+   <init_units/>
+   <objectives>
+    <objective_defend minimum="1">
+     <unit name="Midway"/>
+    </objective_defend>
+    <objective_destroy>
+     <unit name="bomber_4"/>
+     <unit name="bomber_5"/>
+     <unit name="bomber_6"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

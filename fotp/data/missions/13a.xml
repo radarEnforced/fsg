@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/14a_ico.png</icon>
+  <icon_locked>missions/14a_ico_locked.png</icon_locked>
+  <image>missions/14a_img.png</image>
+  <image_locked>missions/14a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Battle of Leyte Gulf</text>
+   <text lang="pl">Bitwa w zatoce Leyte</text>
+  </name>
+  <introduction>
+   <text lang="en">On October 24th 1944 near the Philippine islands of Leyte Japanese Combined Fleet launched aerial attack agaings ships of US Task Force 58. American F6F Hellcats stood up against this attack. Defend the fleet and shoot down all incoming bombers.</text>
+   <text lang="pl">24 października 1944 roku w pobliżu filipińskiej wyspy Leyte Japońska Połączona Flota rozpoczęła atak lotniczy skierowany przeciwko Task Force 58. Amerykańskie myśliwce F6F Hellcat przeciwstawiły się temu atakowi. Broń floty i zniszcz wszystkie nadlatujące bombowce.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy aircrafts and defend carrier task group. Try again.</text>
+   <text lang="pl">Nie udało ci się zestrzelić wrogich samolotów i obronić grupy lotniskowców. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded to shoot down all enemy aircrafts and defend carrier task group.</text>
+   <text lang="pl">Udało ci się zestrzelić wrogie samoloty i obronić grupę lotniskowców.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/ocean.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_3.rgb</sky_dome>
+  <visibility>6400</visibility>
+  <sun_coef>0.9</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/f6f.xml</file>
+    <position>200 -1400 91</position>
+    <heading>0</heading>
+    <velocity>155</velocity>
+    <livery>entities/f6f_usn_1944.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_1">
+    <offset>100 100 0</offset>
+    <file>entities/f6f.xml</file>
+    <position>300 -1600 91</position>
+    <heading>0</heading>
+    <velocity>155</velocity>
+    <livery>entities/f6f_usn_1944.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" name="fighter_1">
+    <file>entities/f6f.xml</file>
+    <position>200 -1000 91</position>
+    <heading>0</heading>
+    <velocity>155</velocity>
+    <livery>entities/f6f_usn_1944.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="fighter_1" name="fighter_2">
+    <offset>100 100 0</offset>
+    <file>entities/f6f.xml</file>
+    <position>300 -1200 91</position>
+    <heading>0</heading>
+    <velocity>155</velocity>
+    <livery>entities/f6f_usn_1944.rgb</livery>
+   </fighter>
+   <warship hp="100" name="essex">
+    <file>entities/essex.xml</file>
+    <position>0 0 0</position>
+    <heading>0</heading>
+   </warship>
+   <warship hp="100" name="fletcher_1">
+    <file>entities/fletcher.xml</file>
+    <position>-400 500 0</position>
+    <heading>0</heading>
+   </warship>
+   <warship hp="100" name="fletcher_2">
+    <file>entities/fletcher.xml</file>
+    <position>-400 -500 0</position>
+    <heading>0</heading>
+   </warship>
+   <warship hp="100" name="fletcher_3">
+    <file>entities/fletcher.xml</file>
+    <position>400 -1000 0</position>
+    <heading>0</heading>
+   </warship>
+   <warship hp="100" name="fletcher_4">
+    <file>entities/fletcher.xml</file>
+    <position>400 1000 0</position>
+    <heading>0</heading>
+   </warship>
+  </friends>
+  <hostiles>
+   <fighter route="bomber" hp="100" name="escort_1c">
+    <file>entities/a6m.xml</file>
+    <position>15000 0 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <fighter route="bomber" hp="100" leader="escort_1c" name="escort_1r">
+    <offset>50 50 0</offset>
+    <file>entities/a6m.xml</file>
+    <position>15050 50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <fighter route="bomber" hp="100" leader="escort_1r" name="escort_1l">
+    <offset>0 -100 0</offset>
+    <file>entities/a6m.xml</file>
+    <position>15050 -50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <fighter route="bomber" hp="100" name="escort_2c">
+    <file>entities/a6m.xml</file>
+    <position>16000 0 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <fighter route="bomber" hp="100" leader="escort_2c" name="escort_2r">
+    <offset>50 50 0</offset>
+    <file>entities/a6m.xml</file>
+    <position>16050 50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <fighter route="bomber" hp="100" leader="escort_2r" name="escort_2l">
+    <offset>0 -100 0</offset>
+    <file>entities/a6m.xml</file>
+    <position>16050 -50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <bomber_dive route="bomber" hp="100" name="bomber_1c">
+    <file>entities/d4y.xml</file>
+    <position>16000 0 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d4y_ijn_1943.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bomber" hp="100" leader="bomber_1c" name="bomber_1r">
+    <offset>50 50 0</offset>
+    <file>entities/d4y.xml</file>
+    <position>16050 50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d4y_ijn_1943.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bomber" hp="100" leader="bomber_1r" name="bomber_1l">
+    <offset>0 -100 0</offset>
+    <file>entities/d4y.xml</file>
+    <position>16050 -50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d4y_ijn_1943.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bomber" hp="100" name="bomber_2c">
+    <file>entities/d4y.xml</file>
+    <position>16000 0 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d4y_ijn_1943.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bomber" hp="100" leader="bomber_2c" name="bomber_2r">
+    <offset>50 50 0</offset>
+    <file>entities/d4y.xml</file>
+    <position>16050 50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d4y_ijn_1943.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bomber" hp="100" leader="bomber_2r" name="bomber_2l">
+    <offset>0 -100 0</offset>
+    <file>entities/d4y.xml</file>
+    <position>16050 -50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d4y_ijn_1943.rgb</livery>
+   </bomber_dive>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>602 500 297</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>1700 1598 503</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>3200 2000 708</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>4600 2000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>6000 2000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>8000 2000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>10000 2000 914</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>12000 2000 914</position>
+    <speed>155</speed>
+   </waypoint>
+  </route>
+  <route name="bomber">
+   <waypoint>
+    <position>10000 0 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-10000 0 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 0 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="wingman_1"/>
+    <unit name="fighter_1"/>
+    <unit name="fighter_2"/>
+    <unit name="essex"/>
+    <unit name="fletcher_1"/>
+    <unit name="fletcher_2"/>
+    <unit name="fletcher_3"/>
+    <unit name="fletcher_4"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Intercept enemy aircrafts flying</text>
+      <text lang="pl">Przechwyć wrogie samoloty lecące</text>
+     </line>
+     <line>
+      <text lang="en">towards Carrier Task Group.</text>
+      <text lang="pl">w kierunku Grupy Uderzeniowej.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="6"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept Fighters 1">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="escort_1c"/>
+    <unit name="escort_1r"/>
+    <unit name="escort_1l"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy fighters at 2 o'clock.</text>
+      <text lang="pl">Wrogie myśliwce na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="30"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept Bombers 1">
+   <init_units>
+    <unit name="bomber_1c"/>
+    <unit name="bomber_1r"/>
+    <unit name="bomber_1l"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Incoming enemy bombers.</text>
+      <text lang="pl">Zbliżają się wrogie bombowce.</text>
+     </line>
+     <line>
+      <text lang="en">Defend Carrier Task Group.</text>
+      <text lang="pl">Broń Grupy Uderzeniowej.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="60"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept Fighters 2">
+   <init_units>
+    <unit name="escort_2c"/>
+    <unit name="escort_2r"/>
+    <unit name="escort_2l"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Incoming enemy fighters.</text>
+      <text lang="pl">Nadlatują wrogie myśliwce.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="30"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept Bombers 2">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="bomber_2c"/>
+    <unit name="bomber_2r"/>
+    <unit name="bomber_2l"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Incoming enemy bombers.</text>
+      <text lang="pl">Zbliżają się wrogie bombowce.</text>
+     </line>
+     <line>
+      <text lang="en">Defend Carrier Task Group.</text>
+      <text lang="pl">Broń Grupy Uderzeniowej.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_defend minimum="4">
+     <unit name="essex"/>
+     <unit name="fletcher_1"/>
+     <unit name="fletcher_2"/>
+     <unit name="fletcher_3"/>
+     <unit name="fletcher_4"/>
+    </objective_defend>
+    <objective_destroy>
+     <unit name="bomber_1c"/>
+     <unit name="bomber_1r"/>
+     <unit name="bomber_1l"/>
+     <unit name="bomber_2c"/>
+     <unit name="bomber_2r"/>
+     <unit name="bomber_2l"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+    <objective_defend minimum="4">
+     <unit name="essex"/>
+     <unit name="fletcher_1"/>
+     <unit name="fletcher_2"/>
+     <unit name="fletcher_3"/>
+     <unit name="fletcher_4"/>
+    </objective_defend>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

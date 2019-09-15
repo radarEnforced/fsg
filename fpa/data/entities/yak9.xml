@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <model>entities/yak9.osgb</model>
+  <ap>7</ap>
+  <radius>4.9</radius>
+  <aircraft>
+    <time_p>0.1</time_p>
+    <time_q>0.5</time_q>
+    <time_r>0.5</time_r>
+    <time_v>10.0</time_v>
+    <speed_min>50.0</speed_min>
+    <speed_max>165.0</speed_max>
+    <roll_max>72.0</roll_max>
+    <max_ailerons>20.0</max_ailerons>
+    <max_elevator>30.0</max_elevator>
+    <max_rudder>60.0</max_rudder>
+    
+    <flash light="1">-1.43  0.11  0.33</flash>
+    <flash light="1">-1.43 -0.11  0.33</flash>
+    <flash>-2.70  0.00  0.00</flash>
+
+    <muzzle>-45.0  0.0 0.0</muzzle>
+    <muzzle trail="1">-28.0 -0.3 0.0</muzzle>
+    <muzzle trail="1">-15.0  0.3 0.0</muzzle>
+  </aircraft>
+</unit>

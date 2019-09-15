@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/03a_ico.png</icon>
+  <icon_locked>missions/03a_ico_locked.png</icon_locked>
+  <image>missions/03a_img.png</image>
+  <image_locked>missions/03a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Skirmish over Olkusz</text>
+   <text lang="pl">Potyczka nad Olkuszem</text>
+  </name>
+  <introduction>
+   <text lang="en">On September 1st 1939 at 4.45 AM German army attacked Poland. In the morning this day P.11c of 121st Fighter Squadron, piloted by second lieutenant Władysław Gnyś, took off from Balice airfield near Cracow. Patrol area near Olkusz, watch out for enemy aircrafts.</text>
+   <text lang="pl">1 września 1939 roku o 4.45 rano wojska niemieckie uderzyły na Polskę. Rankiem tego dnia z lotniska w Balicach pod Krakowem wystartował samolot PZL P.11c ze 121. eskadry myśliwskiej, pilotowany przez podporucznika Władysława Gnysia. Poprowadź patrol w okolicach Olkusza, wypatruj wrogich samolotów.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to shoot down enemy bombers. Try again.</text>
+   <text lang="pl">Nie udało ci się zestrzelić wrogich bombowców. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">You have succeeded to shoot down enemy bombers. In the morning on September 1st 1939 Władysław Gnyś, flying PZL P.11c fighter, shot down two Do 17 German bombers. They were first German aircrafts shot down during World War II.</text>
+   <text lang="pl">Udało ci się zestrzelić dwa wrogie bombowce. Rankiem 1. września 1939 roku, Władysław Gnyś lecąc myśliwcem PZL P.11c, zestrzelił dwa niemieckie bombowce Do 17. Były to pierwsze niemieckie samoloty zestrzelone w trakcie II Wojny Światowej.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_2.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p11.xml</file>
+    <position>200 -1000 91</position>
+    <heading>0</heading>
+    <velocity>110</velocity>
+    <livery>entities/p11_lwrp_1939_34k.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends/>
+  <hostiles>
+   <aircraft route="bombers" hp="100" name="bomber_1">
+    <file>entities/do17.xml</file>
+    <position>11000 0 762</position>
+    <heading>270</heading>
+    <velocity>105</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bomber" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>100 100 0</offset>
+    <file>entities/do17.xml</file>
+    <position>11100 100 762</position>
+    <heading>270</heading>
+    <velocity>105</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>602 500 183</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>1700 1598 274</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>3200 2000 366</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>4600 2000 458</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>6000 2000 458</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>8000 2000 458</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>10000 2000 458</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>12000 2000 458</position>
+    <speed>150</speed>
+   </waypoint>
+  </route>
+  <route name="bomber">
+   <waypoint>
+    <position>8000 0 762</position>
+    <speed>105</speed>
+   </waypoint>
+   <waypoint>
+    <position>-10000 0 762</position>
+    <speed>105</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 0 762</position>
+    <speed>105</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <time_limit>3600</time_limit>
+   <init_units/>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Patrol area around Olkusz.</text>
+      <text lang="pl">Patroluj okolice Olkusza.</text>
+     </line>
+     <line>
+      <text lang="en">Watch out for enemy aircrafts.</text>
+      <text lang="pl">Wypatruj wrogich samolotów.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="5"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept bombers">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy bombers at 2 o'clock.</text>
+      <text lang="pl">Wrogie bombowce na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

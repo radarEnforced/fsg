@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/05b_ico.png</icon>
+  <icon_locked>missions/05b_ico_locked.png</icon_locked>
+  <image>missions/05b_img.png</image>
+  <image_locked>missions/05b_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Battle of Britain. Part 2. No. 303 Polish Squadron</text>
+   <text lang="pl">Bitwa o Anglię. Część II. Dywizjon 303</text>
+  </name>
+  <introduction>
+   <text lang="en">On August 2nd 1940 No. 303 Polish Squadron was formed at RAF Northolt Airfield. On August 30th "B" team started its training flight. Follow your leader. Remember, the squdron is still non-operational.</text>
+   <text lang="pl">2 sierpnia 1940 roku na lotnisku RAF-u w Northolt utworzono polski Dywizjon 303. 30 sierpnia eskadra "B" rozpoczęła lot treningowy. Podążaj za swoim prowadzącym. Pamiętaj, że dywizjon nie osiągnął jeszcze gotowości bojowej.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to finish the mission. Try again.</text>
+   <text lang="pl">Niestety nie udało ci się ukończyć misji. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">On August 30th 1940 Ludwik Paszkiewicz, during training flight, scored first victory for still non-operational No. 303 Polish Squadron. Next day the squadron was declared to be operational.</text>
+   <text lang="pl">30 sierpnia 1940, podczas lotu treningowego, Ludwik Paszkiewicz zaliczył pierwsze zwycięstwo dla Dywizjonu 303. Następnego dnia dywizjon został uznany za gotowy do walki.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/seuk_elevation.csv</elevation>
+  <terrain>scenery/seuk_terrain.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_2.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/hurricane.xml</file>
+    <position>43900 -10030 305</position>
+    <heading>90</heading>
+    <velocity>134</velocity>
+    <livery>entities/hurricane_raf_1940_rfv.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <aircraft route="leader" hp="100" name="leader">
+    <file>entities/hurricane.xml</file>
+    <position>44000 -10000 305</position>
+    <heading>90</heading>
+    <velocity>134</velocity>
+    <livery>entities/hurricane_raf_1940.rgb</livery>
+   </aircraft>
+   <aircraft route="leader" hp="100" leader="leader" name="wingman">
+    <offset>30 -30 0</offset>
+    <file>entities/hurricane.xml</file>
+    <position>43950 -9970 305</position>
+    <heading>90</heading>
+    <velocity>134</velocity>
+    <livery>entities/hurricane_raf_1940.rgb</livery>
+   </aircraft>
+  </friends>
+  <hostiles>
+   <fighter route="bombers" hp="100" leader="ownship" name="escort">
+    <offset>0 0 0</offset>
+    <file>entities/bf110.xml</file>
+    <position>48000 -18000 305</position>
+    <heading>0</heading>
+    <velocity>129</velocity>
+    <livery>entities/bf110_luftwaffe_1939.rgb</livery>
+   </fighter>
+   <aircraft route="bombers" hp="100" name="bomber_1">
+    <file>entities/do17.xml</file>
+    <position>48000 -18100 305</position>
+    <heading>0</heading>
+    <velocity>129</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" name="bomber_2">
+    <file>entities/do17.xml</file>
+    <position>48000 -18200 305</position>
+    <heading>0</heading>
+    <velocity>129</velocity>
+    <livery>entities/do17_luftwaffe_1939.rgb</livery>
+   </aircraft>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="leader">
+   <waypoint>
+    <position>46000 -10000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>48000 -10000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>49500 -10402 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>50598 -11500 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>51000 -13000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>51000 -15000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>51000 -20000 305</position>
+    <speed>134</speed>
+   </waypoint>
+  </route>
+  <route name="ownship">
+   <waypoint>
+    <position>46000 -10030 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>48000 -10030 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>49485 -10428 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>50572 -11515 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>50970 -13000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>50970 -15000 305</position>
+    <speed>134</speed>
+   </waypoint>
+   <waypoint>
+    <position>50970 -20000 305</position>
+    <speed>134</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>48000 -10000 305</position>
+    <speed>129</speed>
+   </waypoint>
+   <waypoint>
+    <position>48000 0 305</position>
+    <speed>129</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Enroute">
+   <init_units>
+    <unit name="leader"/>
+    <unit name="wingman"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Follow your leader.</text>
+      <text lang="pl">Podążaj za swoim prowadzącym.</text>
+     </line>
+     <line>
+      <text lang="en">This is a training flight.</text>
+      <text lang="pl">To lot treningowy,</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="5"/>
+    <objective_distance limit="300" leader="leader"/>
+    <objective_defend minimum="0">
+     <unit name="leader"/>
+     <unit name="wingman"/>
+    </objective_defend>
+   </objectives>
+  </stage>
+  <stage name="Destroy">
+   <init_units>
+    <unit name="escort"/>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">You spotted a formation of enemy</text>
+      <text lang="pl">Zauważyłeś formację wrogich samolotów</text>
+     </line>
+     <line>
+      <text lang="en">aircrafts at 2 o'clock.</text>
+      <text lang="pl">na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="escort"/>
+    </objective_destroy>
+    <objective_defend minimum="0">
+     <unit name="leader"/>
+     <unit name="wingman"/>
+    </objective_defend>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

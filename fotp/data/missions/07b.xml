@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/08b_ico.png</icon>
+  <icon_locked>missions/08b_ico_locked.png</icon_locked>
+  <image>missions/08b_img.png</image>
+  <image_locked>missions/08b_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Defend USS Yorktown</text>
+   <text lang="pl">Obrona USS Yorktown</text>
+  </name>
+  <introduction>
+   <text lang="en">Japanese aircrafts are flying toward USS Yorktown. Destroy all incoming enemy bombers. Be careful. There can be a fighter escort.</text>
+   <text lang="pl">Japońskie samoloty zbliżają się do lotniskowca USS Yorktown. Zniszcz wszystkie bombowce nieprzyjaciela. Uważaj. Mogą mieć osłonę myśliwską.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed. USS Yorktown has been destroyed. Try again.</text>
+   <text lang="pl">Odniosłeś klęskę. USS Yorktown został zniszczony. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Despite your success USS Yorktown was heavily damaged. However the battle has been won, Japanese navy lost four aircraft carriers. Without them their fleet is crippled.</text>
+   <text lang="pl">Pomimo twojego sukcesu USS Yorktown został poważnie uszkodzony. Bitwa jednak została wygrana, Japońska Marynarka Wojenne straciła cztery lotniskowce. Bez tych okrętów ich flota jest okaleczona.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/ocean.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_1.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/f4f.xml</file>
+    <position>200 -1000 91</position>
+    <heading>0</heading>
+    <velocity>150</velocity>
+    <livery>entities/f4f_usn_1942.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman">
+    <offset>100 100 0</offset>
+    <file>entities/f4f.xml</file>
+    <position>300 -1100 91</position>
+    <heading>0</heading>
+    <velocity>150</velocity>
+    <livery>entities/f4f_usn_1942.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" name="fighter_1">
+    <file>entities/f4f.xml</file>
+    <position>200 -2000 91</position>
+    <heading>0</heading>
+    <velocity>150</velocity>
+    <livery>entities/f4f_usn_1942.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="fighter_1" name="fighter_2">
+    <offset>100 100 0</offset>
+    <file>entities/f4f.xml</file>
+    <position>300 -2100 91</position>
+    <heading>0</heading>
+    <velocity>150</velocity>
+    <livery>entities/f4f_usn_1942.rgb</livery>
+   </fighter>
+   <warship hp="100" name="yorktown">
+    <file>entities/yorktown.xml</file>
+    <position>0 0 0</position>
+    <heading>0</heading>
+   </warship>
+   <warship hp="100" name="farragut_1">
+    <file>entities/farragut.xml</file>
+    <position>-400 500 0</position>
+    <heading>0</heading>
+   </warship>
+   <warship hp="100" name="farragut_2">
+    <file>entities/farragut.xml</file>
+    <position>-400 -500 0</position>
+    <heading>0</heading>
+   </warship>
+  </friends>
+  <hostiles>
+   <fighter route="bomber" hp="100" name="escort_1">
+    <file>entities/a6m.xml</file>
+    <position>15000 0 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1941.rgb</livery>
+   </fighter>
+   <fighter route="bomber" hp="100" leader="escort_1" name="escort_2">
+    <offset>50 50 0</offset>
+    <file>entities/a6m.xml</file>
+    <position>15050 50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1941.rgb</livery>
+   </fighter>
+   <fighter route="bomber" hp="100" leader="escort_2" name="escort_3">
+    <offset>0 -100 0</offset>
+    <file>entities/a6m.xml</file>
+    <position>15050 -50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/a6m_ijn_1941.rgb</livery>
+   </fighter>
+   <bomber_dive route="bomber" hp="100" name="bomber_1">
+    <file>entities/d3a.xml</file>
+    <position>16000 0 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bomber" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>50 50 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>16050 50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bomber" hp="100" leader="bomber_2" name="bomber_3">
+    <offset>0 -100 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>16050 -50 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+   <bomber_dive route="bomber" hp="100" leader="bomber_3" name="bomber_4">
+    <offset>50 -50 0</offset>
+    <file>entities/d3a.xml</file>
+    <position>16100 -100 914</position>
+    <heading>270</heading>
+    <velocity>103</velocity>
+    <livery>entities/d3a_ijn_1942.rgb</livery>
+   </bomber_dive>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>602 500 297</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>1700 1598 503</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>3200 2000 708</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>4600 2000 914</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>6000 2000 914</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>8000 2000 914</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>10000 2000 914</position>
+    <speed>150</speed>
+   </waypoint>
+   <waypoint>
+    <position>12000 2000 914</position>
+    <speed>150</speed>
+   </waypoint>
+  </route>
+  <route name="bomber">
+   <waypoint>
+    <position>10000 0 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-10000 0 914</position>
+    <speed>103</speed>
+   </waypoint>
+   <waypoint>
+    <position>-20000 0 914</position>
+    <speed>103</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Patrol">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="wingman"/>
+    <unit name="yorktown"/>
+    <unit name="farragut_1"/>
+    <unit name="farragut_2"/>
+    <unit name="fighter_1"/>
+    <unit name="fighter_2"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Intercept enemy aircrafts</text>
+      <text lang="pl">Przechwyć wrogie samoloty</text>
+     </line>
+     <line>
+      <text lang="en">flying towards USS Yorktown.</text>
+      <text lang="pl">lecące w kierunku USS Yorktown.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_waypoint index="6"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept Fighters">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="escort_1"/>
+    <unit name="escort_2"/>
+    <unit name="escort_3"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy fighters at 2 o'clock.</text>
+      <text lang="pl">Wrogie myśliwce na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_timeout limit="30"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept Bombers">
+   <time_limit>3600</time_limit>
+   <init_units>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+    <unit name="bomber_3"/>
+    <unit name="bomber_4"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Incoming enemy bombers.</text>
+      <text lang="pl">Nadlatują wrogie bombowce.</text>
+     </line>
+     <line>
+      <text lang="en">Defend USS Yorktown.</text>
+      <text lang="pl">Broń USS Yorktown.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_defend minimum="1">
+     <unit name="yorktown"/>
+    </objective_defend>
+    <objective_destroy>
+     <unit name="bomber_1"/>
+     <unit name="bomber_2"/>
+     <unit name="bomber_3"/>
+     <unit name="bomber_4"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+    <objective_defend minimum="1">
+     <unit name="yorktown"/>
+    </objective_defend>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

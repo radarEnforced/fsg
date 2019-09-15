@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/00_ico.png</icon>
+  <icon_locked>missions/00_ico_locked.png</icon_locked>
+  <image>missions/00_img.png</image>
+  <image_locked>missions/00_img_locked.png</image_locked>
+  <name>
+   <text lang="en">MISSION SCREENSHOT</text>
+   <text lang="pl">MISSION SCREENSHOT</text>
+  </name>
+  <introduction>
+   <text lang="en">INTRODUCTION EN</text>
+   <text lang="pl">INTRODUCTION PL</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">SUMMARY FAILURE EN</text>
+   <text lang="pl">SUMMARY FAILURE PL</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">SUMMARY SUCCESS EN</text>
+   <text lang="pl">SUMMARY SUCCESS PL</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <elevation>scenery/warsaw_elevation.csv</elevation>
+  <terrain>scenery/grassland.osgb</terrain>
+  <generic>scenery/grassland.osgb</generic>
+  <sky_dome>textures/sky_2.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" hp="100" name="ownship">
+    <file>entities/yak9.xml</file>
+    <position>0 0 457</position>
+    <heading>270</heading>
+    <velocity>50</velocity>
+    <livery>entities/yak9_llwp_1945_68.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter hp="100" name="wingman">
+    <file>entities/yak9.xml</file>
+    <position>25 25 457</position>
+    <heading>270</heading>
+    <velocity>50</velocity>
+    <livery>entities/yak9_llwp_1945_87.rgb</livery>
+   </fighter>
+   <aircraft hp="100" name="bomber_1">
+    <file>entities/b17.xml</file>
+    <position>40 40 457</position>
+    <heading>270</heading>
+    <velocity>50</velocity>
+    <livery>entities/b17_usaaf_1944.rgb</livery>
+   </aircraft>
+   <aircraft hp="100" name="bomber_2">
+    <file>entities/b17.xml</file>
+    <position>40 80 458</position>
+    <heading>270</heading>
+    <velocity>50</velocity>
+    <livery>entities/b17_usaaf_1944.rgb</livery>
+   </aircraft>
+  </friends>
+  <hostiles/>
+  <neutrals/>
+ </units>
+ <routes/>
+ <stages>
+  <stage name="Stage 1">
+   <init_units>
+    <unit name="wingman"/>
+   </init_units>
+   <objectives>
+    <objective_timeout limit="360"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

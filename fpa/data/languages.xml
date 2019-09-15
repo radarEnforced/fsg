@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languages>
+  <language code="en" default="1">English</language>
+  <language code="pl">polski</language>
+  <!--<language code="fr">français</language>-->
+  <!--<language code="es">español</language>-->
+  <!--<language code="pt">português</language>-->
+  <!--<language code="ru">русский</language>-->
+  <!--<language code="de">Deutsch</language>-->
+</languages>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission tutorial="0">
+ <data>
+  <icon>missions/10a_ico.png</icon>
+  <icon_locked>missions/10a_ico_locked.png</icon_locked>
+  <image>missions/10a_img.png</image>
+  <image_locked>missions/10a_img_locked.png</image_locked>
+  <name>
+   <text lang="en">Operation Vengeance</text>
+   <text lang="pl">Operacja Vengeance</text>
+  </name>
+  <introduction>
+   <text lang="en">Navy intelligence reports that high rank Japanese officer is scheduled an inspection tour of the Solomon Islands and New Guinea. You job is to intercept his transport. Fly low to avoid detection by radar.</text>
+   <text lang="pl">Wywiad Marynarki Wojenne doniósł, że wysokiej rangi japoński oficer ma zaplanowaną inspekcję wojsk na Wyspach Salomona i Nowej Gwinei. Twoim zadaniem jest przechwycenie jego samolotu. Leć nisko aby uniknąć wykrycia przez radar.</text>
+  </introduction>
+  <summary_failure>
+   <text lang="en">You have failed to destroy Japanese officer transport. Try again.</text>
+   <text lang="pl">Nie udało ci się zniszczyć samolotu japońskiego oficera. Spróbuj ponownie.</text>
+  </summary_failure>
+  <summary_success>
+   <text lang="en">Good job. The officer on board of the aircraft you shot down was Isoroku Yamamoto himself, commander-in-chief of the Combined Fleet.</text>
+   <text lang="pl">Świetna robota. Oficer na pokładzie samolotu, który zestrzeliłeś, to sam Isoroku Yamamoto - głównodowodzący japońskiej Połączonej Floty.</text>
+  </summary_success>
+ </data>
+ <scenery>
+  <terrain>scenery/ocean.osgb</terrain>
+  <generic>scenery/ocean.osgb</generic>
+  <sky_dome>textures/sky_2.rgb</sky_dome>
+  <visibility>7200</visibility>
+  <sun_coef>1</sun_coef>
+  <objects/>
+ </scenery>
+ <units>
+  <ownship>
+   <fighter unique="1" route="ownship" hp="100" name="ownship">
+    <file>entities/p38.xml</file>
+    <position>42000 -42000 91</position>
+    <heading>315</heading>
+    <velocity>155</velocity>
+    <livery>entities/p38_usaaf_1942_147.rgb</livery>
+   </fighter>
+  </ownship>
+  <friends>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_1">
+    <offset>100 100 0</offset>
+    <file>entities/p38.xml</file>
+    <position>42100 -42000 91</position>
+    <heading>315</heading>
+    <velocity>155</velocity>
+    <livery>entities/p38_usaaf_1942.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="ownship" name="wingman_2">
+    <offset>100 -100 0</offset>
+    <file>entities/p38.xml</file>
+    <position>42000 -42100 91</position>
+    <heading>315</heading>
+    <velocity>155</velocity>
+    <livery>entities/p38_usaaf_1942.rgb</livery>
+   </fighter>
+   <fighter route="ownship" hp="100" leader="wingman_1" name="wingman_3">
+    <offset>100 100 0</offset>
+    <file>entities/p38.xml</file>
+    <position>42200 -42000 91</position>
+    <heading>315</heading>
+    <velocity>155</velocity>
+    <livery>entities/p38_usaaf_1942.rgb</livery>
+   </fighter>
+  </friends>
+  <hostiles>
+   <fighter route="bombers" hp="100" name="escort_1">
+    <file>entities/a6m.xml</file>
+    <position>36000 -32000 914</position>
+    <heading>225</heading>
+    <velocity>120</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <fighter route="bombers" hp="100" leader="escort_1" name="escort_2">
+    <offset>100 100 0</offset>
+    <file>entities/a6m.xml</file>
+    <position>36000 -31900 914</position>
+    <heading>225</heading>
+    <velocity>120</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <aircraft unique="1" route="bombers" hp="100" name="bomber_1">
+    <file>entities/g4m.xml</file>
+    <position>37000 -31000 914</position>
+    <heading>225</heading>
+    <velocity>120</velocity>
+    <livery>entities/g4m_ijn_1942_323.rgb</livery>
+   </aircraft>
+   <aircraft route="bombers" hp="100" leader="bomber_1" name="bomber_2">
+    <offset>100 0 0</offset>
+    <file>entities/g4m.xml</file>
+    <position>37100 -30900 914</position>
+    <heading>225</heading>
+    <velocity>120</velocity>
+    <livery>entities/g4m_ijn_1942.rgb</livery>
+   </aircraft>
+   <fighter route="bombers" hp="100" leader="bomber_1" name="escort_3">
+    <offset>100 100 -100</offset>
+    <file>entities/a6m.xml</file>
+    <position>37000 -30900 814</position>
+    <heading>225</heading>
+    <velocity>120</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+   <fighter route="bombers" hp="100" leader="bomber_1" name="escort_4">
+    <offset>100 -100 -100</offset>
+    <file>entities/a6m.xml</file>
+    <position>37100 -31000 814</position>
+    <heading>225</heading>
+    <velocity>120</velocity>
+    <livery>entities/a6m_ijn_1943.rgb</livery>
+   </fighter>
+  </hostiles>
+  <neutrals/>
+ </units>
+ <routes>
+  <route name="ownship">
+   <waypoint>
+    <position>40000 -40000 91</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>38000 -38000 91</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>36000 -36000 365</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>34000 -34000 639</position>
+    <speed>155</speed>
+   </waypoint>
+   <waypoint>
+    <position>32000 -32000 914</position>
+    <speed>155</speed>
+   </waypoint>
+  </route>
+  <route name="bombers">
+   <waypoint>
+    <position>34000 -34000 914</position>
+    <speed>120</speed>
+   </waypoint>
+   <waypoint>
+    <position>20000 -48000 914</position>
+    <speed>120</speed>
+   </waypoint>
+   <waypoint>
+    <position>0 -48000 914</position>
+    <speed>120</speed>
+   </waypoint>
+  </route>
+ </routes>
+ <stages>
+  <stage name="Intro">
+   <init_units>
+    <unit name="wingman_1"/>
+    <unit name="wingman_2"/>
+    <unit name="wingman_3"/>
+   </init_units>
+   <objectives>
+    <objective_waypoint index="2"/>
+   </objectives>
+  </stage>
+  <stage name="Intercept">
+   <init_units>
+    <unit name="escort_1"/>
+    <unit name="escort_2"/>
+    <unit name="bomber_1"/>
+    <unit name="bomber_2"/>
+    <unit name="escort_3"/>
+    <unit name="escort_4"/>
+   </init_units>
+   <message overlay="0">
+    <duration>12</duration>
+    <delay>0</delay>
+    <caption>
+     <line>
+      <text lang="en">Enemy aircrafts at 2 o'clock.</text>
+      <text lang="pl">Wrogie samoloty na godzinie 2.</text>
+     </line>
+    </caption>
+   </message>
+   <objectives>
+    <objective_destroy>
+     <unit name="bomber_1"/>
+    </objective_destroy>
+   </objectives>
+  </stage>
+  <stage name="Outro">
+   <init_units/>
+   <objectives>
+    <objective_timeout limit="3"/>
+   </objectives>
+  </stage>
+ </stages>
+</mission>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenery_list>
+  
+  <scenery name="Desert">
+    <terrain>scenery/desert.osgb</terrain>
+    <generic>scenery/desert.osgb</generic>
+    <objects/>
+    <initial_position>0 0 0</initial_position>
+  </scenery>
+  
+  <scenery name="Grassland">
+    <terrain>scenery/grassland.osgb</terrain>
+    <generic>scenery/grassland.osgb</generic>
+    <objects/>
+    <initial_position>0 0 0</initial_position>
+  </scenery>
+  
+  <scenery name="Ocean">
+    <terrain>scenery/ocean.osgb</terrain>
+    <generic>scenery/ocean.osgb</generic>
+    <objects/>
+    <initial_position>0 0 0</initial_position>
+  </scenery>
+  
+  <scenery name="South East UK">
+    <elevation>scenery/seuk_elevation.csv</elevation>
+    <terrain>scenery/seuk_terrain.osgb</terrain>
+    <generic>scenery/ocean.osgb</generic>
+    <initial_position>0 0 0</initial_position>
+  </scenery>
+  
+  <scenery name="Warsaw Area">
+    <elevation>scenery/warsaw_elevation.csv</elevation>
+    <terrain>scenery/warsaw_terrain.osgb</terrain>
+    <generic>scenery/grassland.osgb</generic>
+    <objects>
+      <object>scenery/warsaw_objects.osgb</object>
+    </objects>
+    <initial_position>0 0 0</initial_position>
+  </scenery>
+  
+</scenery_list>

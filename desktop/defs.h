@@ -9,8 +9,8 @@
 
 #define SIM_APP_NAME    "Flight_Simulation_Game"
 #define SIM_APP_VER     "1.0.0"
-#define SIM_ORG_NAME    "PW_Omnitech"
-#define SIM_ORG_DOMAIN  "omnitech-software.com"
+#define SIM_ORG_NAME    "Marek_Cel"
+#define SIM_ORG_DOMAIN  "marekcel.pl"
 
 ////////////////////////////////////////////////////////////////////////////////
 

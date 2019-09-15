@@ -1,0 +1,1521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<units>
+
+  <aerial>
+  
+    <unit opponent="1" fighter="1" unlock_mission="12">
+      <name>
+        <text lang="en">A5M "Claude"</text>
+        <text lang="pl">A5M "Claude"</text>
+      </name>
+      <file>entities/a5m.xml</file>
+      <icon>entities/a5m.png</icon>
+      <icon_locked>entities/a5m_locked.png</icon_locked>
+      <liveries>
+        <livery name="Imperial Japanese Navy Air Service 1941">entities/a5m_ijn_1941.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/a5m_ijn_1941.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Mitsubishi Heavy Industries</manufacturer>
+        <first_flight>1935-02-04</first_flight>
+        <introduction>1936</introduction>
+        <retired>1945</retired>
+        <number_built>1,094</number_built>
+        <primary_user>Imperial Japanese Navy Air Service</primary_user>
+        <crew>1 pilot</crew>
+        <length>24'9" (7.55 m)</length>
+        <wingspan>36'1" (11.00 m)</wingspan>
+        <height>10'6" (3.20 m)</height>
+        <mtow>4,017 lb (1,822 kg)</mtow>
+        <max_speed>237 kts (440 km/h)</max_speed>
+        <range>650 nmi (1,200 km)</range>
+        <powerplant>
+          <text lang="en">Nakajima Kotobuki 41 785 HP 9-cylinder air-cooled radial engine</text>
+          <text lang="pl">Silnik gwiazdowy Nakajima Kotobuki 41 o mocy 785 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x 7.7mm Type 97 machine gun</text>
+          <text lang="pl">2 karabiny maszynowe Typ 97 kalibru 7,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" fighter="1" unlock_mission="12">
+      <name>
+        <text lang="en">A6M "Zero"</text>
+        <text lang="pl">A6M "Zero"</text>
+      </name>
+      <file>entities/a6m.xml</file>
+      <icon>entities/a6m.png</icon>
+      <icon_locked>entities/a6m_locked.png</icon_locked>
+      <liveries>
+        <livery name="Imperial Japanese Navy Air Service 1941">entities/a6m_ijn_1941.rgb</livery>
+        <livery name="Imperial Japanese Navy Air Service 1943">entities/a6m_ijn_1943.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/a6m_ijn_1943.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Mitsubishi Heavy Industries</manufacturer>
+        <first_flight>1939-04-01</first_flight>
+        <introduction>1940</introduction>
+        <retired>1945</retired>
+        <number_built>10,939</number_built>
+        <primary_user>Imperial Japanese Navy Air Service</primary_user>
+        <crew>1 pilot</crew>
+        <length>29'8" (9.06 m)</length>
+        <wingspan>39'4" (12.00 m)</wingspan>
+        <height>10' (3.05 m)</height>
+        <mtow>6,025 lb (2,733 kg)</mtow>
+        <max_speed>287 kts (534 km/h)</max_speed>
+        <range>1,675 nmi (3,104 km)</range>
+        <powerplant>
+          <text lang="en">Nakajima NK1C Sakae 21 14-cylinder 1,130 HP air-cooled two-row radial engine</text>
+          <text lang="pl">Silnik gwiazdowy Nakajima NK1C Sakae 21 o mocy 1130 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x 20mm Type 99-1 cannons, 2x 7.7mm Type 97 machine guns, 2x 60kg bombs</text>
+          <text lang="pl">2 działka Typ 99-1 kalibru 20mm, 2 karabiny maszynowe Typ 97 kalibru 7,7mm, 120 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="0">
+      <name>
+        <text lang="en">AT-6 Texan</text>
+        <text lang="pl">AT-6 Texan</text>
+      </name>
+      <file>entities/at6.xml</file>
+      <icon>entities/at6.png</icon>
+      <icon_locked>entities/at6_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Army Air Forces 1941">entities/at6_usaaf_1941.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/at6_usaaf_1941.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Trainer</text>
+          <text lang="pl">szkolny</text>
+        </role>
+        <manufacturer>North American Aviation</manufacturer>
+        <first_flight>1935-04-01</first_flight>
+        <introduction>1937</introduction>
+        <retired>1995</retired>
+        <number_built>15,495</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>1 student and 1 instructor</crew>
+        <length>29' (8.94 m)</length>
+        <wingspan>42' (12.81 m)</wingspan>
+        <height>11'8" (3.57 m)</height>
+        <mtow>5,300 lb (2,404 kg)</mtow>
+        <max_speed>178 kts (335 km/h)</max_speed>
+        <range>652 nmi (1,175 km)</range>
+        <powerplant>
+          <text lang="en">Pratt &#038; Whitney R-1340-AN-1 Wasp 600 HP radial engine</text>
+          <text lang="pl">Silnik gwiazdowy Pratt &#038; Whitney R-1340-AN-1 Wasp o mocy 600 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x .300-inch machine guns</text>
+          <text lang="pl">2 karabiny maszynowe kalibru 7,62mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+  <unit opponent="1" unlock_mission="6">
+      <name>
+        <text lang="en">B5N "Kate"</text>
+        <text lang="pl">B5N "Kate"</text>
+      </name>
+      <file>entities/b5n.xml</file>
+      <icon>entities/b5n.png</icon>
+      <icon_locked>entities/b5n_locked.png</icon_locked>
+      <liveries>
+        <livery name="Imperial Japanese Navy Air Service 1941">entities/b5n_ijn_1941.rgb</livery>
+        <livery name="Imperial Japanese Navy Air Service 1941 (aircraft carrier Soryu)">entities/b5n_ijn_1941_soryu.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/b5n_ijn_1941_soryu.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>2</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Torpedo bomber</text>
+          <text lang="pl">samolot torpedowy</text>
+        </role>
+        <manufacturer>Nakajima Aircraft Company</manufacturer>
+        <first_flight>1937-01-08</first_flight>
+        <introduction>1937</introduction>
+        <retired>1945</retired>
+        <number_built>1,149</number_built>
+        <primary_user>Imperial Japanese Navy Air Service</primary_user>
+        <crew>1 pilot, 1 commander and 1 gunner</crew>
+        <length>33'10" (10.30 m)</length>
+        <wingspan>50'11" (15.52 m)</wingspan>
+        <height>12'2" (3.70 m)</height>
+        <mtow>9,040 lb (4,100 kg)</mtow>
+        <max_speed>204 kts (378 km/h)</max_speed>
+        <range>1,075 nmi (1,992 km)</range>
+        <powerplant>
+          <text lang="en">Nakajima Sakae 11 1,000 HP radial engine</text>
+          <text lang="pl">Silnik gwiazdowy Nakajima Sakae 11 o mocy 1000 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x 7.7mm Type 97 machine guns in the wings, 1x 7.7mm Type 92 rear machine gun, 1x Type 91 torpedo</text>
+          <text lang="pl">2 karabiny maszynowe Typ 97 kalibru 7,7mm, karabin maszynowy Typ 92 w tylniej kabinie, torpeda Typ 91</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit unlock_mission="20">
+      <name>
+        <text lang="en">B-24 Liberator</text>
+        <text lang="pl">B-24 Liberator</text>
+      </name>
+      <file>entities/b24.xml</file>
+      <icon>entities/b24.png</icon>
+      <icon_locked>entities/b24_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Army Air Forces 1943 (425th Bombardment Squadron)">entities/b24_usaaf_1943_308bg.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/b24_usaaf_1943_308bg.rgb</texture>
+        <distance>50</distance>
+        <heading>45</heading>
+        <offset_x>4</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Bomber</text>
+          <text lang="pl">bombowiec</text>
+        </role>
+        <manufacturer>Consolidated</manufacturer>
+        <first_flight>1939-12-29</first_flight>
+        <introduction>1941</introduction>
+        <retired>1945</retired>
+        <number_built>19,256</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>11</crew>
+        <length>67'8" (20.6 m)</length>
+        <wingspan>110' (33.5 m)</wingspan>
+        <height>18' (5.5 m)</height>
+        <mtow>65,000 lb (29,500 kg)</mtow>
+        <max_speed>250 kts (488 km/h)</max_speed>
+        <range>1,800 nmi (3,300 km)</range>
+        <powerplant>
+          <text lang="en">4x Pratt &#038; Whitney R-1830 Twin Wasp 1,200 HP air-cooled radial piston engine</text>
+          <text lang="pl">4 silniki gwiazdowe Pratt &#038; Whitney R-1830 Twin Wasp o mocy 1200 KM każdy</text>
+        </powerplant>
+        <armament>
+          <text lang="en">10x .50-inch M2 Browning machine guns, 3,600 kg of bombs</text>
+          <text lang="pl">10 karabinów maszynowych M2 Browning kalibru 12,7mm, 3600 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit unlock_mission="21">
+      <name>
+        <text lang="en">B-25 Mitchell</text>
+        <text lang="pl">B-25 Mitchell</text>
+      </name>
+      <file>entities/b25.xml</file>
+      <icon>entities/b25.png</icon>
+      <icon_locked>entities/b25_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Army Air Forces 1943">entities/b25_usaaf_1943.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/b25_usaaf_1943.rgb</texture>
+        <distance>39</distance>
+        <heading>45</heading>
+        <offset_x>2</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Bomber</text>
+          <text lang="pl">bombowiec</text>
+        </role>
+        <manufacturer>North American Aviation</manufacturer>
+        <first_flight>1940-08-19</first_flight>
+        <introduction>1941</introduction>
+        <retired>1960</retired>
+        <number_built>9,816</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>6</crew>
+        <length>52'11" (16.1 m)</length>
+        <wingspan>67'7" (20.6 m)</wingspan>
+        <height>16'4" (5.0 m)</height>
+        <mtow>35,000 lb (15,910 kg)</mtow>
+        <max_speed>237 kts (438 km/h)</max_speed>
+        <range>1,350 nmi (2,175 km)</range>
+        <powerplant>
+          <text lang="en">2x Wright R-2600-92 Twin Cyclone 1,900 HP radial piston engine</text>
+          <text lang="pl">4 silniki gwiazdowe Wright R-2600-92 Twin Cyclone o mocy 1900 KM każdy</text>
+        </powerplant>
+        <armament>
+          <text lang="en">12x .50-inch M2 Browning machine guns, 1360 kg of bombs</text>
+          <text lang="pl">12 karabinów maszynowych M2 Browning kalibru 12,7mm, 1360 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" unlock_mission="7">
+      <name>
+        <text lang="en">D3A "Val"</text>
+        <text lang="pl">D3A "Val"</text>
+      </name>
+      <file>entities/d3a.xml</file>
+      <icon>entities/d3a.png</icon>
+      <icon_locked>entities/d3a_locked.png</icon_locked>
+      <liveries>
+        <livery name="Imperial Japanese Navy Air Service 1941">entities/d3a_ijn_1941.rgb</livery>
+        <livery name="Imperial Japanese Navy Air Service 1942">entities/d3a_ijn_1942.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/d3a_ijn_1941.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>2</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Dive bomber</text>
+          <text lang="pl">bombowiec nurkujący</text>
+        </role>
+        <manufacturer>Aichi Kokuki KK</manufacturer>
+        <first_flight>1938</first_flight>
+        <introduction>1939</introduction>
+        <retired>1945</retired>
+        <number_built>1,495</number_built>
+        <primary_user>Imperial Japanese Navy Air Service</primary_user>
+        <crew>1 pilot and 1 gunner</crew>
+        <length>33'5" (10.20 m)</length>
+        <wingspan>47'2" (14.37 m)</wingspan>
+        <height>12'8" (3.85 m)</height>
+        <mtow>8,047 lb (3,650 kg)</mtow>
+        <max_speed>205 kts (389 km/h)</max_speed>
+        <range>795 nmi (1,472 km)</range>
+        <powerplant>
+          <text lang="en">Mitsubishi Kinsei 44 1,070 HP radial engine</text>
+          <text lang="pl">Silnik gwiazdowy Mitsubishi Kinsei 44 o mocy 1070 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x 7.7mm Type 97 machine guns, 1x 7.7mm Type 92 rear machine gun, 1x Type 99 bomb</text>
+          <text lang="pl">2 karabiny maszynowy Typ 97 kalibru 7,7mm, karabin maszynowy Typ 92 kalibru 7,7mm bomba Typ 99</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" unlock_mission="23">
+      <name>
+        <text lang="en">D4Y "Judy"</text>
+        <text lang="pl">D4Y "Judy"</text>
+      </name>
+      <file>entities/d4y.xml</file>
+      <icon>entities/d4y.png</icon>
+      <icon_locked>entities/d4y_locked.png</icon_locked>
+      <liveries>
+        <livery name="Imperial Japanese Navy Air Service 1943">entities/d4y_ijn_1943.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/d4y_ijn_1943.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Dive bomber</text>
+          <text lang="pl">bombowiec nurkujący</text>
+        </role>
+        <manufacturer>Yokosuka</manufacturer>
+        <first_flight>1940-11-15</first_flight>
+        <introduction>1942</introduction>
+        <retired>1945</retired>
+        <number_built>2,253</number_built>
+        <primary_user>Imperial Japanese Navy Air Service</primary_user>
+        <crew>1 pilot and 1 gunner</crew>
+        <length>33'6" (10.22 m)</length>
+        <wingspan>37'9" (11.50 m)</wingspan>
+        <height>12'3" (3.74 m)</height>
+        <mtow>9,597 lb (4,353 kg)</mtow>
+        <max_speed>313 kts (550 km/h)</max_speed>
+        <range>820 nmi (1,465 km)</range>
+        <powerplant>
+          <text lang="en">Aichi Atsuta AE1P 32 liquid-cooled inverted V12 1,400 HP piston engine</text>
+          <text lang="pl">Silnik V12 Aichi Atsuta AE1P 32 o mocy 1400 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x forward-firing 7.7mm Type 97 machine guns, 1x 7.92mm Type 1 rear machine gun, 500 kg of bombs</text>
+          <text lang="pl">2 karabiny maszynowy Typ 97 kalibru 7,7mm, karabin maszynowy Typ 1 kalibru 7,92mm 500 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="3">
+      <name>
+        <text lang="en">F2A Buffalo</text>
+        <text lang="pl">F2A Buffalo</text>
+      </name>
+      <file>entities/f2a.xml</file>
+      <icon>entities/f2a.png</icon>
+      <icon_locked>entities/f2a_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Navy 1941">entities/f2a_usn_1941.rgb</livery>
+        <livery name="US Navy 1942">entities/f2a_usn_1942.rgb</livery>
+        <livery name="Royal Netherlands East Indies Army Air Force 1939">entities/f2a_mlknil_1941.rgb</livery>
+        <livery name="Royal New Zealand Air Force 1941">entities/f2a_rnzaf_1941.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/f2a_rnzaf_1941.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Brewster Aeronautical Corporation</manufacturer>
+        <first_flight>1937-12-02</first_flight>
+        <introduction>1939</introduction>
+        <retired>1948</retired>
+        <number_built>509</number_built>
+        <primary_user>United States Navy</primary_user>
+        <crew>1 pilot</crew>
+        <length>26'4" (8.03 m)</length>
+        <wingspan>35' (10.67 m)</wingspan>
+        <height>12' (3.66 m)</height>
+        <mtow>7,159 lb (3,247 kg)</mtow>
+        <max_speed>279 kts (517 km/h)</max_speed>
+        <range>839 nmi (1,553 km)</range>
+        <powerplant>
+          <text lang="en">Wright R-1820-40 Cyclone 9 9-cylinder 1,200 HP air-cooled radial piston engine</text>
+          <text lang="pl">Silnik gwiazdowy Wright R-1820-40 Cyclone 9 o mocy 1200 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">4x .50-inch M2 Browning machine guns in the engine cowling and wings</text>
+          <text lang="pl">4 karabiny maszynowe M2 Browning kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="11">
+      <name>
+        <text lang="en">F4F Wildcat</text>
+        <text lang="pl">F4F Wildcat</text>
+      </name>
+      <file>entities/f4f.xml</file>
+      <icon>entities/f4f.png</icon>
+      <icon_locked>entities/f4f_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Navy 1941">entities/f4f_usn_1941.rgb</livery>
+        <livery name="US Navy 1941 (flown by Edward O'Hare)">entities/f4f_usn_no_f15.rgb</livery>
+        <livery name="US Navy 1942">entities/f4f_usn_1942.rgb</livery>
+        <livery name="US Navy 1942 (flown by Jim Swett)">entities/f4f_usn_no_77.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/f4f_usn_1942.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Grumman Aircraft Corporation</manufacturer>
+        <first_flight>1937-08-02</first_flight>
+        <introduction>1940</introduction>
+        <retired>1945</retired>
+        <number_built>7,885</number_built>
+        <primary_user>United States Navy</primary_user>
+        <crew>1 pilot</crew>
+        <length>28'9" (8.80 m)</length>
+        <wingspan>28' (11.60 m)</wingspan>
+        <height>11'10" (3.60 m)</height>
+        <mtow>8,762 lb (3,974 kg)</mtow>
+        <max_speed>290 kts</max_speed>
+        <range>721 nmi (1,337 km)</range>
+        <powerplant>
+          <text lang="en">Pratt &#038; Whitney R-1830-86 Twin Wasp 1,200 HP double-row radial piston engine</text>
+          <text lang="pl">Silnik gwiazdowy Pratt &#038; Whitney R-1830-86 Twin Wasp o mocy 1200 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">6x .50-inch M2 Browning machine guns</text>
+          <text lang="pl">6 karabinów maszynowych M2 Browning kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="27">
+      <name>
+        <text lang="en">F4U Corsair</text>
+        <text lang="pl">F4U Corsair</text>
+      </name>
+      <file>entities/f4u.xml</file>
+      <icon>entities/f4u.png</icon>
+      <icon_locked>entities/f4u_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Navy 1944">entities/f4u_usn_1944.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/f4u_usn_1944.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Chance Vought</manufacturer>
+        <first_flight>1940-05-29</first_flight>
+        <introduction>1942</introduction>
+        <retired>1979</retired>
+        <number_built>12,571</number_built>
+        <primary_user>United States Navy</primary_user>
+        <crew>1 pilot</crew>
+        <length>33'8" (10.26 m)</length>
+        <wingspan>41' (12.50 m)</wingspan>
+        <height>14'9" (4.50 m)</height>
+        <mtow>14,000 lb (6,350 kg)</mtow>
+        <max_speed>388 kts (718 km/h)</max_speed>
+        <range>873 nmi (1,617 km)</range>
+        <powerplant>
+          <text lang="en">Pratt &#038; Whitney R-2800-18W Double Wasp 2,380 HP radial piston engine</text>
+          <text lang="pl">Silnik gwiazdowy Pratt &#038; Whitney R-2800-18W Double Wasp o mocy 2380 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">6x .50-inch M2 Browning machine guns</text>
+          <text lang="pl">6 karabinów maszynowych M2 Browning kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="22">
+      <name>
+        <text lang="en">F6F Hellcat</text>
+        <text lang="pl">F6F Hellcat</text>
+      </name>
+      <file>entities/f6f.xml</file>
+      <icon>entities/f6f.png</icon>
+      <icon_locked>entities/f6f_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Navy 1943">entities/f6f_usn_1943.rgb</livery>
+        <livery name="US Navy 1944">entities/f6f_usn_1944.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/f6f_usn_1943.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.7</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Grumman Aircraft Corporation</manufacturer>
+        <first_flight>1942-06-26</first_flight>
+        <introduction>1943</introduction>
+        <retired>1960</retired>
+        <number_built>12,275</number_built>
+        <primary_user>United States Navy</primary_user>
+        <crew>1 pilot</crew>
+        <length>33'7" (10.24 m)</length>
+        <wingspan>42'10" (13.06 m)</wingspan>
+        <height>13'1" (3.99 m)</height>
+        <mtow>15,415 lb (6,990 kg)</mtow>
+        <max_speed>330 kts (629 km/h)</max_speed>
+        <range>1,330 nmi (2,460 km)</range>
+        <powerplant>
+          <text lang="en">Pratt &#038; Whitney R-2800-10W Double Wasp 2,200 HP two-row radial piston engine</text>
+          <text lang="pl">Silnik gwiazdowy Pratt &#038; Whitney R-2800-10W Double Wasp o mocy 2200 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">6x .50-inch M2 Browning machine guns</text>
+          <text lang="pl">6 karabinów maszynowych M2 Browning kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" unlock_mission="11">
+      <name>
+        <text lang="en">G4M "Betty"</text>
+        <text lang="pl">G4M "Betty"</text>
+      </name>
+      <file>entities/g4m.xml</file>
+      <icon>entities/g4m.png</icon>
+      <icon_locked>entities/g4m_locked.png</icon_locked>
+      <liveries>
+        <livery name="Imperial Japanese Navy Air Service 1942">entities/g4m_ijn_1942.rgb</livery>
+        <livery name="Imperial Japanese Navy Air Service 1942 (Admiral Yamamoto transport)">entities/g4m_ijn_no_323.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/g4m_ijn_1942.rgb</texture>
+        <distance>39</distance>
+        <heading>45</heading>
+        <offset_x>4</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Bomber</text>
+          <text lang="pl">bombowiec</text>
+        </role>
+        <manufacturer>Mitsubishi Heavy Industries</manufacturer>
+        <first_flight>1939-10-23</first_flight>
+        <introduction>1941</introduction>
+        <retired>1945</retired>
+        <number_built>2,435</number_built>
+        <primary_user>Imperial Japanese Navy Air Service</primary_user>
+        <crew>7</crew>
+        <length>65'6" (19.97 m)</length>
+        <wingspan>81'8" (24.89 m)</wingspan>
+        <height>16'1" (4.9 m)</height>
+        <mtow>28,350 lb (12,860 kg)</mtow>
+        <max_speed>230 kts (428 km/h)</max_speed>
+        <range>1,540 nmi (2,852 km)</range>
+        <powerplant>
+          <text lang="en">2x Mitsubishi MK4A-11 "Kasei" 14-cylinder 1,530 HP radial piston engines</text>
+          <text lang="pl">2 silniki gwiazdowe Mitsubishi MK4A-11 "Kasei" o mocy 1530 KM każdy</text>
+        </powerplant>
+        <armament>
+          <text lang="en">1x 20mm Type 99 cannon, 4x 7.7mm Type 92 machine guns, 1,000 kg of bombs</text>
+          <text lang="pl">działko Typ 99 kalibru 20mm, 4 karabiny maszynowe Typ 92 kalibru 7,7mm, 1000 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" unlock_mission="8">
+      <name>
+        <text lang="en">Ki-21 "Sally"</text>
+        <text lang="pl">Ki-21 "Sally"</text>
+      </name>
+      <file>entities/ki21.xml</file>
+      <icon>entities/ki21.png</icon>
+      <icon_locked>entities/ki21_locked.png</icon_locked>
+      <liveries>
+        <livery name="Imperial Japanese Army Air Service 1942">entities/ki21_ija_1942.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/ki21_ija_1942.rgb</texture>
+        <distance>39</distance>
+        <heading>45</heading>
+        <offset_x>4</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Bomber</text>
+          <text lang="pl">bombowiec</text>
+        </role>
+        <manufacturer>Mitsubishi Heavy Industries</manufacturer>
+        <first_flight>1936-12-18</first_flight>
+        <introduction>1938</introduction>
+        <retired>1945</retired>
+        <number_built>2,064</number_built>
+        <primary_user>Imperial Japanese Army Air Service</primary_user>
+        <crew>7</crew>
+        <length>52'6" (16.0 m)</length>
+        <wingspan>73'10" (22.5 m)</wingspan>
+        <height>15'11" (4.9 m)</height>
+        <mtow>23,320 lb (10,600 kg)</mtow>
+        <max_speed>260 kts (485 km/h)</max_speed>
+        <range>1,460 nmi (2,700 km)</range>
+        <powerplant>
+          <text lang="en">2x Mitsubishi Ha-101 "Kasei" 14-cylinder 1,530 HP radial piston engines</text>
+          <text lang="pl">2 silniki gwiazdowe Mitsubishi Ha-101 "Kasei" o mocy 1530 KM każdy</text>
+        </powerplant>
+        <armament>
+          <text lang="en">1x 12.7mm Type 1 machine gun, 4x 7.7mm Type 89 machine guns, 1,000 kg of bombs</text>
+          <text lang="pl">karabin maszynowy Typ 1 kalibru 12.7mm, 4 karabiny maszynowe Typ 89 kalibru 7,7mm, 1000 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" fighter="1" unlock_mission="9">
+      <name>
+        <text lang="en">Ki-43 "Oscar"</text>
+        <text lang="pl">Ki-43 "Oscar"</text>
+      </name>
+      <file>entities/ki43.xml</file>
+      <icon>entities/ki43.png</icon>
+      <icon_locked>entities/ki43_locked.png</icon_locked>
+      <liveries>
+        <livery name="Imperial Japanese Army Air Service 1944">entities/ki43_ija_1942.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/ki43_ija_1942.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Nakajima Aircraft Company</manufacturer>
+        <first_flight>1938-12-12</first_flight>
+        <introduction>1941</introduction>
+        <retired>1952</retired>
+        <number_built>5,919</number_built>
+        <primary_user>Imperial Japanese Army Air Service</primary_user>
+        <crew>1 pilot</crew>
+        <length>29'3" (8.92 m)</length>
+        <wingspan>35'7" (10.84 m)</wingspan>
+        <height>10'9" (3.27 m)</height>
+        <mtow>6,450 lb (2,925 kg)</mtow>
+        <max_speed>286 kts (530 km/h)</max_speed>
+        <range>952 nmi (1,760 km)</range>
+        <powerplant>
+          <text lang="en">Nakajima Ha-115 14-cylinder 1,150 HP air-cooled radial piston engine</text>
+          <text lang="pl">Silnik gwiazdowy Nakajima Ha-115 o mocy 1150 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x forward-firing 12.7mm Ho-103 machine guns</text>
+          <text lang="pl">2 karabiny maszynowe Ho-103 kalibru 12.7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" unlock_mission="28">
+      <name>
+        <text lang="en">MXY-7 Ohka</text>
+        <text lang="pl">MXY-7 Ohka</text>
+      </name>
+      <file>entities/mxy7.xml</file>
+      <icon>entities/mxy7.png</icon>
+      <icon_locked>entities/mxy7_locked.png</icon_locked>
+      <liveries>
+        <livery name="Imperial Japanese Navy Air Service 1945">entities/mxy7_ijn_1945.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/mxy7_ijn_1945.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>2</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Kamikaze aircraft</text>
+          <text lang="pl">samolot kamikaze</text>
+        </role>
+        <manufacturer>Yokosuka</manufacturer>
+        <first_flight>1944-10-31</first_flight>
+        <introduction>1945</introduction>
+        <retired>1945</retired>
+        <number_built>852</number_built>
+        <primary_user>Imperial Japanese Navy Air Service</primary_user>
+        <crew>1 pilot</crew>
+        <length>19'11" (6.06 m)</length>
+        <wingspan>16'10" (5.12 m)</wingspan>
+        <height>3'9" (1.16 m)</height>
+        <mtow>5,004 lb (2,270 kg)</mtow>
+        <max_speed>434 kts (804 km/h)</max_speed>
+        <range>23 nmi (36 km)</range>
+        <powerplant>
+          <text lang="en">3x Type 4 Mark 1 Model 20 2.6 kN thrust solid propellant rocket motors</text>
+          <text lang="pl">3 silniki rakietowe na paliwo stałe Typ 4 Model 20 o ciągu 2,6 kN</text>
+        </powerplant>
+        <armament>
+          <text lang="en">1,200 kg warhead</text>
+          <text lang="pl">głowica o masie 1200 kg</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit opponent="1" unlock_mission="0">
+      <name>
+        <text lang="en">OQ-2 Radioplane</text>
+        <text lang="pl">OQ-2 Radioplane</text>
+      </name>
+      <file>entities/oq2.xml</file>
+      <icon>entities/oq2.png</icon>
+      <icon_locked>entities/oq2_locked.png</icon_locked>
+      <liveries/>
+      <view>
+        <distance>10</distance>
+        <heading>45</heading>
+        <offset_x>0.4</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Target drone</text>
+          <text lang="pl">cel latający</text>
+        </role>
+        <manufacturer>Radioplane</manufacturer>
+        <first_flight>1939</first_flight>
+        <introduction>1941</introduction>
+        <retired>1952</retired>
+        <number_built>15,000</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>0</crew>
+        <length>8'8" (2.65 m)</length>
+        <wingspan>12'3" (3.73 m)</wingspan>
+        <height></height>
+        <mtow>104 lb (47 kg)</mtow>
+        <max_speed>74 kts (137 km/h)</max_speed>
+        <range>50 nmi (93 km)</range>
+        <powerplant>
+          <text lang="en">Righter O-15-1 7 HP piston engine</text>
+          <text lang="pl">Silnik tłokowy Righter O-15-1 o mocy 7 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">none</text>
+          <text lang="pl">brak</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="4">
+      <name>
+        <text lang="en">P-36 Hawk</text>
+        <text lang="pl">P-36 Hawk</text>
+      </name>
+      <file>entities/p36.xml</file>
+      <icon>entities/p36.png</icon>
+      <icon_locked>entities/p36_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Army Air Forces 1941">entities/p36_usaaf_1941.rgb</livery>
+        <livery name="US Army Air Forces 1941 (flown by Harry Brown)">entities/p36_usaaf_no_2.rgb</livery>
+        <livery name="US Army Air Forces 1941 (flown by Phil Rasmussen)">entities/p36_usaaf_no_86.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/p36_usaaf_1941.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Curtiss-Wright Corporation</manufacturer>
+        <first_flight>1935-05-06</first_flight>
+        <introduction>1938</introduction>
+        <retired>1954</retired>
+        <number_built>1,115</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>1 pilot</crew>
+        <length>28'6" (8.70 m)</length>
+        <wingspan>37'4" (11.40 m)</wingspan>
+        <height>8'5" (2.60 m)</height>
+        <mtow>6,010 lb (2,732 kg)</mtow>
+        <max_speed>272 kts (500 km/h)</max_speed>
+        <range>543 nmi (1,006 km)</range>
+        <powerplant>
+          <text lang="en">Pratt &#038; Whitney R-1830-17 Twin Wasp 1,050 HP air-cooled radial piston engine</text>
+          <text lang="pl">Silnik gwiazdowy Pratt &#038; Whitney R-1830-17 Twin Wasp o mocy 1050 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">4x .300-inch M1919 Browning machine guns</text>
+          <text lang="pl">4 karabiny maszynowe M1919 Browning kalibru 7,94mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="18">
+      <name>
+        <text lang="en">P-38 Lightning</text>
+        <text lang="pl">P-38 Lightning</text>
+      </name>
+      <file>entities/p38.xml</file>
+      <icon>entities/p38.png</icon>
+      <icon_locked>entities/p38_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Army Air Forces 1942">entities/p38_usaaf_1942.rgb</livery>
+        <livery name="US Army Air Forces 1942 (Miss Virginia)">entities/p38_usaaf_no_147.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/p38_usaaf_1942.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>2</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Heavy fighter</text>
+          <text lang="pl">ciężki myśliwiec</text>
+        </role>
+        <manufacturer>Lockheed Aircraft Company</manufacturer>
+        <first_flight>1939-01-27</first_flight>
+        <introduction>1941</introduction>
+        <retired>1965</retired>
+        <number_built>10,037</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>1 pilot</crew>
+        <length>37'10" (11.53 m)</length>
+        <wingspan>52' (15.85 m)</wingspan>
+        <height>12'10" (3.91 m)</height>
+        <mtow>21,600 lb (9,798 kg)</mtow>
+        <max_speed>360 kts (666 km/h)</max_speed>
+        <range>1,134 nmi (2,100 km)</range>
+        <powerplant>
+          <text lang="en">2x Allison V-1710-111/113 V12 1,600 HP piston engine</text>
+          <text lang="pl">2 silniki V12 Allison V-1710-111/113 o mocy 1600 KM każdy</text>
+        </powerplant>
+        <armament>
+          <text lang="en">1x Hispano M2(C) 20mm cannon, 4x .50 in M2 Browning machine guns</text>
+          <text lang="pl">działko Hispano M2(C) kalibru 20mm, 4 karabiny maszynowe M2 Browning kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="5">
+      <name>
+        <text lang="en">P-40 Warhawk</text>
+        <text lang="pl">P-40 Warhawk</text>
+      </name>
+      <file>entities/p40.xml</file>
+      <icon>entities/p40.png</icon>
+      <icon_locked>entities/p40_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Army Air Forces 1941">entities/p40_usaaf_1941.rgb</livery>
+        <livery name="US Army Air Forces 1941 (flown by Kenneth Taylor)">entities/p40_usaaf_no_155.rgb</livery>
+        <livery name="US Army Air Forces 1941 (flown by George Welch)">entities/p40_usaaf_no_160.rgb</livery>
+        <livery name="American Volunteer Group 1941 (Flying Tigers)">entities/p40_avg_1941.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/p40_avg_1941.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Curtiss-Wright Corporation</manufacturer>
+        <first_flight>1938-10-14</first_flight>
+        <introduction>1939</introduction>
+        <retired>1958</retired>
+        <number_built>13,738</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>1 pilot</crew>
+        <length>31'9" (9.68 m)</length>
+        <wingspan>37'4" (11.38 m)</wingspan>
+        <height>12'4" (3.76 m)</height>
+        <mtow>8,818 lb (4,000 kg)</mtow>
+        <max_speed>310 kts (580 km/h)</max_speed>
+        <range>560 nmi (1,100 km)</range>
+        <powerplant>
+          <text lang="en">Allison V-1710-39 liquid-cooled V12 1,150 HP piston engine</text>
+          <text lang="pl">Silnik V12 Allison V-1710-39 o mocy 1150 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">6x .50-inch M2 Browning machine guns</text>
+          <text lang="pl">6 karabinów maszynowych M2 Browning kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="21">
+      <name>
+        <text lang="en">P-51 Mustang</text>
+        <text lang="pl">P-51 Mustang</text>
+      </name>
+      <file>entities/p51d.xml</file>
+      <icon>entities/p51d.png</icon>
+      <icon_locked>entities/p51d_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Army Air Forces 1943 (75th Fighter Squadron)">entities/p51d_usaaf_1943_75fs.rgb</livery>
+        <livery name="US Army Air Forces 1943 (118th Tactical Reconnaissance Squadron)">entities/p51d_usaaf_1943_118trs.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/p51d_usaaf_1943_75fs.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>North American Aviation</manufacturer>
+        <first_flight>1940-10-26</first_flight>
+        <introduction>1942</introduction>
+        <retired>1957</retired>
+        <number_built>ca. 15,000</number_built>
+        <primary_user>United States Army Air Forces</primary_user>
+        <crew>1 pilot</crew>
+        <length>32'3" (9.83 m)</length>
+        <wingspan>37' (11.228 m)</wingspan>
+        <height>13'5" (4.08 m)</height>
+        <mtow>12,100 lb (5,490 kg)</mtow>
+        <max_speed>383 kts (708 km/h)</max_speed>
+        <range>1,400 nmi (2,650 km)</range>
+        <powerplant>
+          <text lang="en">Packard V-1650-7 liquid-cooled V12 1,490 HP piston engine</text>
+          <text lang="pl">Silnik V12 Packard V-1650-7 o mocy 1490 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">6x .50-inch M2 Browning machine guns</text>
+          <text lang="pl">6 karabinów maszynowych M2 Browning kalibru 12,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit unlock_mission="27">
+      <name>
+        <text lang="en">SB2C Helldiver</text>
+        <text lang="pl">SB2C Helldiver</text>
+      </name>
+      <file>entities/sb2c.xml</file>
+      <icon>entities/sb2c.png</icon>
+      <icon_locked>entities/sb2c_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Navy 1944">entities/sb2c_usn_1944.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/sb2c_usn_1944.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.8</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Dive bomber</text>
+          <text lang="pl">bombowiec nurkujący</text>
+        </role>
+        <manufacturer>Curtiss-Wright Corporation</manufacturer>
+        <first_flight>1940-12-18</first_flight>
+        <introduction>1942</introduction>
+        <retired>1959</retired>
+        <number_built>7,140</number_built>
+        <primary_user>United States Navy</primary_user>
+        <crew>1 pilot and 1 gunner</crew>
+        <length>36'8" (11.18 m)</length>
+        <wingspan>49'9" (15.17 m)</wingspan>
+        <height>13'2" (4.01 m)</height>
+        <mtow>16,616 lb (7,553 kg)</mtow>
+        <max_speed>257 kts (475 km/h)</max_speed>
+        <range>1,013 nmi (1,876 km)</range>
+        <powerplant>
+          <text lang="en">Wright R-2600-20 Twin Cyclone 1,900 HP radial piston engine</text>
+          <text lang="pl">Silnik gwiazdowy Wright R-2600-20 Twin Cyclone o mocy 1900 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x 20mm AN/M2 cannon, 2x .300-inch M2 Browning machine guns in the rear cockpit, 900 kg of bombs in internal bay, 225 kg of bombs on underwing hardpoints</text>
+          <text lang="pl">2 działka AN/M2 kalibru 20mm, 2 karabiny maszynowe M2 Browning kalibru 7,62mm, 900 kg bomb w komorach wewnętrznych, 225 kg bomb na zaczepach podskrzydłowych</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit unlock_mission="12">
+      <name>
+        <text lang="en">SBD Dauntless</text>
+        <text lang="pl">SBD Dauntless</text>
+      </name>
+      <file>entities/sbd.xml</file>
+      <icon>entities/sbd.png</icon>
+      <icon_locked>entities/sbd_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Navy 1941">entities/sbd_usn_1941.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/sbd_usn_1941.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.8</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Dive bomber</text>
+          <text lang="pl">bombowiec nurkujący</text>
+        </role>
+        <manufacturer>Douglas Aircraft</manufacturer>
+        <first_flight>1940-05-01</first_flight>
+        <introduction>1940</introduction>
+        <retired>1959</retired>
+        <number_built>5,936</number_built>
+        <primary_user>United States Navy</primary_user>
+        <crew>1 pilot and 1 gunner</crew>
+        <length>33'1" (10.09 m)</length>
+        <wingspan>41'6" (12.66 m)</wingspan>
+        <height>13'7" (4.14 m)</height>
+        <mtow>10,700 lb (4,853 kg)</mtow>
+        <max_speed>222 kts (410 km/h)</max_speed>
+        <range>970 nmi (1,795 km)</range>
+        <powerplant>
+          <text lang="en">Wright R-1820-60 Cyclone 1,200 HP radial piston engine</text>
+          <text lang="pl">Silnik gwiazdowy Wright R-1820-60 Cyclone o mocy 1200 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x .50-inch forward-firing Browning M2 machine guns in the engine cowling, 2x .300-inch Browning machine guns in the rear cockpit, 1,020 kg of bombs</text>
+          <text lang="pl">2 karabiny maszynowe M2 Browning kalibru 7,62mm, 2 karabiny maszynowe Browning kalibru 7,62mm w tylniej kabinie, 1020 kg bomb</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit playable="1" fighter="1" unlock_mission="19">
+      <name>
+        <text lang="en">Seafire</text>
+        <text lang="pl">Seafire</text>
+      </name>
+      <file>entities/spitfire.xml</file>
+      <icon>entities/spitfire.png</icon>
+      <icon_locked>entities/spitfire_locked.png</icon_locked>
+      <liveries>
+        <livery name="1943 Royal Australian Air Force">entities/spitfire_raaf_1943.rgb</livery>
+        <livery name="1945 Fleet Air Arm">entities/spitfire_faa_1945.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/spitfire_raaf_1943.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>1.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Fighter</text>
+          <text lang="pl">myśliwiec</text>
+        </role>
+        <manufacturer>Supermarine</manufacturer>
+        <first_flight>1942-01-07</first_flight>
+        <introduction>1942</introduction>
+        <retired>1961</retired>
+        <number_built>2,646</number_built>
+        <primary_user>Fleet Air Arm</primary_user>
+        <crew>1 pilot</crew>
+        <length>30'3" (9.21 m)</length>
+        <wingspan>36'10" (11.22 m)</wingspan>
+        <height>11'5" (3.48 m)</height>
+        <mtow>7,640 lb (3,466 kg)</mtow>
+        <max_speed>312 kts (578 km/h)</max_speed>
+        <range>445 nmi (825 km)</range>
+        <powerplant>
+          <text lang="en">Rolls-Royce Merlin 55M supercharged 1,585 HP V12 engine</text>
+          <text lang="pl">Silnik V12 Rolls-Royce Merlin 55M o mocy 1585 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x 20mm Hispano Mk II cannon, 4x .303-inch Browning Mk II machine guns</text>
+          <text lang="pl">2 działka Hispano Mk II kalibru 20mm, 4 karabiny maszynowe Browning Mk II kalibru 7,7mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit unlock_mission="27">
+      <name>
+        <text lang="en">TBF Avenger</text>
+        <text lang="pl">TBF Avenger</text>
+      </name>
+      <file>entities/tbf.xml</file>
+      <icon>entities/tbf.png</icon>
+      <icon_locked>entities/tbf_locked.png</icon_locked>
+      <liveries>
+        <livery name="US Navy 1942">entities/tbf_usn_1942.rgb</livery>
+        <livery name="Fleet Air Arm 1945">entities/tbf_faa_1945.rgb</livery>
+      </liveries>
+      <view>
+        <texture>entities/tbf_usn_1942.rgb</texture>
+        <distance>25</distance>
+        <heading>45</heading>
+        <offset_x>2.5</offset_x>
+      </view>
+      <info>
+        <role>
+          <text lang="en">Torpedo bomber</text>
+          <text lang="pl">samolot torpedowy</text>
+        </role>
+        <manufacturer>Grumman Aircraft Corporation</manufacturer>
+        <first_flight>1941-08-07</first_flight>
+        <introduction>1942</introduction>
+        <retired>1960</retired>
+        <number_built>9,839</number_built>
+        <primary_user>United States Navy</primary_user>
+        <crew>1 pilot and 2 gunners</crew>
+        <length>41' (12.48 m)</length>
+        <wingspan>54'2" (16.51 m)</wingspan>
+        <height>15'5" (4.70 m)</height>
+        <mtow>17,893 lb (8,115 kg)</mtow>
+        <max_speed>239 kts (442 km/h)</max_speed>
+        <range>870 nmi (1,610 km)</range>
+        <powerplant>
+          <text lang="en">Wright R-2600-20 Twin Cyclone 1,900 HP radial piston engine</text>
+          <text lang="pl">Silnik gwiazdowy Wright R-2600-20 Twin Cyclone o mocy 1900 KM</text>
+        </powerplant>
+        <armament>
+          <text lang="en">2x .50-inch forward-firing M2 Browning machine guns, 1x .300 in turret-mounted M2 Browning machine, 1x .300-inch M1919 Browning machine gun, 1x Mark 13 torpedo</text>
+          <text lang="pl">4 karabiny maszynowe Browning M2 kalibru 12,7mm, karabin maszynowy M2 Browning kalibru 7,62mm w wieżyczce, karabin maszynowy M1919 Browning kalibru 7,62mm, torpeda Mark 13</text>
+        </armament>
+      </info>
+    </unit>
+
+  </aerial>
+  
+  <marine>
+  
+    <unit>
+      <name>
+        <text lang="en">Agano-class cruiser</text>
+        <text lang="pl">Krążownik typu Agano</text>
+      </name>
+      <file>entities/agano.xml</file>
+      <icon>entities/agano.png</icon>
+      <view>
+        <distance>250</distance>
+        <heading>30</heading>
+        <offset_x>-15</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Light cruiser</text>
+          <text lang="pl">lekki krążownik</text>
+        </type>
+        <number_built>4</number_built>
+        <displacement>6,652 t</displacement>
+        <length>571' (174 m)</length>
+        <beam>50' (15.2 m)</beam>
+        <draft>18' (5.6 m)</draft>
+        <max_speed>35 kts (65 km/h)</max_speed>
+        <complement>730</complement>
+        <armament>
+          <text lang="en">6x 152mm Type 41 guns, 4x 76.2mm Type 98 DP guns, 6x 25mm AA guns, 4x 13mm Type 93 AA machine guns, 8x 610mm torpedos, 16x depth charges, 3x Type 88 mines</text>
+          <text lang="pl">6 dział Typ 41 kalilbru 152mm, 4 działa Typ 98 kalibru 76,2mm, 6 dział przeciwlotniczych kalibru 25mm, 4 karabiny maszynowe Typ 93 kalibru 13mm, 8 torped kalibru 610mm, 16 bomb głębinowych, 3 miny Typ 88</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit>
+      <name>
+        <text lang="en">Essex-class aircraft carrier</text>
+        <text lang="pl">Lotniskowiec typu Essex</text>
+      </name>
+      <file>entities/essex.xml</file>
+      <icon>entities/essex.png</icon>
+      <view>
+        <distance>300</distance>
+        <heading>30</heading>
+        <offset_x>-50</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Aircraft carrier</text>
+          <text lang="pl">lotniskowiec</text>
+        </type>
+        <number_built>24</number_built>
+        <displacement>30,800 t</displacement>
+        <length>820' (250 m)</length>
+        <beam>93' (28.3 m)</beam>
+        <draft>23' (7.0 m)</draft>
+        <max_speed>33 kts (61 km/h)</max_speed>
+        <complement>2,631</complement>
+        <armament>
+          <text lang="en">12x 5-inch guns, 32x 40mm Bofors AA guns, 55x 20mm Oerlikon cannon, 100 aircrafts</text>
+          <text lang="pl">12 dział kalibru 127mm, 32 działa przecilotnicze Bofors kalibru 40mm, 55 działek Oerlikon kalibru 20mm, 100 samolotów</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit>
+      <name>
+        <text lang="en">Farragut-class destroyer</text>
+        <text lang="pl">Niszczyciel typu Farragut</text>
+      </name>
+      <file>entities/farragut.xml</file>
+      <icon>entities/farragut.png</icon>
+      <view>
+        <distance>200</distance>
+        <heading>30</heading>
+        <offset_x>-10</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Destroyer</text>
+          <text lang="pl">niszczyciel</text>
+        </type>
+        <number_built>8</number_built>
+        <displacement>2,064 t</displacement>
+        <length>341'3" (104 m)</length>
+        <beam>34'3" (10.4 m)</beam>
+        <draft>16'2" (4.9 m)</draft>
+        <max_speed>37 kts (69 km/h)</max_speed>
+        <complement>250</complement>
+        <armament>
+          <text lang="en">5x 5-inch guns, 4x .50-inch machine guns, 8x 21-inch torpedos</text>
+          <text lang="pl">5 dział kalibru 127mm, 4 karabiny maszynowe kalibru 12,7mm, 8 torped kalibru 533mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit>
+      <name>
+        <text lang="en">Fletcher-class destroyer</text>
+        <text lang="pl">Niszczyciel typu Fletcher</text>
+      </name>
+      <file>entities/fletcher.xml</file>
+      <icon>entities/fletcher.png</icon>
+      <view>
+        <distance>200</distance>
+        <heading>30</heading>
+        <offset_x>-10</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Destroyer</text>
+          <text lang="pl">niszczyciel</text>
+        </type>
+        <number_built>175</number_built>
+        <displacement>2,500 t</displacement>
+        <length>376'6" (115 m)</length>
+        <beam>39'6" (12.0 m)</beam>
+        <draft>17'6" (5.3 m)</draft>
+        <max_speed>37 kts (68 km/h)</max_speed>
+        <complement>329</complement>
+        <armament>
+          <text lang="en">5x 5-inch guns, 6x 40mm Bofors AA guns, 7x 20mm Oerlikon autocannons, 10x 21-inch torpedos, 6x K-gun depth charge projectors</text>
+          <text lang="pl">5 dział kalibru 127mm, 6 dział przeciwlotniczych Bofors kalibru 40mm, 7 działek Oerlikon kalibru 20mm, 10 torped kalibru 533mm, 6 wyrzutni bomb głębinowych</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit>
+      <name>
+        <text lang="en">Iowa-class battleship</text>
+        <text lang="pl">Pancernik typu Iowa</text>
+      </name>
+      <file>entities/iowa.xml</file>
+      <icon>entities/iowa.png</icon>
+      <view>
+        <distance>300</distance>
+        <heading>30</heading>
+        <offset_x>-40</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Battleship</text>
+          <text lang="pl">pancernik</text>
+        </type>
+        <number_built>4</number_built>
+        <displacement>58,460 t</displacement>
+        <length>887' (270 m)</length>
+        <beam>108' (33.0 m)</beam>
+        <draft>32' (11.0 m)</draft>
+        <max_speed>33 kts (61 km/h)</max_speed>
+        <complement>2,700</complement>
+        <armament>
+          <text lang="en">9x 16-inch Mark 7 guns, 20x 5-inch Mark 12 guns, 80x 40mm Bofors AA guns, 49x 20mm Oerlikon cannons</text>
+          <text lang="pl">9 dział Mark 7 kalibru 406mm, 20 dział Mark 12 kalibru 127mm, 80 dział przeciwlotniczych Bofors kalibru 40mm, 49 działek Oerlikon kalibru 20mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit>
+      <name>
+        <text lang="en">Kagero-class destroyer</text>
+        <text lang="pl">Niszczyciel typu Kagero</text>
+      </name>
+      <file>entities/kagero.xml</file>
+      <icon>entities/kagero.png</icon>
+      <view>
+        <distance>200</distance>
+        <heading>30</heading>
+        <offset_x>-10</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Destroyer</text>
+          <text lang="pl">niszczyciel</text>
+        </type>
+        <number_built>19</number_built>
+        <displacement>2,540 t</displacement>
+        <length>390'5" (119 m)</length>
+        <beam>35'5" (10.8 m)</beam>
+        <draft>12'6" (3.8 m)</draft>
+        <max_speed>36 kts (66 km/h)</max_speed>
+        <complement>239</complement>
+        <armament>
+          <text lang="en">6x 127mm Type 3 guns, 4x 25mm Type 96 AA guns, 16x Type 93 torpedos, 18x Type 95 depth charges</text>
+          <text lang="pl">6 dział Typ 3 kalibru 127mm, 4 działa przecilotnicze Typ 96 kalibru 25mm, 16 torped Typ 93, 18 bomb głębinowych Typ 95</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit>
+      <name>
+        <text lang="en">Lexington-class aircraft carrier</text>
+        <text lang="pl">Lotniskowiec typu Lexington</text>
+      </name>
+      <file>entities/lexington.xml</file>
+      <icon>entities/lexington.png</icon>
+      <view>
+        <distance>300</distance>
+        <heading>30</heading>
+        <offset_x>-50</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Aircraft carrier</text>
+          <text lang="pl">lotniskowiec</text>
+        </type>
+        <number_built>2</number_built>
+        <displacement>43,746 t</displacement>
+        <length>888' (271 m)</length>
+        <beam>106' (32.3 m)</beam>
+        <draft>30'5" (9.3 m)</draft>
+        <max_speed>33 kts (62 km/h)</max_speed>
+        <complement>2,791</complement>
+        <armament>
+          <text lang="en">8x 8-inch guns, 12x 5-inch anti-aircraft guns, 78 aircrafts</text>
+          <text lang="pl">8 dział kalibru 203mm, 5 dział przeciwlotniczych, 78 samolotów</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit>
+      <name>
+        <text lang="en">Matsu-class destroyer</text>
+        <text lang="pl">Niszczyciel typu Matsu</text>
+      </name>
+      <file>entities/matsu.xml</file>
+      <icon>entities/matsu.png</icon>
+      <view>
+        <distance>200</distance>
+        <heading>30</heading>
+        <offset_x>-10</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Destroyer</text>
+          <text lang="pl">niszczyciel</text>
+        </type>
+        <number_built>32</number_built>
+        <displacement>1,530 t</displacement>
+        <length>328' (100 m)</length>
+        <beam>30'8" (9.4 m)</beam>
+        <draft>10'10" (3.3 m)</draft>
+        <max_speed>28 kts (52 km/h)</max_speed>
+        <complement>211</complement>
+        <armament>
+          <text lang="en">3x 127mm Type 89 AA guns, 4x Type 93 torpedos, 36x Type 2 depth charges</text>
+          <text lang="pl">3 działa przecilotnicze Typ 89 kalibru 127mm, 4 wyrzutnie torped Typ 93, 36 bomb głębinowych Typ 2</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit>
+      <name>
+        <text lang="en">Yamato-class battleship</text>
+        <text lang="pl">Pancernik typu Yamato</text>
+      </name>
+      <file>entities/yamato.xml</file>
+      <icon>entities/yamato.png</icon>
+      <view>
+        <distance>300</distance>
+        <heading>30</heading>
+        <offset_x>-40</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Battleship</text>
+          <text lang="pl">pancernik</text>
+        </type>
+        <number_built>2</number_built>
+        <displacement>73,000 t</displacement>
+        <length>840' (256 m)</length>
+        <beam>121'1" (36.9 m)</beam>
+        <draft>34'1" (10.4 m)</draft>
+        <max_speed>27 kts (50 km/h)</max_speed>
+        <complement>2,767</complement>
+        <armament>
+          <text lang="en">9x 460mm guns, 12x 155mm guns, 12x 127mm guns, 24x 25mm anti-aircraft guns, 4x 13.2mm anti-aircraft guns</text>
+          <text lang="pl">9 dział kalibru 460mm, 12 dział kalibru 155mm, 12 dział kalibru 127mm, 24 działa przecilotnicze kalibru 25mm, 4 karabiny maszynowe kalibru 13,2mm</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit>
+      <name>
+        <text lang="en">Yorktown-class aircraft carrier</text>
+        <text lang="pl">Lotniskowiec typu Yorktown</text>
+      </name>
+      <file>entities/yorktown.xml</file>
+      <icon>entities/yorktown.png</icon>
+      <view>
+        <distance>300</distance>
+        <heading>30</heading>
+        <offset_x>-40</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Aircraft carrier</text>
+          <text lang="pl">lotniskowiec</text>
+        </type>
+        <number_built>3</number_built>
+        <displacement>25,900 t</displacement>
+        <length>770' (230 m)</length>
+        <beam>83' (25.0 m)</beam>
+        <draft>24'4" (7.9 m)</draft>
+        <max_speed>33 kts (60 km/h)</max_speed>
+        <complement>2,217</complement>
+        <armament>
+          <text lang="en">8x 5-inch guns, 16x 1.1-inch guns, 24x .50 machine guns, 90 aircrafts</text>
+          <text lang="pl">8 dział kalibru 127mm, 16 działek kalibru 30mm, 24 karabiny maszynowe kalibru 12,7mm, 90 samolotów</text>
+        </armament>
+      </info>
+    </unit>
+    
+    <unit>
+      <name>
+        <text lang="en">Zuiho-class aircraft carrier</text>
+        <text lang="pl">Lotniskowiec typu Zuiho</text>
+      </name>
+      <file>entities/zuiho.xml</file>
+      <icon>entities/zuiho.png</icon>
+      <view>
+        <distance>300</distance>
+        <heading>30</heading>
+        <offset_x>-25</offset_x>
+      </view>
+      <info>
+        <type>
+          <text lang="en">Aircraft carrier</text>
+          <text lang="pl">lotniskowiec</text>
+        </type>
+        <number_built>2</number_built>
+        <displacement>11,400 t</displacement>
+        <length>674' (206 m)</length>
+        <beam>59'8" (18.2 m)</beam>
+        <draft>21'7" (6.6 m)</draft>
+        <max_speed>28 kts (52 km/h)</max_speed>
+        <complement>785</complement>
+        <armament>
+          <text lang="en">8x 127mm Type 89 guns, 8x 25mm Type 96 guns, 30 aircrafts</text>
+          <text lang="pl">8 dział Typ 89 kalibru 127mm, 8 dział Typ 96 kalibru 25mm, 30 samolotów</text>
+        </armament>
+      </info>
+    </unit>
+    
+  </marine>
+  
+  <ground></ground>
+</units>
