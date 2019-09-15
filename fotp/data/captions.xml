@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<captions>
+  <loading>
+    <text lang="en">LOADING...</text>
+    <text lang="pl">ŁADOWANIE...</text>
+  </loading>
+  <resume>
+    <text lang="en">Tap the screen to resume.</text>
+    <text lang="pl">Dotknij ekranu aby wznowić grę.</text>
+  </resume>
+  <begin>
+    <text lang="en">Hold your device comfortable and tap the screen to begin.</text>
+    <text lang="pl">Ustaw swoje urządzenie w wygodnej pozycji i dotknij ekranu.</text>
+  </begin>
+  <mission_accomplished>
+    <text lang="en">MISSION ACCOMPLISHED</text>
+    <text lang="pl">MISJA WYKONANA</text>
+    <!--<text lang="fr">MISSION ACCOMPLIE</text>-->
+  </mission_accomplished>
+  <mission_failed>
+    <text lang="en">MISSION FAILED</text>
+    <text lang="pl">NIEPOWODZENIE MISJI</text>
+    <!--<text lang="fr">MISSION ÉCHOUÉE</text>-->
+  </mission_failed>
+  <friendly_fire>
+    <text lang="en">FRIENDLY FIRE</text>
+    <text lang="pl">BRATOBÓJCZY OGIEŃ</text>
+    <!--<text lang="fr">TIR AMI</text>-->
+  </friendly_fire>
+  <target_killed>
+    <text lang="en">TARGET KILLED</text>
+    <text lang="pl">CEL ZNISZCZONY</text>
+  </target_killed>
+  <target_hit>
+    <text lang="en">TARGET HIT</text>
+    <text lang="pl">TRAFIENIE</text>
+  </target_hit>
+</captions>
