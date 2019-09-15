@@ -9,8 +9,8 @@ An arcade style combat flight simulation video game engine written in C++ intend
 ![screenshot 06](screenshot_06.jpg)
 
 ## Released Games
-[Fighters over the Pacific](https://play.google.com/store/apps/details?id=com.omnitech_software.fotp)
-[Fighters: Polish Aces](https://play.google.com/store/apps/details?id=com.omnitech_software.fpa)
+- [Fighters over the Pacific](https://play.google.com/store/apps/details?id=com.omnitech_software.fotp)
+- [Fighters: Polish Aces](https://play.google.com/store/apps/details?id=com.omnitech_software.fpa)
 
 ## Tools
 
