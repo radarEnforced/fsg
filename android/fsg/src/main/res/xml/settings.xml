@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<ListPreference
+        android:key="@string/conf_language_key"
+        android:title="@string/setting_language"
+        android:dialogTitle="@string/setting_language"
+        android:summary="%s"
+        android:entries="@array/conf_language_entries"
+        android:entryValues="@array/conf_language_values"
+        android:defaultValue="0" />-->
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="@string/conf_invert_pitch_key"
+        android:summaryOn="@string/yes"
+        android:summaryOff="@string/no"
+        android:title="@string/setting_invert_pitch"
+        />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="@string/conf_silent_mode_key"
+        android:summaryOn="@string/setting_on"
+        android:summaryOff="@string/setting_off"
+        android:title="@string/setting_silent_mode"
+        />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="@string/conf_no_controller_key"
+        android:summaryOn="@string/yes"
+        android:summaryOff="@string/no"
+        android:title="@string/setting_controller"
+        />
+
+</PreferenceScreen>

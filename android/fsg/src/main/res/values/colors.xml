@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#808080</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#FAFAFA</color>
+
+    <color name="colorFocused">#33FAFAFA</color>
+    <color name="colorPressed">@color/colorPrimary</color>
+
+    <color name="colorHeader">#212121</color>
+    <color name="colorText">#FAFAFA</color>
+</resources>

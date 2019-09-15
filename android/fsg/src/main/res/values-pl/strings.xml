@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Language code -->
+    <string name="language_code">pl</string>
+
+    <!-- Global strings -->
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+    <string name="of">z</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Anuluj</string>
+
+    <!-- Downloader Activity -->
+    <string name="downloader_paused_cellular">Czy chcesz uruchomić pobieranie za pośrednictwem połączenia telefonicznego? W zależności od twojego planu taryfowego może to wiązać się z dodatkowymi kosztami.</string>
+    <string name="downloader_paused_cellular_2">Jeżeli wybierzesz aby nie korzystac z pobierania za pośrednictwem łącza telefonicznego, pobieranie zostanie automatycznie wznowione po połączeniu do sieci Wi-Fi.</string>
+    <string name="downloader_button_resume_cellular">Wznów pobieranie</string>
+    <string name="downloader_button_wifi_settings">Ustawienia Wi-Fi</string>
+    <string name="downloader_verifying_download">Sprawdzanie pliku</string>
+    <string name="downloader_validation_completed">Sprawdzanie pliku XAPK zakończone. Wybierz OK aby wyjść.</string>
+    <string name="downloader_validation_failed">Sprawdzanie pliku XAPK nie powiodło się.</string>
+    <string name="downloader_button_pause">Wstrzymaj pobieranie</string>
+    <string name="downloader_button_resume">Wznów pobieranie</string>
+    <string name="downloader_button_cancel">Anuluj</string>
+    <string name="downloader_button_cancel_verify">Anuluj sprawdzanie</string>
+
+    <!-- Main Activity buttons labels -->
+    <string name="menu_tutorial">Tutorial</string>
+    <string name="menu_campaign">Kampania</string>
+    <string name="menu_quick_action">Szybka Misja</string>
+    <string name="menu_encyclopedia">Encyklopedia</string>
+
+    <string name="do_you_want_to_start_tutorial">Czy chcesz rozpocząć tutorial? Tutorial będziesz mógł uruchomić w dowolnym momencie.</string>
+
+    <!-- Settings Activity -->
+    <string name="setting_on">Wł.</string>
+    <string name="setting_off">Wył.</string>
+    <string name="setting_invert_pitch">Odwróć sterowanie pochyleniem</string>
+    <string name="setting_silent_mode">Tryb cichy</string>
+    <string name="setting_controller">Nie używaj gamepada</string>
+
+    <!-- Campaign Activity -->
+    <string name="mission_locked">Misja zablokowana.</string>
+
+    <!-- Mission Activity -->
+    <string name="mission_start">Rozpocznij misję</string>
+    <string name="mission_restart">Rozpocznij ponownie</string>
+    <string name="mission_proceed">Kontynuuj</string>
+    <string name="mission_mission">Misja</string>
+    <string name="mission_unlocked">odblokowana.</string>
+    <string name="mission_campaign_finished">Koniec kampanii.</string>
+    <string name="mission_aircraft_unlocked">odblokowany.</string>
+    <string name="mission_summary_time">Czas lotu:</string>
+    <string name="mission_summary_friends_destroyed">Zniszczonych sojuszników:</string>
+    <string name="mission_summary_enemies_destroyed">Zniszczonych przeciwników:</string>
+    <string name="mission_summary_ownship_destroyed">Przeciwnicy zniszczeni przez ciebie:</string>
+
+    <!-- Skirmish Activity -->
+    <string name="skirmish_aircraft_locked">Samolot zablokowany.</string>
+    <string name="skirmish_finish_mission">Ukończ misję</string>
+    <string name="skirmish_to_unlock_this_aircraft">aby odblokować ten samolot.</string>
+    <string name="skirmish_scenery">Sceneria:</string>
+    <string name="skirmish_your_aircraft">Twój samolot:</string>
+    <string name="skirmish_wingman_aircraft">Samolot skrzydłowego:</string>
+    <string name="skirmish_ally_aircraft">Samolot sprzymierzeńca:</string>
+    <string name="skirmish_opponent_aircraft">Samolot przeciwnika:</string>
+    <string name="skirmish_change">Zmień</string>
+    <string name="skirmish_empty_slot">-</string>
+    <string name="skirmish_unknown_scenery">Nieznana sceneria</string>
+    <string name="skirmish_start">Rozpocznij</string>
+
+    <!-- Choose Unit Activity -->
+    <string name="choose_unit_aircraft_type">Typ samolotu:</string>
+    <string name="choose_unit_aircraft_livery">Schemat malowania:</string>
+
+    <!-- Simulation Activity -->
+    <string name="do_you_want_to_abort">Czy chcesz przerwać misję?</string>
+
+    <!-- Unit Activity -->
+    <string name="unit_role">Typ:</string>
+    <string name="unit_type">Klasa:</string>
+    <string name="unit_manufacturer">Producent:</string>
+    <string name="unit_first_flight">Data oblotu:</string>
+    <string name="unit_introduction">Wejście do służby:</string>
+    <string name="unit_retired">Wycofanie ze służby:</string>
+    <string name="unit_primary_user">Główny użytkownik:</string>
+    <string name="unit_number_built">Egzemplarze:</string>
+    <string name="unit_displacement">Wyporność:</string>
+    <string name="unit_length">Długość:</string>
+    <string name="unit_wingspan">Rozpiętość:</string>
+    <string name="unit_height">Wysokość:</string>
+    <string name="unit_beam">Szerokość:</string>
+    <string name="unit_draft">Zanużenie:</string>
+    <string name="unit_mtow">Masa maks.:</string>
+    <string name="unit_max_speed">Prędkość maks.:</string>
+    <string name="unit_range">Zasięg:</string>
+    <string name="unit_crew">Załoga:</string>
+    <string name="unit_powerplant">Napęd:</string>
+    <string name="unit_complement">Załoga:</string>
+    <string name="unit_armament">Uzbrojenie:</string>
+</resources>

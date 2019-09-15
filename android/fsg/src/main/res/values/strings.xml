@@ -1,0 +1,108 @@
+<resources>
+    <!-- Language code -->
+    <string name="language_code">en</string>
+
+    <!-- Shared Preferences key strings -->
+    <string name="conf_first_start" translatable="false">conf_first_start</string>
+    <string name="conf_completed_missions" translatable="false">conf_completed_missions</string>
+    <string name="conf_missions_count" translatable="false">conf_missions_count</string>
+    <string name="conf_language_key" translatable="false">conf_language</string>
+    <string name="conf_invert_pitch_key" translatable="false">conf_invert_pitch</string>
+    <string name="conf_silent_mode_key" translatable="false">conf_silent_mode</string>
+    <string name="conf_no_controller_key" translatable="false">conf_no_controller</string>
+
+    <!-- Global strings -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="of">of</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Downloader Activity -->
+    <string name="downloader_paused_cellular">Would you like to enable downloading over cellular connections? Depending on your data plan, this may cost you money.</string>
+    <string name="downloader_paused_cellular_2">If you choose not to enable downloading over cellular connections, the download will automatically resume when wi-fi is available.</string>
+    <string name="downloader_button_resume_cellular">Resume download</string>
+    <string name="downloader_button_wifi_settings">Wi-Fi settings</string>
+    <string name="downloader_verifying_download">Verifying download</string>
+    <string name="downloader_validation_completed">XAPK file validation completed. Select OK to exit.</string>
+    <string name="downloader_validation_failed">XAPK file validation failed.</string>
+    <string name="downloader_button_pause">Pause Download</string>
+    <string name="downloader_button_resume">Resume Download</string>
+    <string name="downloader_button_cancel">Cancel</string>
+    <string name="downloader_button_cancel_verify">Cancel Verification</string>
+
+    <!-- Main Activity buttons labels -->
+    <string name="menu_tutorial">Tutorial</string>
+    <string name="menu_campaign">Campaign</string>
+    <string name="menu_quick_action">Quick Action</string>
+    <string name="menu_encyclopedia">Encyclopedia</string>
+
+    <string name="do_you_want_to_start_tutorial">Do you want to start tutorial? You will be able to start tutorial any time you want.</string>
+
+    <!-- Settings Activity -->
+    <string name="setting_on">On</string>
+    <string name="setting_off">Off</string>
+    <string name="setting_invert_pitch">Invert pitch controls</string>
+    <string name="setting_silent_mode">Silent mode</string>
+    <string name="setting_controller">Do not use controller</string>
+
+    <!-- Campaign Activity -->
+    <string name="mission_locked">Mission locked.</string>
+
+    <!-- Mission Activity -->
+    <string name="mission_start">Start Mission</string>
+    <string name="mission_restart">Restart</string>
+    <string name="mission_proceed">Proceed</string>
+    <string name="mission_mission">Mission</string>
+    <string name="mission_unlocked">unlocked.</string>
+    <string name="mission_campaign_finished">Campaign finished.</string>
+    <string name="mission_aircraft_unlocked">unlocked.</string>
+    <string name="mission_summary_time">Total flight time:</string>
+    <string name="mission_summary_friends_destroyed">Friend units destroyed:</string>
+    <string name="mission_summary_enemies_destroyed">Enemy units destroyed:</string>
+    <string name="mission_summary_ownship_destroyed">Opponents destroyed by you:</string>
+
+    <!-- Skirmish Activity -->
+    <string name="skirmish_aircraft_locked">Aircraft locked.</string>
+    <string name="skirmish_finish_mission">Finish mission</string>
+    <string name="skirmish_to_unlock_this_aircraft">to unlock this aircraft.</string>
+    <string name="skirmish_scenery">Scenery:</string>
+    <string name="skirmish_your_aircraft">Your aircraft:</string>
+    <string name="skirmish_wingman_aircraft">Wingman aircraft:</string>
+    <string name="skirmish_ally_aircraft">Ally aircraft:</string>
+    <string name="skirmish_opponent_aircraft">Opponent aircraft:</string>
+    <string name="skirmish_change">Change</string>
+    <string name="skirmish_empty_slot">-</string>
+    <string name="skirmish_unknown_scenery">Unknown Scenery</string>
+    <string name="skirmish_start">Start</string>
+
+    <!-- Choose Unit Activity -->
+    <string name="choose_unit_aircraft_type">Aircraft type:</string>
+    <string name="choose_unit_aircraft_livery">Aircraft livery:</string>
+
+    <!-- Simulation Activity -->
+    <string name="do_you_want_to_abort">Do you want to abort this mission?</string>
+
+    <!-- Unit Activity -->
+    <string name="unit_role">Role:</string>
+    <string name="unit_type">Type:</string>
+    <string name="unit_manufacturer">Manufacturer:</string>
+    <string name="unit_first_flight">First flight:</string>
+    <string name="unit_introduction">Introduction:</string>
+    <string name="unit_retired">Retired:</string>
+    <string name="unit_primary_user">Primary user:</string>
+    <string name="unit_number_built">Number built:</string>
+    <string name="unit_displacement">Displacement:</string>
+    <string name="unit_length">Length:</string>
+    <string name="unit_wingspan">Wingspan:</string>
+    <string name="unit_height">Height:</string>
+    <string name="unit_beam">Beam:</string>
+    <string name="unit_draft">Draft:</string>
+    <string name="unit_mtow">MTOW:</string>
+    <string name="unit_max_speed">Max speed:</string>
+    <string name="unit_range">Range:</string>
+    <string name="unit_crew">Crew:</string>
+    <string name="unit_powerplant">Powerplant:</string>
+    <string name="unit_complement">Complement:</string>
+    <string name="unit_armament">Armament:</string>
+</resources>

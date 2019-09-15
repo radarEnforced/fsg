@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityEncyclopedia">
+
+    <ImageView
+        android:id="@+id/activity_encyclopedia_img_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_background" />
+
+    <fragment
+        android:id="@+id/activity_encyclopedia_header"
+        android:name="pl.marekcel.fsg.FragmentHeader"
+        tools:layout="@layout/fragment_header"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <GridView
+        android:id="@+id/activity_encyclopedia_gridView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_encyclopedia_header"
+        app:layout_constraintTop_toTopOf="parent"
+        android:columnWidth="128dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="@dimen/activity_vertical_margin"
+        android:horizontalSpacing="@dimen/activity_horizontal_margin"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:focusable="false"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColor">@color/colorText</item>
+        
+        <!--<item name="preferenceTheme">@style/PreferenceThemeOverlay</item>-->
+    </style>
+
+    <style name="fsg_button" parent="AppTheme">
+        <item name="android:background">@drawable/fsg_button</item>
+        <item name="android:fontFamily">@font/fsg_stencil</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@drawable/fsg_button_color</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginStart">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginEnd">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="fsg_button_skirmish" parent="AppTheme">
+        <item name="android:background">@drawable/fsg_button</item>
+        <item name="android:fontFamily">@font/fsg_stencil</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@drawable/fsg_button_color</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginStart">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginEnd">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="fsg_text_caption" parent="AppTheme">
+        <item name="android:fontFamily">@font/fsg_stencil</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+</resources>

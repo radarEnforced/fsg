@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityUnitEntry">
+
+    <ImageView
+        android:id="@+id/activity_unit_entry_img_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_background" />
+
+    <fragment
+        android:id="@+id/activity_unit_entry_header"
+        android:name="pl.marekcel.fsg.FragmentHeader"
+        tools:layout="@layout/fragment_header"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_unit_entry_header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin_half"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:adjustViewBounds="true"
+            android:background="@drawable/fsg_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/activity_unit_entry_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.omnitech_software.fsg.ViewUnitEntry
+                android:id="@+id/activity_unit_entry_view_egl"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/activity_unit_entry_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ScrollView
+            android:id="@+id/activity_unit_entry_sv_introduction"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin_half"
+            android:layout_marginTop="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:paddingEnd="0dp"
+            android:background="@drawable/fsg_highlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/activity_unit_entry_guideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_name"
+                        style="@style/fsg_text_caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_span="2"
+                        android:layout_weight="1"
+                        tools:text="Unit Name" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_role"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_role" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_type" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_manufacturer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_manufacturer" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_manufacturer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_first_flight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_first_flight" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_first_flight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_introduction" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_introduction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_retired"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_retired" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_retired"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_number_built"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_number_built" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_number_built"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_primary_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_primary_user" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_primary_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_crew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_crew" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_crew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_displacement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_displacement" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_displacement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_length" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_length"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_wingspan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_wingspan" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_wingspan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_height" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_beam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_beam" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_beam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_draft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_draft" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_draft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_mtow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_mtow" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_mtow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_max_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_max_speed" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_max_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_range"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_range" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_powerplant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_powerplant" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_powerplant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_complement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_complement" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_complement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_armament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="@string/unit_armament" />
+                    <TextView
+                        android:id="@+id/activity_unit_entry_tv_armament"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="1"
+                        tools:text="0" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/activity_unit_entry_tr_dummy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:text="" />
+                </TableRow>
+
+            </TableLayout>
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

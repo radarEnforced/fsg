@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityHome">
+
+    <ImageView
+        android:id="@+id/activity_home_img_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_background" />
+
+    <!-- NAV HEADER -->
+
+    <ImageView
+        android:id="@+id/activity_home_img_conf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:adjustViewBounds="true"
+        android:focusable="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_nav_conf" />
+
+    <ImageView
+        android:id="@+id/activity_home_img_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:adjustViewBounds="true"
+        android:focusable="true"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/activity_home_img_conf"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_nav_test" />
+
+    <ImageView
+        android:id="@+id/activity_home_img_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:adjustViewBounds="true"
+        android:focusable="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_nav_exit" />
+
+    <!-- LOGO -->
+
+    <android.support.constraint.Guideline
+        android:id="@+id/activity_home_guideline_logo_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/activity_home_guideline_logo_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <ImageView
+        android:id="@+id/activity_home_img_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin_half"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:foregroundGravity="top"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/activity_home_btn_tutorial"
+        app:layout_constraintEnd_toStartOf="@+id/activity_home_guideline_logo_r"
+        app:layout_constraintStart_toEndOf="@+id/activity_home_guideline_logo_l"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_logo" />
+
+    <!-- NAV BUTTONS -->
+
+    <Button
+        android:id="@+id/activity_home_btn_tutorial"
+        style="@style/fsg_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin_half"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:onClick="onButtonTutorialClicked"
+        android:text="@string/menu_tutorial"
+        app:layout_constraintBottom_toTopOf="@+id/activity_home_btn_campaign"
+        app:layout_constraintEnd_toEndOf="@+id/activity_home_guideline_logo_r"
+        app:layout_constraintStart_toStartOf="@+id/activity_home_guideline_logo_l" />
+
+    <Button
+        android:id="@+id/activity_home_btn_campaign"
+        style="@style/fsg_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin_half"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin_half"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:onClick="onButtonCampaignClicked"
+        android:text="@string/menu_campaign"
+        app:layout_constraintBottom_toTopOf="@+id/activity_home_btn_quick_action"
+        app:layout_constraintEnd_toEndOf="@+id/activity_home_guideline_logo_r"
+        app:layout_constraintStart_toStartOf="@+id/activity_home_guideline_logo_l" />
+
+    <Button
+        android:id="@+id/activity_home_btn_quick_action"
+        style="@style/fsg_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin_half"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin_half"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:onClick="onButtonQuickActionClicked"
+        android:text="@string/menu_quick_action"
+        app:layout_constraintBottom_toTopOf="@+id/activity_home_btn_encyclopedia"
+        app:layout_constraintEnd_toEndOf="@+id/activity_home_guideline_logo_r"
+        app:layout_constraintStart_toStartOf="@+id/activity_home_guideline_logo_l" />
+
+    <Button
+        android:id="@+id/activity_home_btn_encyclopedia"
+        style="@style/fsg_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin_half"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin_half"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:onClick="onButtonEncyclopediaClicked"
+        android:text="@string/menu_encyclopedia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/activity_home_guideline_logo_r"
+        app:layout_constraintStart_toStartOf="@+id/activity_home_guideline_logo_l" />
+
+</android.support.constraint.ConstraintLayout>
