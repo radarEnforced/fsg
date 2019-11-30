@@ -13,5 +13,5 @@ An arcade style combat flight simulation video game engine written in C++ intend
 - [Fighters: Polish Aces](https://play.google.com/store/apps/details?id=com.omnitech_software.fpa)
 
 ## Tools
-- [Missions Editor](https://github.com/marek-cel/flight-simulation-game-missions-editor)
-- [Terrain Generator](https://github.com/marek-cel/flight-simulation-game-terrain-generator)
+- [Missions Editor](https://github.com/marek-cel/fsg-missions-editor)
+- [Terrain Generator](https://github.com/marek-cel/fsg-terrain-generator)
